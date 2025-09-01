@@ -1,5 +1,3 @@
-'use client'
-
 import { Phone, Heart, Shield, AlertTriangle } from 'lucide-react'
 import { ElementType } from 'react'
 

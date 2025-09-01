@@ -1,8 +1,6 @@
 import {
   ArrowRight,
   Users,
-  // Info,
-  // BookOpen,
   CheckSquare,
   Shield,
   AlertTriangle,
@@ -10,6 +8,8 @@ import {
   Target
 } from 'lucide-react'
 import Link from 'next/link'
+
+import CountdownSection from '@/components/page/home/countdown-section'
 
 const Home = () => {
   const keyFeatures = [
@@ -41,7 +41,7 @@ const Home = () => {
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="relative bg-green-800 px-4 py-20 md:py-32">
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left Column - Main Message */}
             <div className="text-center lg:text-left">
@@ -58,12 +58,12 @@ const Home = () => {
                 <span className="block">Kepada Pemerintah</span>
               </h1>
 
-              <p className="text-lg md:text-xl text-green-100 mb-8 leading-relaxed max-w-xl">
+              <p className="text-lg md:text-xl text-green-100 mb-8 leading-relaxed">
                 Platform untuk memantau dan berpartisipasi dalam gerakan
                 perubahan yang damai, terorganisir, dan bermartabat.
               </p>
 
-              <div className="flex flex-col sm:flex-row gap-4 mb-8">
+              <div className="flex flex-col justify-center lg:justify-start sm:flex-row gap-4 mb-8">
                 <Link
                   href="/tuntutan"
                   className="inline-flex items-center justify-center gap-3 bg-pink-600 hover:bg-pink-700 text-white font-bold py-4 px-8 rounded-2xl transition-all duration-300 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-pink-300"
@@ -99,61 +99,9 @@ const Home = () => {
               </div>
             </div>
 
-            {/* Right Column - Quick Stats */}
-            <div className="lg:pl-8">
-              {/* <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20">
-                <h3 className="text-2xl font-bold text-white mb-6 text-center">
-                  Status Terkini
-                </h3>
-
-                <div className="space-y-4 mb-6">
-                  <div className="flex items-center justify-between p-4 bg-white/10 rounded-xl">
-                    <div>
-                      <div className="text-2xl font-bold text-white">17</div>
-                      <div className="text-sm text-green-100">
-                        Tuntutan 1 Minggu
-                      </div>
-                    </div>
-                    <div className="bg-red-500 text-white text-xs px-3 py-1 rounded-full font-bold">
-                      URGENT
-                    </div>
-                  </div>
-
-                  <div className="flex items-center justify-between p-4 bg-white/10 rounded-xl">
-                    <div>
-                      <div className="text-2xl font-bold text-white">8</div>
-                      <div className="text-sm text-green-100">
-                        Tuntutan 1 Tahun
-                      </div>
-                    </div>
-                    <div className="bg-blue-500 text-white text-xs px-3 py-1 rounded-full font-bold">
-                      STRATEGIS
-                    </div>
-                  </div>
-
-                  <div className="flex items-center justify-between p-4 bg-white/10 rounded-xl">
-                    <div>
-                      <div className="text-2xl font-bold text-white">
-                        31 Agt
-                      </div>
-                      <div className="text-sm text-green-100">
-                        Target Deadline
-                      </div>
-                    </div>
-                    <div className="bg-orange-500 text-white text-xs px-3 py-1 rounded-full font-bold">
-                      COUNTDOWN
-                    </div>
-                  </div>
-                </div>
-
-                <Link
-                  href="/tuntutan"
-                  className="w-full inline-flex items-center justify-center gap-2 bg-pink-400 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
-                >
-                  Pantau Progress
-                  <ArrowRight className="size-4" />
-                </Link>
-              </div> */}
+            {/* Right Column - Countdown */}
+            <div className="flex justify-center">
+              <CountdownSection />
             </div>
           </div>
         </div>

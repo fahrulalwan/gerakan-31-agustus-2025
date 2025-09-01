@@ -1,5 +1,3 @@
-'use client'
-
 import { Shield, AlertCircle, Phone } from 'lucide-react'
 
 import { LEGAL_RIGHTS_INFO } from '@/constants/demonstration'

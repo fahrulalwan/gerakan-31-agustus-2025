@@ -1,5 +1,3 @@
-'use client'
-
 import { Target, Users, Heart, Shield, Scale, Calendar } from 'lucide-react'
 
 const TentangPage = () => {
@@ -46,30 +44,6 @@ const TentangPage = () => {
         'Mengedepankan persatuan di atas perbedaan untuk kepentingan bangsa'
     }
   ]
-
-  // const timeline = [
-  //   {
-  //     date: '28-30 Agustus 2024',
-  //     title: 'Demonstrasi Awal',
-  //     description:
-  //       'Gelombang demonstrasi pertama yang memicu terbentuknya gerakan ini'
-  //   },
-  //   {
-  //     date: '31 Agustus 2024',
-  //     title: 'Deklarasi Gerakan',
-  //     description: 'Pembentukan gerakan terorganisir dengan tuntutan yang jelas'
-  //   },
-  //   {
-  //     date: '1-7 September 2024',
-  //     title: 'Konsolidasi',
-  //     description: 'Penyusunan tuntutan 1 minggu dan strategi gerakan'
-  //   },
-  //   {
-  //     date: '31 Agustus 2025',
-  //     title: 'Target Pencapaian',
-  //     description: 'Deadline untuk pemenuhan seluruh tuntutan yang diajukan'
-  //   }
-  // ]
 
   return (
     <div className="min-h-screen bg-green-800">
@@ -200,39 +174,6 @@ const TentangPage = () => {
           </div>
         </div>
       </section>
-
-      {/* Timeline */}
-      {/* <section className="px-4 pb-16">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">
-            Perjalanan Gerakan
-          </h2>
-          <div className="space-y-6">
-            {timeline.map((event, index) => (
-              <div key={index} className="bg-white rounded-2xl p-6 relative">
-                <div className="flex items-start gap-4">
-                  <div className="bg-pink-600 text-white rounded-full size-12 flex items-center justify-center font-bold shrink-0">
-                    {index + 1}
-                  </div>
-                  <div className="flex-1">
-                    <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-2">
-                      <h3 className="text-xl font-bold text-green-800">
-                        {event.title}
-                      </h3>
-                      <span className="text-sm font-medium text-pink-600 bg-pink-100 px-3 py-1 rounded-full w-fit">
-                        {event.date}
-                      </span>
-                    </div>
-                    <p className="text-green-700 leading-relaxed">
-                      {event.description}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section> */}
 
       {/* Kontak & Dukungan */}
       <section className="px-4 pb-16">
