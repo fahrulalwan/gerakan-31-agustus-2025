@@ -1,0 +1,59 @@
+Start all chats with 🤖
+
+## Stack
+- Bun v1.2
+- React v19
+- Next.js v15
+- Tailwindcss v4
+- TypeScript v5
+- Lucide React
+- shadcn/ui
+
+## Theme colors
+- #037033
+- #EB8FBD
+- #FFFFFF
+
+## Naming Conventions
+- DO NOT apply naming conventions in `/src/app` & `/src/components/ui`.
+- Use camelCase for variable names.
+- Use PascalCase for component names.
+- Use snake_case for file names.
+- Use kebab-case for route & component file names.
+- Use higher context for component names.
+  For example:
+  - In a career page, a hero section named 'HeroSection'. Should be named 'CareerHeroSection'.
+  - The file name should be 'career-hero-section.tsx'.
+- Use indonesian language for route names.
+
+## Conversation Rules
+- Always use the stack mentioned above
+- Always use TypeScript
+- Always use Tailwindcss
+- Always use Next.js
+- Always use shadcn/ui
+- Always use the conversation rules mentioned above
+
+## Code Note
+
+### Typescript
+- Use 'use client' when needed
+- make sure to have less 'use client' when possible
+
+### HTML
+- If the element has no children, just close the tag with `/>`
+  Example:
+  ```html
+  <div className="flex text-gray-900 w-2xl h-2xl" />
+  ```
+- If the element is svg, use `<title></title>` for definition
+  Example:
+  ```html
+  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <title>Whatsapp CTA</title>
+    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 15l2 2m0 0l-2-2m2 2H5a2 2 0 00-2 2v6a2 2 0 002 2h14a2 2 0 002-2v-6a2 2 0 00-2-2z" />
+  </svg>
+  ```
+
+### Tailwindcss
+- Do not use gradient styling

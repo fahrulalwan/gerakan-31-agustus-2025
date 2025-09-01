@@ -5,12 +5,18 @@ import { cn } from '@/lib/utils'
 
 const OneWeekDemand = () => (
   <div className="max-w-screen-md mx-auto px-4 md:px-10 pb-10">
-    <div className="flex items-center justify-center gap-4 max-w-[400px] mx-auto text-white">
+    <div
+      className="flex items-center justify-center gap-4 max-w-[400px] mx-auto"
+      style={{ color: '#037033' }}
+    >
       <p className="text-[80px] font-bold">8</p>
       <p className="text-2xl font-bold">TUNTUTAN RAKYAT DALAM 1 TAHUN</p>
     </div>
 
-    <p className="text-center mb-4 px-4 rounded-3xl bg-green-800 w-fit mx-auto font-bold text-white">
+    <p
+      className="text-center mb-4 px-4 rounded-3xl w-fit mx-auto font-bold text-white"
+      style={{ backgroundColor: '#037033' }}
+    >
       Deadline: 31 Agustus 2026
     </p>
 
@@ -23,26 +29,30 @@ const OneWeekDemand = () => (
           >
             <span
               className={cn(
-                'rounded-full size-6 flex items-center justify-center bg-green-600 shrink-0 text-sm font-bold text-white relative',
+                'rounded-full size-6 flex items-center justify-center shrink-0 text-sm font-bold text-white relative',
                 demand.status && 'line-through'
               )}
+              style={{ backgroundColor: '#037033' }}
             >
               {index + 1}
 
               {demand.status && (
-                <CheckIcon className="size-6 text-green-800 absolute top-0 right-0" />
+                <CheckIcon
+                  className="size-6 absolute top-0 right-0"
+                  style={{ color: '#037033' }}
+                />
               )}
             </span>
             <div className="space-y-1">
-              <p className="font-bold text-xl text-green-800">{demand.title}</p>
+              <p className="font-bold text-xl" style={{ color: '#037033' }}>
+                {demand.title}
+              </p>
               <div className="flex gap-2">
                 <p
                   // eslint-disable-next-line react/no-danger
                   dangerouslySetInnerHTML={{ __html: demand.content }}
-                  className={cn(
-                    'text-green-800 leading-6',
-                    demand.status && 'line-through'
-                  )}
+                  className={cn('leading-6', demand.status && 'line-through')}
+                  style={{ color: '#037033' }}
                 />
               </div>
             </div>

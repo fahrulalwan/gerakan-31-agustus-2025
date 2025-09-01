@@ -65,7 +65,7 @@ const InformasiPage = () => {
         href={`/informasi/${article.id}`}
         className={cn(
           'block rounded-2xl p-6 transition-all duration-300 hover:scale-105 hover:shadow-xl group',
-          featured ? 'bg-gradient-to-br from-pink-100 to-green-100' : 'bg-white'
+          featured ? 'bg-green-800' : 'bg-white'
         )}
       >
         <div className="flex items-start gap-4">
@@ -162,7 +162,7 @@ const InformasiPage = () => {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-800 via-green-700 to-pink-600">
+    <div className="min-h-screen bg-green-800">
       {/* Header */}
       <div className="px-4 py-16">
         <div className="max-w-6xl mx-auto text-center">

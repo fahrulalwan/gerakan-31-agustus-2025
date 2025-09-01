@@ -72,7 +72,7 @@ const TentangPage = () => {
   ]
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-green-800 via-green-700 to-pink-600">
+    <div className="min-h-screen bg-green-800">
       {/* Hero Section */}
       <section className="px-4 py-16">
         <div className="max-w-4xl mx-auto text-center">
