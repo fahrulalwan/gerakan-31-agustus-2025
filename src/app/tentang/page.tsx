@@ -140,26 +140,15 @@ const TentangPage = () => {
       />
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
-        <div className="relative overflow-hidden py-20 bg-[#037033]">
-          <div className="absolute inset-0 opacity-30">
-            <div
-              className="absolute inset-0 bg-white/5"
-              style={{
-                backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-                backgroundSize: '60px 60px'
-              }}
-            />
-          </div>
-          <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
-            <div className="mx-auto max-w-2xl text-center">
-              <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
-                Tentang <span className="text-white">Gerakan</span>
-              </h1>
-              <p className="mt-6 text-lg leading-8 text-green-100">
-                Mengenal lebih dalam latar belakang, visi, misi, dan nilai-nilai
-                yang menjadi fondasi Gerakan 31 Agustus 2025
-              </p>
-            </div>
+        <div className="py-20 bg-[#037033]">
+          <div className="mx-auto max-w-2xl text-center px-6 lg:px-8">
+            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
+              Tentang <span className="text-white">Gerakan</span>
+            </h1>
+            <p className="mt-6 text-lg leading-8 text-green-100">
+              Mengenal lebih dalam latar belakang, visi, misi, dan nilai-nilai
+              yang menjadi fondasi Gerakan 31 Agustus 2025
+            </p>
           </div>
         </div>
 

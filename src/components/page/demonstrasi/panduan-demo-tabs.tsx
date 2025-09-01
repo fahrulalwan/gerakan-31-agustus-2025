@@ -85,7 +85,7 @@ const PanduanDemoTabs = ({
 
               return (
                 <Link
-                  href={`/panduan-demo?category=${tab.category}${wilayah ? `&wilayah=${wilayah}` : ''}`}
+                  href={`/panduan-demo?category=${tab.category}`}
                   scroll={false}
                   key={tab.id}
                   className={cn(
@@ -130,7 +130,7 @@ const PanduanDemoTabs = ({
 
               return (
                 <Link
-                  href={`/panduan-demo?category=${tab.category}${wilayah ? `&wilayah=${wilayah}` : ''}`}
+                  href={`/panduan-demo?category=${tab.category}`}
                   scroll={false}
                   key={tab.id}
                   className={cn(

@@ -177,7 +177,7 @@ const EmergencyContacts = ({ wilayah }: { wilayah: string }) => {
 
       {/* Region Selector */}
       <div className="mb-6">
-        <div className="flex items-center gap-2 mb-3">
+        <div className="flex items-center gap-2 mb-5">
           <MapPin className="text-green-800 size-5" />
           <h3 className="font-bold text-green-800">Pilih Wilayah</h3>
         </div>
@@ -192,11 +192,11 @@ const EmergencyContacts = ({ wilayah }: { wilayah: string }) => {
             )
           }}
         >
-          <SelectTrigger className="bg-green-100 border-green-200 text-green-800 font-medium cursor-pointer">
+          <SelectTrigger className="w-full md:w-auto text-base bg-green-100 border-green-200 text-green-800 font-bold cursor-pointer py-5">
             <SelectValue placeholder="Pilih wilayah..." />
           </SelectTrigger>
           <SelectContent>
-            <SelectItem value="nasional">
+            <SelectItem value="nasional" className="cursor-pointer text-base">
               <div className="flex items-center gap-2">
                 <Globe className="size-4" />
                 Nasional
@@ -204,12 +204,14 @@ const EmergencyContacts = ({ wilayah }: { wilayah: string }) => {
             </SelectItem>
             {CATEGORIZED_REGIONS.map((group) => (
               <SelectGroup key={group.island}>
-                <SelectLabel>{group.island}</SelectLabel>
+                <SelectLabel className="text-sm text-gray-400">
+                  {group.island}
+                </SelectLabel>
                 {group.cities.map((city) => (
                   <SelectItem
                     key={city}
                     value={city.toLowerCase()}
-                    className="cursor-pointer"
+                    className="cursor-pointer text-base"
                   >
                     {city}
                   </SelectItem>
