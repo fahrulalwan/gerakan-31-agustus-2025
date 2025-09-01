@@ -4,12 +4,12 @@ export const ONE_WEEK_DEMANDS = [
     items: [
       {
         content:
-          '<b>Tarik TNI dari pengamanan sipil</b> dan pastikan tidak ada kriminalisasi demonstran.',
-        status: false
+          '<b class="text-green-900">Tarik TNI dari pengamanan sipil</b> dan pastikan tidak ada kriminalisasi demonstran.',
+        status: true
       },
       {
         content:
-          'Bentuk <b>Tim Investigasi Independen</b> kasus Affan Kurniawan, Umar Amarudin, maupun semua korban kekerasan aparat selama demonstrasi 28–30 Agustus dengan mandat jelas dan transparan.',
+          'Bentuk <b class="text-green-900">Tim Investigasi Independen</b> kasus Affan Kurniawan, Umar Amarudin, maupun semua korban kekerasan aparat selama demonstrasi 28–30 Agustus dengan mandat jelas dan transparan.',
         status: false
       }
     ]
@@ -24,12 +24,12 @@ export const ONE_WEEK_DEMANDS = [
       },
       {
         content:
-          'Publikasikan <b>transparansi anggaran</b> (gaji, tunjangan, rumah, fasilitas DPR).',
+          'Publikasikan <b class="text-green-900">transparansi anggaran</b> (gaji, tunjangan, rumah, fasilitas DPR).',
         status: false
       },
       {
         content:
-          'Dorong <b>Badan Kehormatan DPR</b> periksa anggota yang bermasalah (termasuk selidiki melalui KPK).',
+          'Dorong <b class="text-green-900">Badan Kehormatan DPR</b> periksa anggota yang bermasalah (termasuk selidiki melalui KPK).',
         status: false
       }
     ]
@@ -39,12 +39,12 @@ export const ONE_WEEK_DEMANDS = [
     items: [
       {
         content:
-          'Pecat atau jatuhkan <b>sanksi tegas</b> kepada kader DPR yang tidak etis dan memicu kemarahan publik.',
+          'Pecat atau jatuhkan <b class="text-green-900">sanksi tegas</b> kepada kader DPR yang tidak etis dan memicu kemarahan publik.',
         status: false
       },
       {
         content:
-          'Umumkan <b>komitmen partai</b> untuk berpihak pada rakyat di tengah krisis.',
+          'Umumkan <b class="text-green-900">komitmen partai</b> untuk berpihak pada rakyat di tengah krisis.',
         status: false
       },
       {
@@ -68,7 +68,7 @@ export const ONE_WEEK_DEMANDS = [
       },
       {
         content:
-          'Tangkap dan proses hukum secara <b>transparan</b> anggota dan komandan yang melakukan dan memerintahkan tindakan kekerasan serta melanggar HAM.',
+          'Tangkap dan proses hukum secara <b class="text-green-900">transparan</b> anggota dan komandan yang melakukan dan memerintahkan tindakan kekerasan serta melanggar HAM.',
         status: false
       }
     ]
@@ -83,7 +83,7 @@ export const ONE_WEEK_DEMANDS = [
       },
       {
         content:
-          'Tegakkan <b>disiplin internal</b> agar anggota TNI tidak mengambil alih fungsi Polri.',
+          'Tegakkan <b class="text-green-900">disiplin internal</b> agar anggota TNI tidak mengambil alih fungsi Polri.',
         status: false
       },
       {
@@ -98,17 +98,17 @@ export const ONE_WEEK_DEMANDS = [
     items: [
       {
         content:
-          'Pastikan <b>upah layak</b> untuk seluruh angkatan kerja (termasuk namun tidak terbatas pada guru, buruh, nakes, dan mitra ojol) di seluruh Indonesia.',
+          'Pastikan <b class="text-green-900">upah layak</b> untuk seluruh angkatan kerja (termasuk namun tidak terbatas pada guru, buruh, nakes, dan mitra ojol) di seluruh Indonesia.',
         status: false
       },
       {
         content:
-          'Ambil langkah darurat untuk <b>mencegah PHK massal</b> dan lindungi buruh kontrak.',
+          'Ambil langkah darurat untuk <b class="text-green-900">mencegah PHK massal</b> dan lindungi buruh kontrak.',
         status: false
       },
       {
         content:
-          'Buka dialog dengan <b>serikat buruh</b> untuk solusi upah minimum dan outsourcing.',
+          'Buka dialog dengan <b class="text-green-900">serikat buruh</b> untuk solusi upah minimum dan outsourcing.',
         status: false
       }
     ]

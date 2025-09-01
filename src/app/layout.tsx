@@ -1,6 +1,8 @@
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
+
 import './globals.css'
+import AppContextProvider from './app-context'
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -24,7 +26,7 @@ const RootLayout = ({
 }>) => (
   <html lang="en">
     <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-      {children}
+      <AppContextProvider>{children}</AppContextProvider>
     </body>
   </html>
 )
