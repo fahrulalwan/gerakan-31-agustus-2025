@@ -24,7 +24,7 @@ const RootLayout = ({
 }: Readonly<{
   children: React.ReactNode
 }>) => (
-  <html lang="en">
+  <html lang="id">
     <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
       <AppContextProvider>{children}</AppContextProvider>
     </body>

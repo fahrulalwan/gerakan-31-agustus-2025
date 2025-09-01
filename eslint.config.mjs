@@ -410,8 +410,15 @@ export const IGNORE_PATTERNS = {
     'dist/**',
     'build/**',
     'coverage/**',
+    '.next/**',
+    'out/**',
+    '.vercel/**',
+    '.husky/**',
+    '.cache/**',
     '*.config.js',
-    '*.config.ts'
+    '*.config.ts',
+    '**/*.min.js',
+    '**/*.min.css'
   ]
 }
 

@@ -6,8 +6,8 @@
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
     "start": "next start",
-    "lint": "eslint",
-    "lint:fix": "eslint --fix",
+    "lint": "eslint ./src",
+    "lint:fix": "eslint --fix ./src",
     "prepare": "husky"
   },
   "dependencies": {
@@ -49,7 +49,7 @@
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
-      "eslint --cache --fix"
+      "eslint --cache --fix ./src"
     ]
   }
 }
