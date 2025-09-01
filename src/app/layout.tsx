@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react'
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 
@@ -27,6 +28,7 @@ const RootLayout = ({
   <html lang="id">
     <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
       <AppContextProvider>{children}</AppContextProvider>
+      <Analytics />
     </body>
   </html>
 )
