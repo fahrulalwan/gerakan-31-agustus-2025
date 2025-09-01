@@ -17,9 +17,81 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: '17+8 Tuntutan Rakyat | Transparansi, Reformasi, Empati',
+  metadataBase: new URL('https://gerakan-31-agustus-2025.vercel.app'),
+  title: {
+    default: 'Gerakan 31 Agustus 2025 | Tuntutan Rakyat Indonesia',
+    template: '%s | Gerakan 31 Agustus 2025'
+  },
   description:
-    '17+8 Tuntutan Rakyat. Hasil rangkuman beberapa tuntutan yang beredar di media sosial dalam beberapa hari.',
+    'Platform resmi gerakan 31 Agustus 2025 untuk memantau 25 tuntutan rakyat Indonesia kepada pemerintah. Akses panduan demonstrasi aman, informasi terkini, dan bergabung dalam perubahan yang damai dan bermartabat.',
+  keywords: [
+    'gerakan 31 agustus 2025',
+    'tuntutan rakyat indonesia',
+    'demonstrasi aman',
+    'reformasi indonesia',
+    'transparansi pemerintah',
+    'perubahan sosial',
+    'aksi damai',
+    'tuntutan masyarakat',
+    'panduan demo',
+    'indonesia baru'
+  ],
+  authors: [{ name: 'Gerakan 31 Agustus 2025' }],
+  creator: 'Gerakan 31 Agustus 2025',
+  publisher: 'Gerakan 31 Agustus 2025',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'id_ID',
+    url: 'https://gerakan-31-agustus-2025.vercel.app',
+    title: 'Gerakan 31 Agustus 2025 | Tuntutan Rakyat Indonesia',
+    description:
+      'Platform resmi gerakan 31 Agustus 2025 untuk memantau 25 tuntutan rakyat Indonesia kepada pemerintah. Bergabung dalam perubahan yang damai dan bermartabat.',
+    siteName: 'Gerakan 31 Agustus 2025',
+    images: [
+      {
+        url: '/opengraph-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'Gerakan 31 Agustus 2025 - Tuntutan Rakyat Indonesia'
+      }
+    ]
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Gerakan 31 Agustus 2025 | Tuntutan Rakyat Indonesia',
+    description:
+      'Platform resmi gerakan 31 Agustus 2025 untuk memantau 25 tuntutan rakyat Indonesia kepada pemerintah.',
+    images: ['/twitter-image.png'],
+    creator: '@gerakan31agustus'
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1
+    }
+  },
+  verification: {
+    google: 'your-google-verification-code',
+    yandex: 'your-yandex-verification-code'
+  },
+  alternates: {
+    canonical: 'https://gerakan-31-agustus-2025.vercel.app',
+    languages: {
+      'id-ID': 'https://gerakan-31-agustus-2025.vercel.app'
+    }
+  },
+  category: 'politics',
+  classification: 'Social Movement',
   icons: {
     icon: [
       { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
