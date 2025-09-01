@@ -65,7 +65,7 @@ const InformasiPage = () => {
         href={`/informasi/${article.id}`}
         className={cn(
           'block rounded-2xl p-6 transition-all duration-300 hover:scale-105 hover:shadow-xl group',
-          featured ? 'bg-green-800' : 'bg-white'
+          featured ? 'bg-green-200' : 'bg-white'
         )}
       >
         <div className="flex items-start gap-4">
