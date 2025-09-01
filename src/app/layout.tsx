@@ -1,8 +1,10 @@
+import { Analytics } from '@vercel/analytics/react'
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 
 import './globals.css'
-import AppContextProvider from './app-context'
+import Footer from '@/components/footer'
+import Navbar from '@/components/navbar'
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -47,9 +49,12 @@ const RootLayout = ({
 }: Readonly<{
   children: React.ReactNode
 }>) => (
-  <html lang="en">
+  <html lang="id">
     <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-      <AppContextProvider>{children}</AppContextProvider>
+      <Navbar />
+      <main>{children}</main>
+      <Footer />
+      <Analytics />
     </body>
   </html>
 )

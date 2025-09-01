@@ -5,12 +5,18 @@ import { cn } from '@/lib/utils'
 
 const OneWeekDemand = () => (
   <div className="max-w-screen-md mx-auto px-4 md:px-10 pb-10">
-    <div className="flex items-center justify-center gap-4 max-w-[400px] mx-auto text-pink-300">
+    <div
+      className="flex items-center justify-center gap-4 max-w-[400px] mx-auto"
+      style={{ color: '#EB8FBD' }}
+    >
       <p className="text-[80px] font-bold">17</p>
       <p className="text-2xl font-bold">TUNTUTAN RAKYAT DALAM 1 MINGGU</p>
     </div>
 
-    <p className="text-center mb-4 px-4 rounded-3xl bg-pink-300 w-fit mx-auto font-bold text-white">
+    <p
+      className="text-center mb-4 px-4 rounded-3xl w-fit mx-auto font-bold text-white"
+      style={{ backgroundColor: '#EB8FBD' }}
+    >
       Deadline: 5 September 2025
     </p>
 
@@ -24,25 +30,31 @@ const OneWeekDemand = () => (
               index % 3 === 0 && 'md:col-span-2'
             )}
           >
-            <p className="font-bold text-xl text-green-800">{demand.title}</p>
+            <p className="font-bold text-xl" style={{ color: '#037033' }}>
+              {demand.title}
+            </p>
             <ul className="space-y-2">
               {demand.items.map((item, index) => (
                 <li key={item.content} className="flex gap-2">
-                  <span className="rounded-full size-6 flex items-center justify-center bg-pink-400 shrink-0 text-sm font-bold text-white relative">
+                  <span
+                    className="rounded-full size-6 flex items-center justify-center shrink-0 text-sm font-bold text-white relative"
+                    style={{ backgroundColor: '#EB8FBD' }}
+                  >
                     {index + 1}
 
                     {item.status && (
-                      <CheckIcon className="size-6 text-green-800 absolute top-0 right-0" />
+                      <CheckIcon
+                        className="size-6 absolute top-0 right-0"
+                        style={{ color: '#037033' }}
+                      />
                     )}
                   </span>
                   <div className="flex items-center gap-2">
                     <p
                       // eslint-disable-next-line react/no-danger
                       dangerouslySetInnerHTML={{ __html: item.content }}
-                      className={cn(
-                        'text-green-800 leading-6',
-                        item.status && 'line-through'
-                      )}
+                      className={cn('leading-6', item.status && 'line-through')}
+                      style={{ color: '#037033' }}
                     />
                   </div>
                 </li>
