@@ -69,10 +69,7 @@ const PanduanDemoTabs = ({
       <div className="bg-white px-4 py-12">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-8">
-            <h2
-              className="text-3xl font-bold mb-4"
-              style={{ color: '#037033' }}
-            >
+            <h2 className="text-3xl font-bold mb-4 text-[#037033]">
               Pilih Panduan yang Anda Butuhkan
             </h2>
             <p className="text-lg text-slate-600">
@@ -92,16 +89,11 @@ const PanduanDemoTabs = ({
                   scroll={false}
                   key={tab.id}
                   className={cn(
-                    'group relative rounded-2xl p-6 text-center transition-all duration-300 hover:scale-105 border-2 cursor-pointer',
+                    'group relative rounded-2xl p-6 text-center transition-all duration-300 hover:scale-105 border-2 cursor-pointer border-[#037033]',
                     isActive
-                      ? 'text-white shadow-lg'
+                      ? 'text-white shadow-lg bg-[#037033]'
                       : 'bg-white text-slate-700 hover:shadow-md'
                   )}
-                  style={
-                    isActive
-                      ? { backgroundColor: '#037033', borderColor: '#037033' }
-                      : { borderColor: '#037033' }
-                  }
                 >
                   <Icon
                     className={cn(
@@ -142,16 +134,11 @@ const PanduanDemoTabs = ({
                   scroll={false}
                   key={tab.id}
                   className={cn(
-                    'w-full flex items-center gap-4 rounded-2xl p-4 text-left transition-all duration-300 border-2',
+                    'w-full flex items-center gap-4 rounded-2xl p-4 text-left transition-all duration-300 border-2 border-[#037033]',
                     isActive
-                      ? 'text-white shadow-lg'
+                      ? 'text-white shadow-lg bg-[#037033]'
                       : 'bg-white text-slate-700'
                   )}
-                  style={
-                    isActive
-                      ? { backgroundColor: '#037033', borderColor: '#037033' }
-                      : { borderColor: '#037033' }
-                  }
                 >
                   <Icon
                     className={cn(

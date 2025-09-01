@@ -50,16 +50,13 @@ const CountdownTimer = () => {
 
   if (!isClient) {
     return (
-      <div
-        className="rounded-2xl md:rounded-3xl p-4 md:p-6 lg:p-8 shadow-2xl border-2"
-        style={{ backgroundColor: '#EB8FBD', borderColor: '#EB8FBD' }}
-      >
+      <div className="rounded-2xl md:rounded-3xl p-4 md:p-6 lg:p-8 shadow-2xl max-w-3xl mx-auto bg-[#EB8FBD]">
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3 md:gap-4 mb-4 md:mb-6">
           <div className="bg-white/20 rounded-full p-2 md:p-3">
             <Clock className="size-6 md:size-8 text-white" />
           </div>
           <div className="text-center sm:text-left">
-            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-1">
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#EB8FBD] mb-1">
               Countdown Sampai 5 September 2025
             </h3>
             <p className="text-white text-sm md:text-lg">
@@ -68,7 +65,7 @@ const CountdownTimer = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 md:gap-4">
+        <div className="grid grid-cols-4 gap-2 md:gap-4">
           {[
             { label: 'Hari', value: '---' },
             { label: 'Jam', value: '--' },
@@ -100,11 +97,7 @@ const CountdownTimer = () => {
 
   return (
     <div
-      className="rounded-2xl md:rounded-3xl p-4 md:p-6 lg:p-8 shadow-2xl border-2"
-      style={{
-        backgroundColor: isExpired ? '#6B7280' : '#EB8FBD',
-        borderColor: isExpired ? '#6B7280' : '#EB8FBD'
-      }}
+      className={`rounded-2xl md:rounded-3xl p-4 md:p-6 lg:p-8 shadow-2xl border-2 max-w-3xl mx-auto ${isExpired ? 'bg-[#6B7280] border-[#6B7280]' : 'bg-[#EB8FBD] border-[#EB8FBD]'}`}
     >
       <div className="flex flex-col sm:flex-row items-center justify-center gap-3 md:gap-4 mb-4 md:mb-6">
         <div className="bg-white/20 rounded-full p-2 md:p-3">
@@ -128,7 +121,7 @@ const CountdownTimer = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 md:gap-4">
+      <div className="grid grid-cols-4 gap-2 md:gap-4">
         {[
           { label: 'Hari', value: timeLeft.days.toString().padStart(2, '0') },
           { label: 'Jam', value: timeLeft.hours.toString().padStart(2, '0') },

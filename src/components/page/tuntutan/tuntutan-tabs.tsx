@@ -17,10 +17,9 @@ const TuntutanTabs = ({ jangka }: { jangka: string }) => (
             className={cn(
               'rounded-xl px-8 py-4 font-semibold transition-all duration-300 flex items-center gap-3',
               jangka === '1-minggu'
-                ? 'text-white shadow-lg transform scale-105'
+                ? 'text-white shadow-lg transform scale-105 bg-[#037033]'
                 : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
             )}
-            style={jangka === '1-minggu' ? { backgroundColor: '#037033' } : {}}
           >
             <span className="text-lg">1 MINGGU</span>
           </Link>
@@ -31,10 +30,9 @@ const TuntutanTabs = ({ jangka }: { jangka: string }) => (
             className={cn(
               'rounded-xl px-8 py-4 font-semibold transition-all duration-300 flex items-center gap-3',
               jangka === '1-tahun'
-                ? 'text-white shadow-lg transform scale-105'
+                ? 'text-white shadow-lg transform scale-105 bg-[#EB8FBD]'
                 : 'text-gray-600 hover:text-gray-900 hover:bg-gray-50'
             )}
-            style={jangka === '1-tahun' ? { backgroundColor: '#EB8FBD' } : {}}
           >
             <span className="text-lg">1 TAHUN</span>
           </Link>

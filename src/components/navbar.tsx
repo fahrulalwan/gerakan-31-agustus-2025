@@ -5,17 +5,19 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 
+import { cn } from '@/lib/utils'
+
+const navigationItems = [
+  { name: 'Beranda', href: '/', icon: Home },
+  { name: 'Tuntutan', href: '/tuntutan', icon: FileText },
+  { name: 'Panduan Demo', href: '/panduan-demo', icon: Megaphone },
+  // { name: 'Informasi', href: '/informasi', icon: Info },
+  { name: 'Tentang', href: '/tentang', icon: HelpCircle }
+]
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
   const pathname = usePathname()
-
-  const navigationItems = [
-    { name: 'Beranda', href: '/', icon: Home },
-    { name: 'Tuntutan', href: '/tuntutan', icon: FileText },
-    { name: 'Panduan Demo', href: '/panduan-demo', icon: Megaphone },
-    // { name: 'Informasi', href: '/informasi', icon: Info },
-    { name: 'Tentang', href: '/tentang', icon: HelpCircle }
-  ]
 
   const isActive = (href: string) => {
     if (href === '/') {
@@ -31,12 +33,6 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-2">
-              {/* <div
-                className="w-8 h-8 rounded-full flex items-center justify-center"
-                style={{ backgroundColor: '#037033' }}
-              >
-                <span className="text-white font-bold text-sm">31</span>
-              </div> */}
               <span className="font-bold text-xl text-green-800">
                 17+8 Tuntutan Rakyat
               </span>
@@ -51,26 +47,12 @@ const Navbar = () => {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className={`px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 flex items-center space-x-2 ${
+                  className={cn(
+                    'px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 flex items-center space-x-2',
                     isActive(item.href)
-                      ? 'text-white shadow-md'
-                      : 'text-gray-700 hover:text-white hover:shadow-md'
-                  }`}
-                  style={{
-                    backgroundColor: isActive(item.href)
-                      ? '#037033'
-                      : 'transparent'
-                  }}
-                  onMouseEnter={(e) => {
-                    if (!isActive(item.href)) {
-                      e.currentTarget.style.backgroundColor = '#037033'
-                    }
-                  }}
-                  onMouseLeave={(e) => {
-                    if (!isActive(item.href)) {
-                      e.currentTarget.style.backgroundColor = 'transparent'
-                    }
-                  }}
+                      ? 'text-white shadow-md bg-[#037033]'
+                      : 'text-gray-700 hover:bg-green-100 hover:shadow-md bg-transparent'
+                  )}
                 >
                   <Icon className="w-4 h-4" />
                   <span>{item.name}</span>
@@ -105,16 +87,12 @@ const Navbar = () => {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className={`px-3 py-2 rounded-lg text-base font-medium transition-all duration-200 flex items-center space-x-3 ${
+                  className={cn(
+                    'px-3 py-2 rounded-lg text-base font-medium transition-all duration-200 flex items-center space-x-3',
                     isActive(item.href)
-                      ? 'text-white shadow-md'
-                      : 'text-gray-700 hover:text-white hover:shadow-md'
-                  }`}
-                  style={{
-                    backgroundColor: isActive(item.href)
-                      ? '#037033'
-                      : 'transparent'
-                  }}
+                      ? 'text-white shadow-md bg-[#037033]'
+                      : 'text-gray-700 hover:text-white hover:shadow-md bg-transparent'
+                  )}
                   onClick={() => setIsOpen(false)}
                 >
                   <Icon className="w-5 h-5" />

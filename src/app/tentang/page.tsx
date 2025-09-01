@@ -135,14 +135,12 @@ const TentangPage = () => {
     <>
       <script
         type="application/ld+json"
+        // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
-        <div
-          className="relative overflow-hidden py-20"
-          style={{ backgroundColor: '#037033' }}
-        >
+        <div className="relative overflow-hidden py-20 bg-[#037033]">
           <div className="absolute inset-0 opacity-30">
             <div
               className="absolute inset-0 bg-white/5"

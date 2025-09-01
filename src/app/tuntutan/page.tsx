@@ -47,11 +47,12 @@ export const metadata: Metadata = {
   }
 }
 
-const TuntutanPage = ({
+const TuntutanPage = async ({
   searchParams
 }: {
-  searchParams: { jangka: string }
+  searchParams: Promise<{ jangka: string }>
 }) => {
+  const awaitedSearchParams = await searchParams
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Article',
@@ -90,39 +91,26 @@ const TuntutanPage = ({
     <>
       <script
         type="application/ld+json"
+        // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
-        <div
-          className="relative overflow-hidden"
-          style={{ backgroundColor: '#037033' }}
-        >
-          <div className="absolute inset-0 opacity-30">
-            <div
-              className="absolute inset-0 bg-white/5"
-              style={{
-                backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-                backgroundSize: '60px 60px'
-              }}
-            />
-          </div>
+        <div className="relative overflow-hidden bg-[#037033]">
+          <div
+            className="absolute inset-0"
+            style={{
+              backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+              backgroundSize: '60px 60px'
+            }}
+          />
 
           <div className="relative px-6 py-16">
             <div className="max-w-7xl mx-auto">
               <div className="text-center mb-12">
-                {/* <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
-              <TrendingUp className="size-4 text-white" />
-              <span className="text-sm font-medium text-white">
-                Tuntutan Rakyat Indonesia
-              </span>
-            </div> */}
-
                 <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight">
                   17+8: Suara Rakyat untuk
-                  <span className="block" style={{ color: '#EB8FBD' }}>
-                    Indonesia Baru
-                  </span>
+                  <span className="block text-[#EB8FBD]">Indonesia Baru</span>
                 </h1>
 
                 <p className="text-xl text-white mb-8 max-w-3xl mx-auto leading-relaxed">
@@ -143,10 +131,7 @@ const TuntutanPage = ({
         {/* Important Notice */}
         <div className="px-6 py-12">
           <div className="max-w-5xl mx-auto">
-            <div
-              className="rounded-3xl p-8 shadow-2xl border-2"
-              style={{ backgroundColor: '#EB8FBD', borderColor: '#EB8FBD' }}
-            >
+            <div className="rounded-3xl p-8 shadow-2xl border-2 bg-[#EB8FBD] border-[#EB8FBD]">
               <div className="flex items-start gap-4">
                 <div className="bg-white/20 rounded-full p-3 shrink-0">
                   <AlertTriangle className="size-6 text-white" />
@@ -169,7 +154,7 @@ const TuntutanPage = ({
         </div>
 
         {/* Tabs and Content */}
-        <TuntutanTabs jangka={searchParams.jangka || '1-minggu'} />
+        <TuntutanTabs jangka={awaitedSearchParams.jangka ?? '1-minggu'} />
       </div>
     </>
   )

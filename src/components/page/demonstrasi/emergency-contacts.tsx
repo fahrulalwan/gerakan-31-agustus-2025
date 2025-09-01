@@ -1,3 +1,5 @@
+'use client'
+
 import {
   Phone,
   Heart,
@@ -9,17 +11,35 @@ import {
   ExternalLink
 } from 'lucide-react'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 import { ElementType } from 'react'
 
 import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectTrigger,
+  SelectValue
+} from '@/components/ui/select'
+import {
   NATIONAL_EMERGENCY_CONTACTS,
   REGIONAL_EMERGENCY_CONTACTS,
-  AVAILABLE_REGIONS,
+  CATEGORIZED_REGIONS,
   EmergencyContact
 } from '@/constants/demonstration'
 import { cn } from '@/lib/utils'
 
+const CONTACT_ICONS: Record<EmergencyContact['type'], ElementType> = {
+  emergency: AlertTriangle,
+  legal: Shield,
+  medical: Heart,
+  other: Heart
+}
+
 const EmergencyContacts = ({ wilayah }: { wilayah: string }) => {
+  const router = useRouter()
   const wilayahCapitalized = wilayah.charAt(0).toUpperCase() + wilayah.slice(1)
 
   // Get contacts based on selected region
@@ -42,84 +62,107 @@ const EmergencyContacts = ({ wilayah }: { wilayah: string }) => {
   const legalServices = filteredContacts.filter(
     (contact) => contact.type === 'legal'
   )
+  const otherServices = filteredContacts.filter(
+    (contact) => contact.type === 'other'
+  )
 
   const ContactCard = ({
     contact,
-    icon: Icon,
     bgColor,
     textColor
   }: {
     contact: EmergencyContact
-    icon: ElementType
     bgColor: string
     textColor: string
-  }) => (
-    <div className={cn('rounded-2xl p-4', bgColor)}>
-      <div className="flex items-center gap-3 mb-2">
-        <Icon className={cn('size-5', textColor)} />
-        <h3 className={cn('font-bold text-lg', textColor)}>{contact.name}</h3>
-      </div>
-      <p className={cn('text-sm mb-3', textColor)}>{contact.description}</p>
+  }) => {
+    const Icon = CONTACT_ICONS[contact.type]
 
-      {/* Address Information */}
-      {contact.address && (
-        <div
-          className={cn(
-            'flex items-start gap-2 mb-3 p-2 rounded-lg',
-            contact.type === 'emergency'
-              ? 'bg-pink-50'
-              : contact.type === 'medical'
-                ? 'bg-green-50'
-                : 'bg-pink-50'
-          )}
-        >
-          <Navigation
-            className={cn('size-4 mt-0.5 flex-shrink-0', textColor)}
-          />
-          <div className="flex-1">
-            <p className={cn('text-xs leading-relaxed mb-2', textColor)}>
-              {contact.address}
-            </p>
-            {contact.address &&
-              !contact.address.includes('Tersedia di seluruh Indonesia') && (
-                <Link
-                  href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(contact.address ?? '')}`}
-                  target="_blank"
-                  className={cn(
-                    'inline-flex items-center gap-1 px-2 py-1 rounded-md text-xs font-medium transition-colors hover:opacity-80',
-                    contact.type === 'emergency'
-                      ? 'bg-pink-200 text-pink-800'
-                      : contact.type === 'medical'
-                        ? 'bg-green-200 text-green-800'
-                        : 'bg-pink-200 text-pink-800'
-                  )}
-                >
-                  <ExternalLink className="size-3" />
-                  Buka di Google Maps
-                </Link>
-              )}
-          </div>
-        </div>
-      )}
-
-      <Link
-        href={`tel:${contact.number.replace(/\D/g, '')}`}
+    return (
+      <div
         className={cn(
-          'w-full p-3 rounded-xl font-bold text-white flex items-center justify-center gap-2 hover:opacity-90 transition-opacity',
-          contact.type === 'emergency'
-            ? 'bg-pink-500'
-            : contact.type === 'medical'
-              ? 'bg-green-600'
-              : 'bg-pink-600'
+          'p-4 rounded-2xl flex flex-col justify-between h-full',
+          bgColor
         )}
-        role="button"
-        aria-label={`Hubungi ${contact.name} di nomor ${contact.number}`}
       >
-        <Phone className="size-4" />
-        {contact.number}
-      </Link>
-    </div>
-  )
+        <div>
+          <div className="flex items-start gap-3 mb-2">
+            <div
+              className={cn(
+                'p-2 rounded-full',
+                contact.type === 'emergency' ? 'bg-pink-200' : 'bg-green-200'
+              )}
+            >
+              <Icon className={cn('size-5', textColor)} />
+            </div>
+            <h4 className={cn('font-bold text-base flex-1', textColor)}>
+              {contact.name}
+            </h4>
+          </div>
+          <p className={cn('text-sm mb-3', textColor)}>{contact.description}</p>
+
+          {/* Address Information */}
+          {contact.address && (
+            <div
+              className={cn(
+                'flex items-start gap-2 mb-3 p-2 rounded-lg',
+                contact.type === 'emergency'
+                  ? 'bg-pink-50'
+                  : contact.type === 'medical'
+                    ? 'bg-green-50'
+                    : 'bg-pink-50'
+              )}
+            >
+              <Navigation
+                className={cn('size-4 mt-0.5 flex-shrink-0', textColor)}
+              />
+              <div className="flex-1">
+                <p className={cn('text-xs leading-relaxed mb-2', textColor)}>
+                  {contact.address}
+                </p>
+                {contact.address &&
+                  !contact.address.includes(
+                    'Tersedia di seluruh Indonesia'
+                  ) && (
+                    <Link
+                      href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${contact.name}${contact.region ? ` ${contact.region}` : ''}`)}`}
+                      target="_blank"
+                      className={cn(
+                        'inline-flex items-center gap-1 px-2 py-1 rounded-md text-xs font-medium transition-colors hover:opacity-80',
+                        contact.type === 'emergency'
+                          ? 'bg-pink-200 text-pink-800'
+                          : contact.type === 'medical'
+                            ? 'bg-green-200 text-green-800'
+                            : 'bg-pink-200 text-pink-800'
+                      )}
+                    >
+                      <ExternalLink className="size-3" />
+                      Buka di Google Maps
+                    </Link>
+                  )}
+              </div>
+            </div>
+          )}
+        </div>
+
+        <Link
+          href={`tel:${contact.number.replace(/\D/g, '')}`}
+          className={cn(
+            'w-full p-3 rounded-xl font-bold text-white flex items-center justify-center gap-2 hover:opacity-90 transition-opacity',
+            contact.type === 'emergency'
+              ? 'bg-pink-500'
+              : contact.type === 'medical'
+                ? 'bg-green-600'
+                : 'bg-pink-600'
+          )}
+          role="button"
+          aria-label={`Hubungi ${contact.name} di nomor ${contact.number}`}
+        >
+          <Phone className="size-4" />
+          {contact.number}
+        </Link>
+      </div>
+    )
+  }
 
   return (
     <div className="max-w-4xl mx-auto px-4 pb-10">
@@ -138,39 +181,46 @@ const EmergencyContacts = ({ wilayah }: { wilayah: string }) => {
           <MapPin className="text-green-800 size-5" />
           <h3 className="font-bold text-green-800">Pilih Wilayah</h3>
         </div>
-        <div className="flex flex-wrap gap-2">
-          <Link
-            href="/panduan-demo?category=kontak-darurat&wilayah=nasional"
-            scroll={false}
-            className={cn(
-              'px-4 py-2 rounded-xl font-medium transition-all flex items-center gap-2 cursor-pointer',
-              wilayah === 'nasional'
-                ? 'bg-green-800 text-white'
-                : 'bg-green-100 text-green-800 hover:bg-green-200'
-            )}
-          >
-            <Globe className="size-4" />
-            Nasional
-          </Link>
-          {AVAILABLE_REGIONS.map((region) => (
-            <Link
-              key={region}
-              href={`/panduan-demo?category=kontak-darurat&wilayah=${region.toLowerCase()}`}
-              scroll={false}
-              className={cn(
-                'px-4 py-2 rounded-xl font-medium transition-all cursor-pointer',
-                wilayah === region
-                  ? 'bg-green-800 text-white'
-                  : 'bg-green-100 text-green-800 hover:bg-green-200'
-              )}
-            >
-              {region}
-            </Link>
-          ))}
-        </div>
+        <Select
+          value={wilayah}
+          onValueChange={(value) => {
+            router.push(
+              `/panduan-demo?category=kontak-darurat&wilayah=${value}`,
+              {
+                scroll: false
+              }
+            )
+          }}
+        >
+          <SelectTrigger className="bg-green-100 border-green-200 text-green-800 font-medium cursor-pointer">
+            <SelectValue placeholder="Pilih wilayah..." />
+          </SelectTrigger>
+          <SelectContent>
+            <SelectItem value="nasional">
+              <div className="flex items-center gap-2">
+                <Globe className="size-4" />
+                Nasional
+              </div>
+            </SelectItem>
+            {CATEGORIZED_REGIONS.map((group) => (
+              <SelectGroup key={group.island}>
+                <SelectLabel>{group.island}</SelectLabel>
+                {group.cities.map((city) => (
+                  <SelectItem
+                    key={city}
+                    value={city.toLowerCase()}
+                    className="cursor-pointer"
+                  >
+                    {city}
+                  </SelectItem>
+                ))}
+              </SelectGroup>
+            ))}
+          </SelectContent>
+        </Select>
         <div className="mt-3 p-3 bg-pink-100 rounded-xl">
           <p className="text-pink-800 text-sm">
-            {wilayah === 'nasional'
+            {wilayahCapitalized === 'nasional'
               ? '📞 Nomor nasional dapat dihubungi dari seluruh Indonesia'
               : `📍 Menampilkan Kontak Darurat Khusus Untuk Wilayah ${wilayahCapitalized}`}
           </p>
@@ -220,7 +270,6 @@ const EmergencyContacts = ({ wilayah }: { wilayah: string }) => {
                 <ContactCard
                   key={`${contact.name}-${contact.region ?? 'national'}`}
                   contact={contact}
-                  icon={AlertTriangle}
                   bgColor="bg-pink-100"
                   textColor="text-pink-800"
                 />
@@ -241,7 +290,6 @@ const EmergencyContacts = ({ wilayah }: { wilayah: string }) => {
                 <ContactCard
                   key={`${contact.name}-${contact.region ?? 'national'}`}
                   contact={contact}
-                  icon={Heart}
                   bgColor="bg-green-100"
                   textColor="text-green-800"
                 />
@@ -262,7 +310,26 @@ const EmergencyContacts = ({ wilayah }: { wilayah: string }) => {
                 <ContactCard
                   key={`${contact.name}-${contact.region ?? 'national'}`}
                   contact={contact}
-                  icon={Shield}
+                  bgColor="bg-green-100"
+                  textColor="text-green-800"
+                />
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Other Services */}
+        {otherServices.length > 0 && (
+          <div>
+            <h3 className="text-xl font-bold text-pink-300 mb-4 flex items-center gap-2">
+              <Heart className="size-5" />
+              Bantuan Lainnya
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {otherServices.map((contact) => (
+                <ContactCard
+                  key={`${contact.name}-${contact.region ?? 'national'}`}
+                  contact={contact}
                   bgColor="bg-green-100"
                   textColor="text-green-800"
                 />

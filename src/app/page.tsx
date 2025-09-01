@@ -109,16 +109,17 @@ const Home = () => {
     <>
       <script
         type="application/ld+json"
+        // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
         <section className="relative bg-green-800 px-4 py-20 md:py-32">
           <div className="max-w-6xl mx-auto">
-            <div className="flex flex-col lg:flex-row gap-12 items-center">
+            <div className="flex flex-col lg:flex-row gap-8 items-center">
               {/* Left Column - Main Message */}
               <div className="text-center lg:text-left lg:flex-2">
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+                <h1 className="text-4xl md:text-5xl xl:text-6xl font-bold text-white mb-6 leading-tight">
                   Ikuti Terus Perkembangan
                   <span className="block text-pink-300">
                     Tuntutan Masyarakat
@@ -126,7 +127,7 @@ const Home = () => {
                   <span className="block">Kepada Pemerintah</span>
                 </h1>
 
-                <p className="text-lg md:text-xl text-green-100 mb-8 leading-relaxed">
+                <p className="text-lg text-green-100 mb-8 leading-relaxed max-w-lg mx-auto lg:mx-0">
                   Platform untuk memantau dan berpartisipasi dalam gerakan
                   perubahan yang damai, terorganisir, dan bermartabat.
                 </p>
@@ -154,7 +155,7 @@ const Home = () => {
                   <div className="flex items-center gap-2 mb-2">
                     <AlertTriangle className="size-4 text-red-300" />
                     <h3 className="font-medium text-white text-sm">
-                      Kontak Darurat
+                      Keadaan Darurat?
                     </h3>
                   </div>
                   <div className="flex gap-2">
@@ -173,7 +174,7 @@ const Home = () => {
                       118
                     </Link>
                     <Link
-                      href="/panduan-demo#kontak-darurat"
+                      href="/panduan-demo?category=kontak-darurat&wilayah=nasional"
                       className="flex-1 inline-flex items-center justify-center gap-1 bg-white/20 hover:bg-white/30 text-white text-xs font-medium py-2 px-3 rounded-lg transition-all duration-300"
                     >
                       <Shield className="size-3" />
@@ -188,7 +189,7 @@ const Home = () => {
                 <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2">
                   <div className="w-2 h-2 bg-green-300 rounded-full animate-pulse" />
                   <span className="text-green-100 text-sm font-medium">
-                    Live Updates
+                    Live Update
                   </span>
                 </div>
 

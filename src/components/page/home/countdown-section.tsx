@@ -1,7 +1,6 @@
 'use client'
 
-import { Clock, Calendar, ArrowRight } from 'lucide-react'
-import Link from 'next/link'
+import { Clock, Calendar } from 'lucide-react'
 import { useState, useEffect } from 'react'
 
 interface TimeLeft {
@@ -74,14 +73,6 @@ const CountdownSection = () => {
             </div>
           ))}
         </div>
-
-        <Link
-          href="/tuntutan"
-          className="w-full inline-flex items-center justify-center gap-2 bg-pink-400 text-white font-bold py-3 px-6 rounded-xl transition-all duration-300"
-        >
-          Pantau Progress
-          <ArrowRight className="size-4" />
-        </Link>
       </div>
     )
   }

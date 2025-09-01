@@ -2,23 +2,26 @@ import { AlertTriangle, MapPin, Route, Navigation } from 'lucide-react'
 
 import PanduanDemoTabs from '../../components/page/demonstrasi/panduan-demo-tabs'
 
-const DemonstrasiPage = ({
+const DemonstrasiPage = async ({
   searchParams
 }: {
-  searchParams: { category: string; wilayah: string }
+  searchParams: Promise<{ category: string; wilayah: string }>
 }) => {
-  const category = searchParams.category || 'persiapan'
-  const wilayah = searchParams.wilayah ? searchParams.wilayah.toLowerCase() : ''
+  const awaitedSearchParams = await searchParams
+  const category = awaitedSearchParams.category ?? 'persiapan'
+  const wilayah = awaitedSearchParams.wilayah
+    ? awaitedSearchParams.wilayah.toLowerCase()
+    : 'nasional'
 
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <div className="px-4 py-16" style={{ backgroundColor: '#037033' }}>
+      <div className="px-4 py-16 bg-[#037033]">
         <div className="max-w-6xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
             Demonstrasi yang Aman,
             <br />
-            <span style={{ color: '#EB8FBD' }}>Suara yang Terdengar</span>
+            <span className="text-[#EB8FBD]">Suara yang Terdengar</span>
           </h1>
 
           <p className="text-xl text-slate-300 mb-12 max-w-4xl mx-auto leading-relaxed">
@@ -33,10 +36,7 @@ const DemonstrasiPage = ({
       <div className="bg-white px-4 py-12">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-8">
-            <h2
-              className="text-3xl font-bold mb-4"
-              style={{ color: '#037033' }}
-            >
+            <h2 className="text-3xl font-bold mb-4 text-[#037033]">
               Pelajari Rute Demonstrasi
             </h2>
             <p className="text-lg text-slate-600 max-w-3xl mx-auto">
@@ -50,11 +50,8 @@ const DemonstrasiPage = ({
               className="bg-white rounded-2xl p-6 border-2 hover:shadow-lg transition-shadow"
               style={{ borderColor: '#037033' }}
             >
-              <MapPin style={{ color: '#037033' }} className="size-12 mb-4" />
-              <h3
-                className="text-xl font-bold mb-3"
-                style={{ color: '#037033' }}
-              >
+              <MapPin className="size-12 mb-4 text-[#037033]" />
+              <h3 className="text-xl font-bold mb-3 text-[#037033]">
                 Titik Kumpul
               </h3>
               <p className="text-slate-600 mb-4">
@@ -72,11 +69,8 @@ const DemonstrasiPage = ({
               className="bg-white rounded-2xl p-6 border-2 hover:shadow-lg transition-shadow"
               style={{ borderColor: '#EB8FBD' }}
             >
-              <Route style={{ color: '#EB8FBD' }} className="size-12 mb-4" />
-              <h3
-                className="text-xl font-bold mb-3"
-                style={{ color: '#037033' }}
-              >
+              <Route className="size-12 mb-4 text-[#EB8FBD]" />
+              <h3 className="text-xl font-bold mb-3 text-[#037033]">
                 Jalur Demonstrasi
               </h3>
               <p className="text-slate-600 mb-4">
@@ -94,14 +88,8 @@ const DemonstrasiPage = ({
               className="bg-white rounded-2xl p-6 border-2 hover:shadow-lg transition-shadow"
               style={{ borderColor: '#037033' }}
             >
-              <Navigation
-                style={{ color: '#037033' }}
-                className="size-12 mb-4"
-              />
-              <h3
-                className="text-xl font-bold mb-3"
-                style={{ color: '#037033' }}
-              >
+              <Navigation className="size-12 mb-4 text-[#037033]" />
+              <h3 className="text-xl font-bold mb-3 text-[#037033]">
                 Navigasi Aman
               </h3>
               <p className="text-slate-600 mb-4">
@@ -126,15 +114,9 @@ const DemonstrasiPage = ({
             style={{ borderLeftColor: '#037033' }}
           >
             <div className="flex items-start gap-4">
-              <AlertTriangle
-                style={{ color: '#037033' }}
-                className="size-8 shrink-0 mt-1"
-              />
+              <AlertTriangle className="size-8 shrink-0 mt-1 text-[#037033]" />
               <div>
-                <h3
-                  className="text-2xl font-bold mb-4"
-                  style={{ color: '#037033' }}
-                >
+                <h3 className="text-2xl font-bold mb-4 text-[#037033]">
                   Keamanan adalah Prioritas Utama
                 </h3>
                 <p className="text-slate-700 leading-relaxed mb-6 text-lg">
@@ -148,10 +130,7 @@ const DemonstrasiPage = ({
                     className="bg-white border-2 rounded-xl p-4"
                     style={{ borderColor: '#037033' }}
                   >
-                    <div
-                      className="font-semibold mb-2"
-                      style={{ color: '#037033' }}
-                    >
+                    <div className="font-semibold mb-2 text-[#037033]">
                       🛡️ Tetap Aman
                     </div>
                     <div className="text-sm text-slate-600">
@@ -162,10 +141,7 @@ const DemonstrasiPage = ({
                     className="bg-white border-2 rounded-xl p-4"
                     style={{ borderColor: '#EB8FBD' }}
                   >
-                    <div
-                      className="font-semibold mb-2"
-                      style={{ color: '#037033' }}
-                    >
+                    <div className="font-semibold mb-2 text-[#037033]">
                       🤝 Tetap Damai
                     </div>
                     <div className="text-sm text-slate-600">
@@ -176,10 +152,7 @@ const DemonstrasiPage = ({
                     className="bg-white border-2 rounded-xl p-4"
                     style={{ borderColor: '#037033' }}
                   >
-                    <div
-                      className="font-semibold mb-2"
-                      style={{ color: '#037033' }}
-                    >
+                    <div className="font-semibold mb-2 text-[#037033]">
                       📱 Tetap Terhubung
                     </div>
                     <div className="text-sm text-slate-600">

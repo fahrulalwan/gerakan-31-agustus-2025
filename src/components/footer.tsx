@@ -1,47 +1,28 @@
-import {
-  // Heart,
-  // Mail,
-  // Phone,
-  // MapPin,
-  // Calendar,
-  // Users,
-  FileText,
-  Megaphone
-} from 'lucide-react'
+import { FileText, Megaphone } from 'lucide-react'
 import Link from 'next/link'
 
 const Footer = () => {
-  // const currentYear = new Date().getFullYear()
-
   const quickLinks = [
     { name: 'Tuntutan Rakyat', href: '/tuntutan', icon: FileText },
-    { name: 'Panduan Demonstrasi', href: '/demonstrasi', icon: Megaphone }
+    { name: 'Panduan Demonstrasi', href: '/panduan-demo', icon: Megaphone }
   ]
 
   const importantInfo = [
-    { name: 'Tentang Gerakan', href: '/tentang' }
-    // { name: 'Informasi', href: '/informasi', icon: Calendar }
-    // { name: 'Hak Hukum', href: '/demonstrasi' },
-    // { name: 'Panduan Demo', href: '/panduan-demo' }
+    { name: 'Tentang Gerakan', href: '/tentang' },
+    { name: 'Hak Hukum', href: '/panduan-demo?category=hak-hukum' }
   ]
 
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-[#036033] text-white">
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Brand Section */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-4">
-              {/* <div
-                className="w-10 h-10 rounded-full flex items-center justify-center"
-                style={{ backgroundColor: '#037033' }}
-              >
-                <span className="text-white font-bold text-lg">31</span>
-              </div> */}
               <div>
                 <h3 className="font-bold text-xl">17+8 Tuntutan Rakyat</h3>
-                <p className="text-sm" style={{ color: '#037033' }}>
+                <p className="text-sm text-[#EB8FBD] font-medium">
                   Transparansi, Reformasi, Empati
                 </p>
               </div>
@@ -50,10 +31,6 @@ const Footer = () => {
               Tuntutan rakyat untuk perubahan menuju Indonesia yang lebih baik.
               Bersama kita wujudkan tuntutan rakyat untuk masa depan bangsa.
             </p>
-            {/* <div className="flex items-center space-x-2 text-sm text-gray-400">
-              <Calendar className="w-4 h-4" />
-              <span>Target: 31 Agustus 2025</span>
-            </div> */}
           </div>
 
           {/* Quick Links */}
@@ -70,10 +47,7 @@ const Footer = () => {
                       href={link.href}
                       className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 md:justify-end"
                     >
-                      <Icon
-                        className="w-4 h-4 group-hover:scale-110 transition-transform duration-200"
-                        style={{ color: '#037033' }}
-                      />
+                      <Icon className="w-4 h-4 group-hover:scale-110 transition-transform duration-200 text-[#EB8FBD]" />
                       <span className="text-sm">{link.name}</span>
                     </Link>
                   </li>
@@ -100,34 +74,6 @@ const Footer = () => {
               ))}
             </ul>
           </div>
-
-          {/* Contact & Emergency */}
-          {/* <div>
-            <h4 className="font-semibold text-lg mb-4">Kontak Darurat</h4>
-            <div className="space-y-3">
-              <div className="flex items-center space-x-2 text-gray-300">
-                <Phone className="w-4 h-4" style={{ color: '#037033' }} />
-                <span className="text-sm">Hotline: 021-XXXX-XXXX</span>
-              </div>
-              <div className="flex items-center space-x-2 text-gray-300">
-                <Mail className="w-4 h-4" style={{ color: '#037033' }} />
-                <span className="text-sm">info@gerakan31agustus.id</span>
-              </div>
-              <div className="flex items-start space-x-2 text-gray-300">
-                <MapPin
-                  className="w-4 h-4 mt-0.5"
-                  style={{ color: '#037033' }}
-                />
-                <span className="text-sm">Jakarta, Indonesia</span>
-              </div>
-            </div>
-            <div className="mt-6 p-3 bg-yellow-900/30 border border-yellow-700/50 rounded-lg">
-              <p className="text-yellow-200 text-xs">
-                <strong>Keamanan Utama:</strong> Selalu ikuti protokol keamanan
-                saat berdemonstrasi. Hubungi kontak darurat jika diperlukan.
-              </p>
-            </div>
-          </div> */}
         </div>
       </div>
 
