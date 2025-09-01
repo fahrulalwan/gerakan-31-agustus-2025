@@ -1,36 +1,44 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Gerakan 31 Agustus 2025 🇮🇩🌑
 
-## Getting Started
+Gerakan 31 Agustus 2025 is a community-driven platform designed to provide a reliable source of information and tools during times of civil unrest in Indonesia. Our mission is to combat misinformation and empower citizens by creating a centralized, verifiable platform for news and protest resources.
 
-First, run the development server:
+The name "Gerakan 31 Agustus 2025" is a sub-movement of #IndonesiaGelap, a powerful reference to the ongoing demonstrations and the need for transparency and truth.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 1. Website Checklist for Demonstrations
+This is a comprehensive and actionable checklist designed for organizers of protest-related websites. It goes beyond a simple to-do list, offering guidance on crucial aspects to ensure a safe and effective digital presence.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+**Content & Information:** Guidelines on what to include, such as the protest's core demands, schedule, and safe gathering points.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+**Security & Privacy:** Best practices for protecting user data and maintaining anonymity.
 
-## Learn More
+**Accessibility:** Tips to ensure the website is accessible to all users, including those with disabilities.
 
-To learn more about Next.js, take a look at the following resources:
+**Calls to Action:** Advice on how to create clear and effective calls to action, such as sharing on social media or donating to a verified cause.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 2. Misinformation-Free News Platform
+This core feature is a news curation platform built on a collaborative model to ensure integrity and combat the spread of misinformation.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+**Fact-Checking Process:** All curated news is subject to a rigorous internal and collaborative verification process to ensure accuracy before publication.
 
-## Deploy on Vercel
+**Community Reporting:** Users can flag potential misinformation, which is then reviewed by our network of collaborators, creating a feedback loop for continuous improvement.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## How It Works
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The platform will be built with a modern web stack, using real-time updates and a modular architecture to scale effectively. The front-end will be designed to be intuitive and mobile-first, recognizing that most users will access the platform on their smartphones.
+
+## How to Contribute
+
+This project is open-source, and we welcome contributions from developers, designers, journalists, and activists.
+
+1. **Fork the repository:** Start by forking this repository to your own GitHub account.
+2. **Clone the project:** `git clone https://github.com/fahrulalwan/gerakan-31-agustus-2025.git`
+3. **Create a new branch:** `git checkout -b feature/your-feature-name`
+4. **Make your changes:** Implement your feature or fix a bug.
+5. **Commit and push:** `git commit -m "feat: your feature description"` followed by `git push origin feature/your-feature-name`
+6. **Open a Pull Request:** Submit a pull request detailing your changes.
+
+## Contact
+
+For inquiries or media collaborations, please open an issue on GitHub or reach out to fahrulalwan@gmail.com.
