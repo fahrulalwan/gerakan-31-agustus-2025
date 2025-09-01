@@ -51,24 +51,24 @@ const CountdownTimer = () => {
   if (!isClient) {
     return (
       <div
-        className="rounded-3xl p-8 shadow-2xl border-2"
+        className="rounded-2xl md:rounded-3xl p-4 md:p-6 lg:p-8 shadow-2xl border-2"
         style={{ backgroundColor: '#EB8FBD', borderColor: '#EB8FBD' }}
       >
-        <div className="flex items-center justify-center gap-4 mb-6">
-          <div className="bg-white/20 rounded-full p-3">
-            <Clock className="size-8 text-white" />
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 md:gap-4 mb-4 md:mb-6">
+          <div className="bg-white/20 rounded-full p-2 md:p-3">
+            <Clock className="size-6 md:size-8 text-white" />
           </div>
-          <div>
-            <h3 className="text-3xl font-bold text-white mb-1">
+          <div className="text-center sm:text-left">
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-1">
               Countdown Sampai 5 September 2025
             </h3>
-            <p className="text-white text-lg">
+            <p className="text-white text-sm md:text-lg">
               Waktu tersisa untuk aksi bersama
             </p>
           </div>
         </div>
 
-        <div className="grid grid-cols-4 gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 md:gap-4">
           {[
             { label: 'Hari', value: '---' },
             { label: 'Jam', value: '--' },
@@ -77,12 +77,12 @@ const CountdownTimer = () => {
           ].map((item, index) => (
             <div
               key={index}
-              className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center border border-white/20"
+              className="bg-white/10 backdrop-blur-sm rounded-xl md:rounded-2xl p-3 md:p-4 lg:p-6 text-center border border-white/20"
             >
-              <div className="text-4xl lg:text-5xl font-bold text-white mb-2">
+              <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-1 md:mb-2">
                 {item.value}
               </div>
-              <div className="text-white font-medium text-sm lg:text-base">
+              <div className="text-white font-medium text-xs sm:text-sm md:text-base">
                 {item.label}
               </div>
             </div>
@@ -100,27 +100,27 @@ const CountdownTimer = () => {
 
   return (
     <div
-      className="rounded-3xl p-8 shadow-2xl border-2"
+      className="rounded-2xl md:rounded-3xl p-4 md:p-6 lg:p-8 shadow-2xl border-2"
       style={{
         backgroundColor: isExpired ? '#6B7280' : '#EB8FBD',
         borderColor: isExpired ? '#6B7280' : '#EB8FBD'
       }}
     >
-      <div className="flex items-center justify-center gap-4 mb-6">
-        <div className="bg-white/20 rounded-full p-3">
+      <div className="flex flex-col sm:flex-row items-center justify-center gap-3 md:gap-4 mb-4 md:mb-6">
+        <div className="bg-white/20 rounded-full p-2 md:p-3">
           {isExpired ? (
-            <Calendar className="size-8 text-white" />
+            <Calendar className="size-6 md:size-8 text-white" />
           ) : (
-            <Clock className="size-8 text-white" />
+            <Clock className="size-6 md:size-8 text-white" />
           )}
         </div>
-        <div>
-          <h3 className="text-3xl font-bold text-white mb-1">
+        <div className="text-center sm:text-left">
+          <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-1">
             {isExpired
               ? 'Waktu Telah Tiba!'
               : 'Countdown Sampai 5 September 2025'}
           </h3>
-          <p className="text-lg text-white">
+          <p className="text-sm md:text-lg text-white">
             {isExpired
               ? 'Saatnya aksi bersama dimulai'
               : 'Waktu tersisa untuk aksi bersama'}
@@ -128,7 +128,7 @@ const CountdownTimer = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-4 gap-4">
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 md:gap-4">
         {[
           { label: 'Hari', value: timeLeft.days.toString().padStart(2, '0') },
           { label: 'Jam', value: timeLeft.hours.toString().padStart(2, '0') },
@@ -143,12 +143,12 @@ const CountdownTimer = () => {
         ].map((item, index) => (
           <div
             key={index}
-            className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center border border-white/20 hover:bg-white/15 transition-all duration-300"
+            className="bg-white/10 backdrop-blur-sm rounded-xl md:rounded-2xl p-3 md:p-4 lg:p-6 text-center border border-white/20 hover:bg-white/15 transition-all duration-300"
           >
-            <div className="text-4xl lg:text-5xl font-bold text-white mb-2 font-mono">
+            <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-1 md:mb-2 font-mono">
               {item.value}
             </div>
-            <div className="font-medium text-sm lg:text-base text-white">
+            <div className="font-medium text-xs sm:text-sm md:text-base text-white">
               {item.label}
             </div>
           </div>
@@ -156,8 +156,8 @@ const CountdownTimer = () => {
       </div>
 
       {!isExpired && (
-        <div className="mt-6 text-center">
-          <p className="text-white text-sm">
+        <div className="mt-4 md:mt-6 text-center">
+          <p className="text-white text-xs sm:text-sm">
             Bersiaplah untuk bergabung dalam gerakan perubahan Indonesia
           </p>
         </div>

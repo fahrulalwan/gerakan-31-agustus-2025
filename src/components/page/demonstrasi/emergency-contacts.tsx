@@ -57,15 +57,12 @@ const EmergencyContacts = () => {
   )
 
   return (
-    <div className="max-w-screen-md mx-auto px-4 md:px-10 pb-10">
+    <div className="max-w-5xl mx-auto px-4 md:px-0 pb-10">
       <div className="text-center mb-6">
-        <div className="flex items-center justify-center gap-3 mb-4">
-          <Phone className="text-pink-300 size-8" />
-          <h2 className="text-3xl font-bold text-pink-300">
-            Kontak Darurat & Bantuan
-          </h2>
-        </div>
-        <p className="text-white mb-4">
+        <h2 className="text-3xl font-bold text-green-800 mb-2">
+          Kontak Darurat & Bantuan
+        </h2>
+        <p className="text-slate-900 mb-4">
           Nomor-nomor penting yang dapat dihubungi dalam situasi darurat
         </p>
       </div>

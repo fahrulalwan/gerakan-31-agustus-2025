@@ -13,23 +13,15 @@ const DuringDemonstration = () => {
   )
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-12">
+    <div className="max-w-5xl mx-auto px-4 md:px-0 pb-12">
       {/* Header Section */}
-      <div className="text-center mb-12">
-        <h2 className="text-4xl font-bold text-slate-900 mb-4">
+      <div className="text-center mb-6">
+        <h2 className="text-3xl font-bold text-green-800 mb-2">
           {DURING_DEMONSTRATION_CHECKLIST.title}
         </h2>
-        <p className="text-lg text-slate-600 mb-8 max-w-3xl mx-auto">
+        <p className="text-slate-900 mb-4">
           {DURING_DEMONSTRATION_CHECKLIST.description}
         </p>
-
-        {/* Live Status Indicator */}
-        <div className="inline-flex items-center gap-3 bg-green-100 border border-green-300 rounded-full px-6 py-3 mb-6">
-          <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
-          <span className="text-green-800 font-semibold">
-            Status: Demonstrasi Aktif
-          </span>
-        </div>
       </div>
 
       {/* Emergency Alert */}

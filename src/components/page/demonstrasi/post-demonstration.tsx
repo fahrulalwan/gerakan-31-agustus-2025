@@ -1,25 +1,20 @@
-import { Heart, Shield } from 'lucide-react'
+import {
+  Heart
+  // Shield
+} from 'lucide-react'
 
 import { POST_DEMONSTRATION_CHECKLIST } from '@/constants/demonstration'
 import { cn } from '@/lib/utils'
 
 const PostDemonstration = () => (
-  <div className="max-w-screen-md mx-auto px-4 md:px-10 pb-10">
+  <div className="max-w-5xl mx-auto px-4 md:px-0 pb-10">
     <div className="text-center mb-6">
-      <h2 className="text-3xl font-bold text-pink-300 mb-2">
+      <h2 className="text-3xl font-bold text-green-800 mb-2">
         {POST_DEMONSTRATION_CHECKLIST.title}
       </h2>
-      <p className="text-white mb-4">
+      <p className="text-slate-900 mb-4">
         {POST_DEMONSTRATION_CHECKLIST.description}
       </p>
-
-      {/* Status Indicator */}
-      <div className="flex items-center justify-center gap-2 mb-4">
-        <Shield className="text-green-400 size-5" />
-        <span className="text-green-200 font-medium">
-          Status: Demonstrasi Selesai
-        </span>
-      </div>
     </div>
 
     {/* Appreciation Message */}

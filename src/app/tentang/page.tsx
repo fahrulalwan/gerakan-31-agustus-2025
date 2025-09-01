@@ -47,48 +47,48 @@ const TentangPage = () => {
     }
   ]
 
-  const timeline = [
-    {
-      date: '28-30 Agustus 2024',
-      title: 'Demonstrasi Awal',
-      description:
-        'Gelombang demonstrasi pertama yang memicu terbentuknya gerakan ini'
-    },
-    {
-      date: '31 Agustus 2024',
-      title: 'Deklarasi Gerakan',
-      description: 'Pembentukan gerakan terorganisir dengan tuntutan yang jelas'
-    },
-    {
-      date: '1-7 September 2024',
-      title: 'Konsolidasi',
-      description: 'Penyusunan tuntutan 1 minggu dan strategi gerakan'
-    },
-    {
-      date: '31 Agustus 2025',
-      title: 'Target Pencapaian',
-      description: 'Deadline untuk pemenuhan seluruh tuntutan yang diajukan'
-    }
-  ]
+  // const timeline = [
+  //   {
+  //     date: '28-30 Agustus 2024',
+  //     title: 'Demonstrasi Awal',
+  //     description:
+  //       'Gelombang demonstrasi pertama yang memicu terbentuknya gerakan ini'
+  //   },
+  //   {
+  //     date: '31 Agustus 2024',
+  //     title: 'Deklarasi Gerakan',
+  //     description: 'Pembentukan gerakan terorganisir dengan tuntutan yang jelas'
+  //   },
+  //   {
+  //     date: '1-7 September 2024',
+  //     title: 'Konsolidasi',
+  //     description: 'Penyusunan tuntutan 1 minggu dan strategi gerakan'
+  //   },
+  //   {
+  //     date: '31 Agustus 2025',
+  //     title: 'Target Pencapaian',
+  //     description: 'Deadline untuk pemenuhan seluruh tuntutan yang diajukan'
+  //   }
+  // ]
 
   return (
     <div className="min-h-screen bg-green-800">
       {/* Hero Section */}
       <section className="px-4 py-16">
-        <div className="max-w-4xl mx-auto text-center">
+        <div className="max-w-5xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Tentang Gerakan 31 Agustus 2025
+            Tentang 17+8 Tuntutan Rakyat
           </h1>
           <p className="text-xl text-green-100 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Gerakan rakyat Indonesia yang lahir dari semangat reformasi untuk
-            mewujudkan perubahan menyeluruh menuju Indonesia yang lebih
-            demokratis, adil, dan sejahtera.
+            Tuntutan rakyat Indonesia yang lahir dari semangat untuk mewujudkan
+            perubahan menyeluruh menuju Indonesia yang lebih demokratis, adil,
+            dan sejahtera.
           </p>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto">
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
               <Calendar className="text-white size-6 mx-auto mb-2" />
-              <div className="text-xl font-bold text-white">2024</div>
+              <div className="text-xl font-bold text-white">2025</div>
               <div className="text-sm text-green-100">Dimulai</div>
             </div>
             <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4">
@@ -112,7 +112,7 @@ const TentangPage = () => {
 
       {/* Latar Belakang */}
       <section className="px-4 pb-16">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <div className="bg-white rounded-3xl p-8 md:p-12">
             <h2 className="text-3xl font-bold text-green-800 mb-6 text-center">
               Latar Belakang
@@ -144,7 +144,7 @@ const TentangPage = () => {
 
       {/* Visi & Misi */}
       <section className="px-4 pb-16">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
             Visi & Misi
           </h2>
@@ -173,7 +173,7 @@ const TentangPage = () => {
 
       {/* Nilai-Nilai */}
       <section className="px-4 pb-16">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
             Nilai-Nilai Gerakan
           </h2>
@@ -202,7 +202,7 @@ const TentangPage = () => {
       </section>
 
       {/* Timeline */}
-      <section className="px-4 pb-16">
+      {/* <section className="px-4 pb-16">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-white text-center mb-12">
             Perjalanan Gerakan
@@ -232,11 +232,11 @@ const TentangPage = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Kontak & Dukungan */}
       <section className="px-4 pb-16">
-        <div className="max-w-4xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 md:p-12 text-center">
             <h2 className="text-3xl font-bold text-white mb-6">
               Bergabung dengan Gerakan

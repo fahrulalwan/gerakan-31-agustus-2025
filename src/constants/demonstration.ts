@@ -265,5 +265,11 @@ export const EMERGENCY_CONTACTS: EmergencyContact[] = [
     number: '021-794-7089',
     description: 'Komisi untuk Orang Hilang dan Korban Tindak Kekerasan',
     type: 'legal'
+  },
+  {
+    name: 'Dompet Dhuafa',
+    number: '0811-1617-101',
+    description: 'Crisis Center Dompet Dhuafa',
+    type: 'legal'
   }
 ]
