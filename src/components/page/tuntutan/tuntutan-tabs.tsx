@@ -1,4 +1,3 @@
-import { Clock, Target, CheckCircle2 } from 'lucide-react'
 import Link from 'next/link'
 
 import { cn } from '@/lib/utils'
@@ -22,9 +21,7 @@ const TuntutanTabs = ({ tab }: { tab: number }) => (
             )}
             style={tab === 0 ? { backgroundColor: '#037033' } : {}}
           >
-            <Clock className="size-5" />
             <span className="text-lg">1 MINGGU</span>
-            {tab === 0 && <CheckCircle2 className="size-5" />}
           </Link>
 
           <Link
@@ -37,9 +34,7 @@ const TuntutanTabs = ({ tab }: { tab: number }) => (
             )}
             style={tab === 1 ? { backgroundColor: '#EB8FBD' } : {}}
           >
-            <Target className="size-5" />
             <span className="text-lg">1 TAHUN</span>
-            {tab === 1 && <CheckCircle2 className="size-5" />}
           </Link>
         </div>
       </div>

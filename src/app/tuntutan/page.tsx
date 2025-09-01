@@ -1,4 +1,8 @@
-import { AlertTriangle, TrendingUp, ArrowRight } from 'lucide-react'
+import {
+  AlertTriangle
+  // TrendingUp
+  // ArrowRight
+} from 'lucide-react'
 
 import CountdownTimer from '@/components/page/tuntutan/countdown-timer'
 import TuntutanTabs from '@/components/page/tuntutan/tuntutan-tabs'
@@ -20,15 +24,15 @@ const TuntutanPage = ({ searchParams }: { searchParams: { tab: string } }) => (
         />
       </div>
 
-      <div className="relative px-6 py-16 lg:py-24">
+      <div className="relative px-6 py-16">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-12">
-            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
+            {/* <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
               <TrendingUp className="size-4 text-white" />
               <span className="text-sm font-medium text-white">
                 Tuntutan Rakyat Indonesia
               </span>
-            </div>
+            </div> */}
 
             <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight">
               17+8: Suara Rakyat untuk
@@ -83,7 +87,7 @@ const TuntutanPage = ({ searchParams }: { searchParams: { tab: string } }) => (
     <TuntutanTabs tab={searchParams.tab === '1' ? 1 : 0} />
 
     {/* Support Section */}
-    <div className="px-6 py-16 bg-white">
+    {/* <div className="px-6 py-16 bg-white">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
@@ -217,7 +221,7 @@ const TuntutanPage = ({ searchParams }: { searchParams: { tab: string } }) => (
           </div>
         </div>
       </div>
-    </div>
+    </div> */}
   </div>
 )
 

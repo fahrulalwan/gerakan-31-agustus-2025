@@ -2,7 +2,7 @@
 
 import {
   Shield,
-  Users,
+  // Users,
   AlertTriangle,
   CheckCircle,
   Phone,
@@ -76,7 +76,7 @@ const DemonstrasiPage = () => {
       {/* Hero Section */}
       <div className="px-4 py-16" style={{ backgroundColor: '#037033' }}>
         <div className="max-w-6xl mx-auto text-center">
-          <div className="mb-8">
+          {/* <div className="mb-8">
             <div
               className="inline-flex items-center gap-2 rounded-full px-6 py-3 mb-6"
               style={{ backgroundColor: '#EB8FBD' }}
@@ -86,7 +86,7 @@ const DemonstrasiPage = () => {
                 Panduan Demonstrasi Aman
               </span>
             </div>
-          </div>
+          </div> */}
 
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
             Demonstrasi yang Aman,
@@ -101,7 +101,7 @@ const DemonstrasiPage = () => {
           </p>
 
           {/* Stats Overview */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+          {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12 max-w-5xl mx-auto">
             <div className="bg-white/10 border border-white/20 rounded-2xl p-6 hover:bg-white/15 transition-colors">
               <CheckCircle
                 style={{ color: '#EB8FBD' }}
@@ -123,7 +123,7 @@ const DemonstrasiPage = () => {
                 style={{ color: '#EB8FBD' }}
                 className="size-10 mx-auto mb-4"
               />
-              <div className="text-3xl font-bold text-white mb-1">8</div>
+              <div className="text-3xl font-bold text-white mb-1">11</div>
               <div className="text-sm text-white/80">Kontak Darurat</div>
             </div>
             <div className="bg-white/10 border border-white/20 rounded-2xl p-6 hover:bg-white/15 transition-colors">
@@ -134,7 +134,7 @@ const DemonstrasiPage = () => {
               <div className="text-3xl font-bold text-white mb-1">100%</div>
               <div className="text-sm text-white/80">Keamanan</div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
 
@@ -154,7 +154,7 @@ const DemonstrasiPage = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
             <div
               className="bg-white rounded-2xl p-6 border-2 hover:shadow-lg transition-shadow"
               style={{ borderColor: '#037033' }}
@@ -229,7 +229,7 @@ const DemonstrasiPage = () => {
 
       {/* Safety Alert */}
       <div className="px-4 py-8" style={{ backgroundColor: '#EB8FBD' }}>
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <div
             className="bg-white border-l-4 rounded-2xl p-8 shadow-sm"
             style={{ borderLeftColor: '#037033' }}
@@ -318,7 +318,7 @@ const DemonstrasiPage = () => {
           </div>
 
           {/* Desktop Tab Navigation */}
-          <div className="hidden md:grid md:grid-cols-5 gap-4 mb-8">
+          <div className="hidden md:grid md:grid-cols-5 gap-4 mb-8 max-w-5xl mx-auto">
             {tabs.map((tab) => {
               const Icon = tab.icon
               const isActive = activeTab === tab.id

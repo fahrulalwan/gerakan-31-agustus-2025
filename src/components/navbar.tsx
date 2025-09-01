@@ -5,7 +5,7 @@ import {
   X,
   Home,
   FileText,
-  Info,
+  // Info,
   HelpCircle,
   Megaphone
 } from 'lucide-react'
@@ -21,7 +21,7 @@ const Navbar = () => {
     { name: 'Beranda', href: '/', icon: Home },
     { name: 'Tuntutan', href: '/tuntutan', icon: FileText },
     { name: 'Panduan Demo', href: '/panduan-demo', icon: Megaphone },
-    { name: 'Informasi', href: '/informasi', icon: Info },
+    // { name: 'Informasi', href: '/informasi', icon: Info },
     { name: 'Tentang', href: '/tentang', icon: HelpCircle }
   ]
 
@@ -39,14 +39,14 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-2">
-              <div
+              {/* <div
                 className="w-8 h-8 rounded-full flex items-center justify-center"
                 style={{ backgroundColor: '#037033' }}
               >
                 <span className="text-white font-bold text-sm">31</span>
-              </div>
-              <span className="font-bold text-xl text-gray-900">
-                Gerakan <span style={{ color: '#037033' }}>31 Agustus</span>
+              </div> */}
+              <span className="font-bold text-xl text-green-800">
+                17+8 Tuntutan Rakyat
               </span>
             </Link>
           </div>
@@ -113,7 +113,7 @@ const Navbar = () => {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className={`block px-3 py-2 rounded-lg text-base font-medium transition-all duration-200 flex items-center space-x-3 ${
+                  className={`px-3 py-2 rounded-lg text-base font-medium transition-all duration-200 flex items-center space-x-3 ${
                     isActive(item.href)
                       ? 'text-white shadow-md'
                       : 'text-gray-700 hover:text-white hover:shadow-md'

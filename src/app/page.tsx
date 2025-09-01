@@ -1,8 +1,8 @@
 import {
   ArrowRight,
   Users,
-  Info,
-  BookOpen,
+  // Info,
+  // BookOpen,
   CheckSquare,
   Shield,
   AlertTriangle,
@@ -41,16 +41,16 @@ const Home = () => {
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
       <section className="relative bg-green-800 px-4 py-20 md:py-32">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left Column - Main Message */}
             <div className="text-center lg:text-left">
-              <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
+              {/* <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
                 <div className="w-2 h-2 bg-green-300 rounded-full animate-pulse" />
                 <span className="text-green-100 text-sm font-medium">
                   Live Updates
                 </span>
-              </div>
+              </div> */}
 
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
                 Ikuti Terus Perkembangan
@@ -59,8 +59,8 @@ const Home = () => {
               </h1>
 
               <p className="text-lg md:text-xl text-green-100 mb-8 leading-relaxed max-w-xl">
-                Platform terpercaya untuk memantau dan berpartisipasi dalam
-                gerakan perubahan yang damai, terorganisir, dan bermartabat.
+                Platform untuk memantau dan berpartisipasi dalam gerakan
+                perubahan yang damai, terorganisir, dan bermartabat.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
@@ -101,7 +101,7 @@ const Home = () => {
 
             {/* Right Column - Quick Stats */}
             <div className="lg:pl-8">
-              <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20">
+              {/* <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20">
                 <h3 className="text-2xl font-bold text-white mb-6 text-center">
                   Status Terkini
                 </h3>
@@ -153,7 +153,7 @@ const Home = () => {
                   Pantau Progress
                   <ArrowRight className="size-4" />
                 </Link>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -161,7 +161,7 @@ const Home = () => {
 
       {/* Focus Section - Main Actions */}
       <section className="py-20 px-4 bg-gray-50">
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Dua Fokus Utama Gerakan
@@ -271,8 +271,8 @@ const Home = () => {
       </section>
 
       {/* Additional Resources */}
-      <section className="py-20 px-4">
-        <div className="max-w-6xl mx-auto">
+      {/* <section className="py-20 px-4">
+        <div className="max-w-5xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Sumber Daya Pendukung
@@ -333,7 +333,7 @@ const Home = () => {
             </Link>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Call to Action */}
       <section className="py-20 px-4 bg-green-800">
