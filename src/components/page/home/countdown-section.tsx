@@ -51,7 +51,7 @@ const CountdownSection = () => {
 
   if (!isClient) {
     return (
-      <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 w-full max-w-2xl">
+      <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 w-full">
         <h3 className="text-2xl font-bold text-white mb-6 text-center">
           Countdown Gerakan
         </h3>
@@ -93,7 +93,7 @@ const CountdownSection = () => {
     timeLeft.seconds === 0
 
   return (
-    <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 w-full max-w-2xl">
+    <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 border border-white/20 w-full">
       <h3 className="text-2xl font-bold text-white mb-6 text-center">
         {isExpired ? 'Waktu Telah Tiba!' : 'Countdown Gerakan'}
       </h3>

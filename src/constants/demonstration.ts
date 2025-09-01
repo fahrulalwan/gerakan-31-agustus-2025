@@ -15,6 +15,9 @@ export interface EmergencyContact {
   number: string
   description: string
   type: 'legal' | 'medical' | 'emergency'
+  region?: string
+  isNational?: boolean
+  address?: string
 }
 
 export const PRE_DEMONSTRATION_CHECKLIST: ChecklistSection = {
@@ -217,59 +220,357 @@ export const LEGAL_RIGHTS_INFO = {
   ]
 }
 
-export const EMERGENCY_CONTACTS: EmergencyContact[] = [
+// National Emergency Numbers (Available across Indonesia)
+export const NATIONAL_EMERGENCY_CONTACTS: EmergencyContact[] = [
   {
     name: 'Polisi',
     number: '110',
-    description: 'Layanan darurat kepolisian',
-    type: 'emergency'
+    description: 'Layanan darurat kepolisian nasional',
+    type: 'emergency',
+    isNational: true,
+    address: 'Tersedia di seluruh Indonesia - hubungi dari telepon manapun'
   },
   {
     name: 'Ambulans',
     number: '118',
-    description: 'Layanan ambulans dan gawat darurat',
-    type: 'medical'
+    description: 'Layanan ambulans dan gawat darurat nasional',
+    type: 'medical',
+    isNational: true,
+    address: 'Tersedia di seluruh Indonesia - hubungi dari telepon manapun'
   },
   {
     name: 'Pemadam Kebakaran',
     number: '113',
-    description: 'Layanan pemadam kebakaran',
-    type: 'emergency'
+    description: 'Layanan pemadam kebakaran nasional',
+    type: 'emergency',
+    isNational: true,
+    address: 'Tersedia di seluruh Indonesia - hubungi dari telepon manapun'
   },
   {
-    name: 'SAR',
+    name: 'SAR Nasional',
     number: '115',
     description: 'Search and Rescue (Pencarian dan Pertolongan)',
-    type: 'emergency'
-  },
-  {
-    name: 'LBH Jakarta',
-    number: '021-719-2620',
-    description: 'Lembaga Bantuan Hukum Jakarta',
-    type: 'legal'
+    type: 'emergency',
+    isNational: true,
+    address: 'Tersedia di seluruh Indonesia - hubungi dari telepon manapun'
   },
   {
     name: 'Komnas HAM',
     number: '021-392-5230',
     description: 'Komisi Nasional Hak Asasi Manusia',
-    type: 'legal'
+    type: 'legal',
+    isNational: true,
+    address: 'Jl. Latuharhary No.4B, Menteng, Jakarta Pusat 10310'
   },
   {
-    name: 'YLBHI',
+    name: 'YLBHI Pusat',
     number: '021-315-6013',
     description: 'Yayasan Lembaga Bantuan Hukum Indonesia',
-    type: 'legal'
+    type: 'legal',
+    isNational: true,
+    address: 'Jl. Diponegoro No.74, Menteng, Jakarta Pusat 10320'
+  }
+]
+
+// Regional Emergency Contacts for Major Cities
+export const REGIONAL_EMERGENCY_CONTACTS: EmergencyContact[] = [
+  // Jakarta
+  {
+    name: 'LBH Jakarta',
+    number: '021-719-2620',
+    description: 'Lembaga Bantuan Hukum Jakarta',
+    type: 'legal',
+    region: 'Jakarta',
+    address: 'Jl. Diponegoro No.74, Menteng, Jakarta Pusat 10320'
   },
   {
-    name: 'Kontras',
+    name: 'Kontras Jakarta',
     number: '021-794-7089',
     description: 'Komisi untuk Orang Hilang dan Korban Tindak Kekerasan',
-    type: 'legal'
+    type: 'legal',
+    region: 'Jakarta',
+    address: 'Jl. Borobudur No.14, Menteng, Jakarta Pusat 10320'
   },
   {
-    name: 'Dompet Dhuafa',
-    number: '0811-1617-101',
-    description: 'Crisis Center Dompet Dhuafa',
-    type: 'legal'
+    name: 'RS Cipto Mangunkusumo',
+    number: '021-314-0608',
+    description: 'Rumah Sakit Pusat Nasional',
+    type: 'medical',
+    region: 'Jakarta',
+    address: 'Jl. Diponegoro No.71, Kenari, Senen, Jakarta Pusat 10430'
+  },
+  {
+    name: 'Polda Metro Jaya',
+    number: '021-523-4001',
+    description: 'Kepolisian Daerah Metro Jaya',
+    type: 'emergency',
+    region: 'Jakarta',
+    address: 'Jl. Jend. Sudirman No.55, Senayan, Jakarta Selatan 12190'
+  },
+
+  // Surabaya
+  {
+    name: 'LBH Surabaya',
+    number: '031-502-4736',
+    description: 'Lembaga Bantuan Hukum Surabaya',
+    type: 'legal',
+    region: 'Surabaya',
+    address:
+      'Jl. Raya Jemursari No.244, Jemur Wonosari, Wonocolo, Surabaya 60237'
+  },
+  {
+    name: 'RSUD Dr. Soetomo',
+    number: '031-550-1001',
+    description: 'Rumah Sakit Umum Daerah Dr. Soetomo',
+    type: 'medical',
+    region: 'Surabaya',
+    address:
+      'Jl. Mayjen Prof. Dr. Moestopo No.6-8, Airlangga, Gubeng, Surabaya 60286'
+  },
+  {
+    name: 'Polda Jawa Timur',
+    number: '031-828-1234',
+    description: 'Kepolisian Daerah Jawa Timur',
+    type: 'emergency',
+    region: 'Surabaya',
+    address: 'Jl. Ahmad Yani No.116, Ketintang, Gayungan, Surabaya 60231'
+  },
+
+  // Bandung
+  {
+    name: 'LBH Bandung',
+    number: '022-423-5871',
+    description: 'Lembaga Bantuan Hukum Bandung',
+    type: 'legal',
+    region: 'Bandung',
+    address:
+      'Jl. Wastukencana No.5, Babakan Ciamis, Sumur Bandung, Bandung 40117'
+  },
+  {
+    name: 'RS Hasan Sadikin',
+    number: '022-203-4953',
+    description: 'Rumah Sakit Hasan Sadikin',
+    type: 'medical',
+    region: 'Bandung',
+    address: 'Jl. Pasteur No.38, Pasteur, Sukajadi, Bandung 40161'
+  },
+  {
+    name: 'Polda Jawa Barat',
+    number: '022-420-3012',
+    description: 'Kepolisian Daerah Jawa Barat',
+    type: 'emergency',
+    region: 'Bandung',
+    address: 'Jl. Soekarno-Hatta No.748, Dayeuhkolot, Bandung 40258'
+  },
+
+  // Medan
+  {
+    name: 'LBH Medan',
+    number: '061-455-2080',
+    description: 'Lembaga Bantuan Hukum Medan',
+    type: 'legal',
+    region: 'Medan',
+    address: 'Jl. Sei Serayu No.9, Babura, Medan Baru, Medan 20153'
+  },
+  {
+    name: 'RSUP H. Adam Malik',
+    number: '061-836-0143',
+    description: 'Rumah Sakit Umum Pusat H. Adam Malik',
+    type: 'medical',
+    region: 'Medan',
+    address:
+      'Jl. Bunga Lau No.17, Kemenangan Tani, Medan Tuntungan, Medan 20136'
+  },
+  {
+    name: 'Polda Sumatra Utara',
+    number: '061-451-2046',
+    description: 'Kepolisian Daerah Sumatra Utara',
+    type: 'emergency',
+    region: 'Medan',
+    address:
+      'Jl. Jend. Ahmad Yani No.7, Petisah Tengah, Medan Petisah, Medan 20112'
+  },
+
+  // Semarang
+  {
+    name: 'LBH Semarang',
+    number: '024-831-2094',
+    description: 'Lembaga Bantuan Hukum Semarang',
+    type: 'legal',
+    region: 'Semarang',
+    address: 'Jl. Pandanaran No.126, Pekunden, Semarang Tengah, Semarang 50241'
+  },
+  {
+    name: 'RSUP Dr. Kariadi',
+    number: '024-841-3476',
+    description: 'Rumah Sakit Umum Pusat Dr. Kariadi',
+    type: 'medical',
+    region: 'Semarang',
+    address: 'Jl. Dr. Sutomo No.16, Randusari, Semarang Selatan, Semarang 50244'
+  },
+  {
+    name: 'Polda Jawa Tengah',
+    number: '024-841-2500',
+    description: 'Kepolisian Daerah Jawa Tengah',
+    type: 'emergency',
+    region: 'Semarang',
+    address: 'Jl. Pahlawan No.1, Mugassari, Semarang Selatan, Semarang 50249'
+  },
+
+  // Yogyakarta
+  {
+    name: 'LBH Yogyakarta',
+    number: '0274-512-781',
+    description: 'Lembaga Bantuan Hukum Yogyakarta',
+    type: 'legal',
+    region: 'Yogyakarta',
+    address: 'Jl. Kapas No.20, Semaki, Umbulharjo, Yogyakarta 55166'
+  },
+  {
+    name: 'RSUP Dr. Sardjito',
+    number: '0274-587-333',
+    description: 'Rumah Sakit Umum Pusat Dr. Sardjito',
+    type: 'medical',
+    region: 'Yogyakarta',
+    address: 'Jl. Kesehatan No.1, Sekip, Sinduadi, Mlati, Sleman 55284'
+  },
+  {
+    name: 'Polda DIY',
+    number: '0274-512-070',
+    description: 'Kepolisian Daerah Istimewa Yogyakarta',
+    type: 'emergency',
+    region: 'Yogyakarta',
+    address: 'Jl. Ringroad Utara, Condongcatur, Depok, Sleman 55283'
+  },
+
+  // Makassar
+  {
+    name: 'LBH Makassar',
+    number: '0411-872-045',
+    description: 'Lembaga Bantuan Hukum Makassar',
+    type: 'legal',
+    region: 'Makassar',
+    address: 'Jl. Urip Sumoharjo No.37, Karampuang, Panakkukang, Makassar 90231'
+  },
+  {
+    name: 'RSUP Dr. Wahidin',
+    number: '0411-584-677',
+    description: 'Rumah Sakit Umum Pusat Dr. Wahidin Sudirohusodo',
+    type: 'medical',
+    region: 'Makassar',
+    address:
+      'Jl. Perintis Kemerdekaan Km.11, Tamalanrea Indah, Tamalanrea, Makassar 90245'
+  },
+  {
+    name: 'Polda Sulawesi Selatan',
+    number: '0411-441-270',
+    description: 'Kepolisian Daerah Sulawesi Selatan',
+    type: 'emergency',
+    region: 'Makassar',
+    address: 'Jl. Ahmad Yani No.9, Banta-Bantaeng, Rappocini, Makassar 90222'
+  },
+
+  // Palembang
+  {
+    name: 'LBH Palembang',
+    number: '0711-351-234',
+    description: 'Lembaga Bantuan Hukum Palembang',
+    type: 'legal',
+    region: 'Palembang',
+    address:
+      'Jl. Kapten A. Rivai No.1404, 9/10 Ulu, Seberang Ulu I, Palembang 30116'
+  },
+  {
+    name: 'RSUP Mohammad Hoesin',
+    number: '0711-354-088',
+    description: 'Rumah Sakit Umum Pusat Mohammad Hoesin',
+    type: 'medical',
+    region: 'Palembang',
+    address: 'Jl. Jend. Sudirman Km.3.5, Kemas Rindo, Kemuning, Palembang 30126'
+  },
+  {
+    name: 'Polda Sumatra Selatan',
+    number: '0711-442-061',
+    description: 'Kepolisian Daerah Sumatra Selatan',
+    type: 'emergency',
+    region: 'Palembang',
+    address:
+      'Jl. Jend. Sudirman No.1435, Siring Agung, Ilir Barat I, Palembang 30138'
+  },
+
+  // Denpasar
+  {
+    name: 'LBH Bali',
+    number: '0361-227-832',
+    description: 'Lembaga Bantuan Hukum Bali',
+    type: 'legal',
+    region: 'Denpasar',
+    address: 'Jl. Hayam Wuruk No.175, Taman, Denpasar Barat, Denpasar 80114'
+  },
+  {
+    name: 'RSUP Sanglah',
+    number: '0361-227-911',
+    description: 'Rumah Sakit Umum Pusat Sanglah',
+    type: 'medical',
+    region: 'Denpasar',
+    address: 'Jl. Diponegoro, Dauh Puri Klod, Denpasar Barat, Denpasar 80113'
+  },
+  {
+    name: 'Polda Bali',
+    number: '0361-424-346',
+    description: 'Kepolisian Daerah Bali',
+    type: 'emergency',
+    region: 'Denpasar',
+    address:
+      'Jl. Gunung Sanghyang No.110, Padangsambian, Denpasar Barat, Denpasar 80117'
+  },
+
+  // Balikpapan
+  {
+    name: 'LBH Balikpapan',
+    number: '0542-734-567',
+    description: 'Lembaga Bantuan Hukum Balikpapan',
+    type: 'legal',
+    region: 'Balikpapan',
+    address:
+      'Jl. Jend. Sudirman No.1, Klandasan Ilir, Balikpapan Kota, Balikpapan 76111'
+  },
+  {
+    name: 'RSUD Abdul Wahab Sjahranie',
+    number: '0542-873-901',
+    description: 'Rumah Sakit Umum Daerah Abdul Wahab Sjahranie',
+    type: 'medical',
+    region: 'Balikpapan',
+    address:
+      'Jl. Wahab Sjahranie No.1, Air Putih, Samarinda Ulu, Samarinda 75124'
+  },
+  {
+    name: 'Polda Kalimantan Timur',
+    number: '0542-421-110',
+    description: 'Kepolisian Daerah Kalimantan Timur',
+    type: 'emergency',
+    region: 'Balikpapan',
+    address:
+      'Jl. Jend. Sudirman No.3, Pelabuhan, Balikpapan Kota, Balikpapan 76111'
   }
+]
+
+// Combined emergency contacts for backward compatibility
+export const EMERGENCY_CONTACTS: EmergencyContact[] = [
+  ...NATIONAL_EMERGENCY_CONTACTS,
+  ...REGIONAL_EMERGENCY_CONTACTS
+]
+
+// Available regions for selection
+export const AVAILABLE_REGIONS = [
+  'Jakarta',
+  'Surabaya',
+  'Bandung',
+  'Medan',
+  'Semarang',
+  'Yogyakarta',
+  'Makassar',
+  'Palembang',
+  'Denpasar',
+  'Balikpapan'
 ]

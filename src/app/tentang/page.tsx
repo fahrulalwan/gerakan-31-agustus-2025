@@ -155,10 +155,7 @@ const TentangPage = () => {
           <div className="relative mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-2xl text-center">
               <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
-                Tentang{' '}
-                <span className="bg-gradient-to-r from-pink-300 to-pink-500 bg-clip-text text-transparent">
-                  Gerakan
-                </span>
+                Tentang <span className="text-white">Gerakan</span>
               </h1>
               <p className="mt-6 text-lg leading-8 text-green-100">
                 Mengenal lebih dalam latar belakang, visi, misi, dan nilai-nilai

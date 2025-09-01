@@ -5,7 +5,8 @@ import {
   Shield,
   AlertTriangle,
   Eye,
-  Target
+  Target,
+  Phone
 } from 'lucide-react'
 import type { Metadata } from 'next'
 import Link from 'next/link'
@@ -114,16 +115,9 @@ const Home = () => {
         {/* Hero Section */}
         <section className="relative bg-green-800 px-4 py-20 md:py-32">
           <div className="max-w-6xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="flex flex-col lg:flex-row gap-12 items-center">
               {/* Left Column - Main Message */}
-              <div className="text-center lg:text-left">
-                {/* <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2 mb-6">
-                <div className="w-2 h-2 bg-green-300 rounded-full animate-pulse" />
-                <span className="text-green-100 text-sm font-medium">
-                  Live Updates
-                </span>
-              </div> */}
-
+              <div className="text-center lg:text-left lg:flex-2">
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
                   Ikuti Terus Perkembangan
                   <span className="block text-pink-300">
@@ -155,6 +149,53 @@ const Home = () => {
                   </Link>
                 </div>
 
+                {/* Emergency Access */}
+                <div className="mb-8 p-3 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 max-w-sm mx-auto lg:mx-0">
+                  <div className="flex items-center gap-2 mb-2">
+                    <AlertTriangle className="size-4 text-red-300" />
+                    <h3 className="font-medium text-white text-sm">
+                      Kontak Darurat
+                    </h3>
+                  </div>
+                  <div className="flex gap-2">
+                    <Link
+                      href="tel:110"
+                      className="flex-1 inline-flex items-center justify-center gap-1 bg-white/20 hover:bg-white/30 text-white text-xs font-medium py-2 px-3 rounded-lg transition-all duration-300"
+                    >
+                      <Phone className="size-3" />
+                      110
+                    </Link>
+                    <Link
+                      href="tel:118"
+                      className="flex-1 inline-flex items-center justify-center gap-1 bg-white/20 hover:bg-white/30 text-white text-xs font-medium py-2 px-3 rounded-lg transition-all duration-300"
+                    >
+                      <Phone className="size-3" />
+                      118
+                    </Link>
+                    <Link
+                      href="/panduan-demo#kontak-darurat"
+                      className="flex-1 inline-flex items-center justify-center gap-1 bg-white/20 hover:bg-white/30 text-white text-xs font-medium py-2 px-3 rounded-lg transition-all duration-300"
+                    >
+                      <Shield className="size-3" />
+                      Semua
+                    </Link>
+                  </div>
+                </div>
+              </div>
+
+              {/* Right Column - Countdown */}
+              <div className="flex flex-col items-center gap-6">
+                <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2">
+                  <div className="w-2 h-2 bg-green-300 rounded-full animate-pulse" />
+                  <span className="text-green-100 text-sm font-medium">
+                    Live Updates
+                  </span>
+                </div>
+
+                <div className="flex justify-center">
+                  <CountdownSection />
+                </div>
+
                 {/* Key Stats */}
                 <div className="grid grid-cols-3 gap-4 max-w-md mx-auto lg:mx-0">
                   {keyFeatures.map((feature, index) => {
@@ -171,11 +212,6 @@ const Home = () => {
                     )
                   })}
                 </div>
-              </div>
-
-              {/* Right Column - Countdown */}
-              <div className="flex justify-center">
-                <CountdownSection />
               </div>
             </div>
           </div>
@@ -196,7 +232,7 @@ const Home = () => {
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {/* Tuntutan Card */}
-              <div className="group bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border-2 border-transparent hover:border-green-200">
+              <div className="group bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border-2 border-transparent hover:border-green-200 flex flex-col">
                 <div className="flex items-center gap-4 mb-6">
                   <div className="bg-green-100 p-4 rounded-2xl group-hover:bg-green-200 transition-colors">
                     <CheckSquare className="size-8 text-green-600" />
@@ -233,7 +269,7 @@ const Home = () => {
 
                 <Link
                   href="/tuntutan"
-                  className="w-full inline-flex items-center justify-center gap-3 bg-green-600 hover:bg-green-700 text-white font-bold py-4 px-6 rounded-2xl transition-all duration-300 group-hover:scale-105"
+                  className="w-full inline-flex items-center justify-center gap-3 bg-green-600 hover:bg-green-700 text-white font-bold py-4 px-6 rounded-2xl transition-all duration-300 group-hover:scale-105 mt-auto"
                 >
                   Lihat Semua Tuntutan
                   <ArrowRight className="size-5" />

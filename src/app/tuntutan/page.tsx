@@ -47,7 +47,11 @@ export const metadata: Metadata = {
   }
 }
 
-const TuntutanPage = ({ searchParams }: { searchParams: { tab: string } }) => {
+const TuntutanPage = ({
+  searchParams
+}: {
+  searchParams: { jangka: string }
+}) => {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Article',
@@ -165,7 +169,7 @@ const TuntutanPage = ({ searchParams }: { searchParams: { tab: string } }) => {
         </div>
 
         {/* Tabs and Content */}
-        <TuntutanTabs tab={searchParams.tab === '1' ? 1 : 0} />
+        <TuntutanTabs jangka={searchParams.jangka || '1-minggu'} />
       </div>
     </>
   )
