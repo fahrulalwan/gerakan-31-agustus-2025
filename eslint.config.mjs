@@ -411,7 +411,25 @@ export const IGNORE_PATTERNS = {
     'build/**',
     'coverage/**',
     '*.config.js',
-    '*.config.ts'
+    '*.config.ts',
+    '.next/**',
+    'out/**',
+    '.env*',
+    '.env.local',
+    '.env.development.local',
+    '.env.test.local',
+    '.env.production.local',
+    '*.log',
+    'logs/**',
+    '.nyc_output/**',
+    '*.tgz',
+    '*.tar.gz',
+    '.DS_Store',
+    'Thumbs.db',
+    '.vscode/**',
+    '.idea/**',
+    '*.tmp',
+    '*.temp'
   ]
 }
 
