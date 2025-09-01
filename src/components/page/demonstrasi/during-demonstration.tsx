@@ -1,35 +1,9 @@
-'use client'
-
-import {
-  CheckIcon,
-  AlertTriangle,
-  Shield,
-  Users,
-  Clock,
-  Eye
-} from 'lucide-react'
-import { useState } from 'react'
+import { AlertTriangle, Shield, Users, Clock, Eye } from 'lucide-react'
 
 import { DURING_DEMONSTRATION_CHECKLIST } from '@/constants/demonstration'
 import { cn } from '@/lib/utils'
 
 const DuringDemonstration = () => {
-  const [checkedItems, setCheckedItems] = useState<Set<string>>(new Set())
-
-  const toggleItem = (itemId: string) => {
-    const newCheckedItems = new Set(checkedItems)
-    if (newCheckedItems.has(itemId)) {
-      newCheckedItems.delete(itemId)
-    } else {
-      newCheckedItems.add(itemId)
-    }
-    setCheckedItems(newCheckedItems)
-  }
-
-  const completedCount = checkedItems.size
-  const totalCount = DURING_DEMONSTRATION_CHECKLIST.items.length
-  const progressPercentage = Math.round((completedCount / totalCount) * 100)
-
   // Categorize items for bento grid
   const highPriorityItems = DURING_DEMONSTRATION_CHECKLIST.items.filter(
     (item) => item.priority === 'high'
@@ -55,20 +29,6 @@ const DuringDemonstration = () => {
           <span className="text-green-800 font-semibold">
             Status: Demonstrasi Aktif
           </span>
-        </div>
-
-        {/* Progress Overview */}
-        <div className="bg-slate-50 rounded-2xl p-6 max-w-md mx-auto">
-          <div className="bg-slate-200 rounded-full h-3 mb-3">
-            <div
-              className="bg-blue-600 h-3 rounded-full transition-all duration-500"
-              style={{ width: `${progressPercentage}%` }}
-            />
-          </div>
-          <p className="text-sm text-slate-600 font-medium">
-            {completedCount} dari {totalCount} panduan diikuti (
-            {progressPercentage}%)
-          </p>
         </div>
       </div>
 
@@ -96,46 +56,35 @@ const DuringDemonstration = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {highPriorityItems.map((item, index) => {
-              const isChecked = checkedItems.has(item.id)
-
-              return (
-                <div
-                  key={item.id}
-                  className={cn(
-                    'bg-white border-2 rounded-2xl p-4 cursor-pointer transition-all duration-300 hover:shadow-md',
-                    isChecked
-                      ? 'border-green-500 bg-green-50'
-                      : 'border-red-200 hover:border-red-300'
-                  )}
-                  onClick={() => toggleItem(item.id)}
-                >
-                  <div className="flex items-start gap-3">
-                    <div className="relative">
-                      <span className="bg-red-600 text-white rounded-full size-8 flex items-center justify-center text-sm font-bold shrink-0">
-                        {index + 1}
-                      </span>
-                      {isChecked && (
-                        <CheckIcon className="size-6 text-green-600 absolute -top-1 -right-1 bg-white rounded-full p-1" />
+            {highPriorityItems.map((item, index) => (
+              <div
+                key={item.id}
+                className={cn(
+                  'bg-white border-2 rounded-2xl p-4 transition-all duration-300',
+                  'border-red-200'
+                )}
+              >
+                <div className="flex items-start gap-3">
+                  <div className="relative">
+                    <span className="bg-red-600 text-white rounded-full size-8 flex items-center justify-center text-sm font-bold shrink-0">
+                      {index + 1}
+                    </span>
+                  </div>
+                  <div className="flex-1">
+                    <p
+                      className={cn(
+                        'text-slate-900 font-medium leading-relaxed'
                       )}
-                    </div>
-                    <div className="flex-1">
-                      <p
-                        className={cn(
-                          'text-slate-900 font-medium leading-relaxed',
-                          isChecked && 'line-through opacity-70'
-                        )}
-                      >
-                        {item.content}
-                      </p>
-                      <span className="inline-block mt-2 px-3 py-1 bg-red-600 text-white text-xs rounded-full font-bold">
-                        KRITIS
-                      </span>
-                    </div>
+                    >
+                      {item.content}
+                    </p>
+                    <span className="inline-block mt-2 px-3 py-1 bg-red-600 text-white text-xs rounded-full font-bold">
+                      KRITIS
+                    </span>
                   </div>
                 </div>
-              )
-            })}
+              </div>
+            ))}
           </div>
         </div>
 
@@ -170,41 +119,28 @@ const DuringDemonstration = () => {
           </div>
 
           <div className="space-y-3">
-            {mediumPriorityItems.map((item, index) => {
-              const isChecked = checkedItems.has(item.id)
-
-              return (
-                <div
-                  key={item.id}
-                  className={cn(
-                    'bg-white border rounded-xl p-4 cursor-pointer transition-all duration-300 hover:shadow-sm',
-                    isChecked
-                      ? 'border-green-300 bg-green-50'
-                      : 'border-blue-200 hover:border-blue-300'
-                  )}
-                  onClick={() => toggleItem(item.id)}
-                >
-                  <div className="flex items-center gap-3">
-                    <div className="relative">
-                      <span className="bg-blue-600 text-white rounded-full size-7 flex items-center justify-center text-xs font-bold shrink-0">
-                        {highPriorityItems.length + index + 1}
-                      </span>
-                      {isChecked && (
-                        <CheckIcon className="size-5 text-green-600 absolute -top-1 -right-1 bg-white rounded-full p-0.5" />
-                      )}
-                    </div>
-                    <p
-                      className={cn(
-                        'text-slate-800 text-sm font-medium flex-1',
-                        isChecked && 'line-through opacity-70'
-                      )}
-                    >
-                      {item.content}
-                    </p>
+            {mediumPriorityItems.map((item, index) => (
+              <div
+                key={item.id}
+                className={cn(
+                  'bg-white border rounded-xl p-4 transition-all duration-300',
+                  'border-blue-200'
+                )}
+              >
+                <div className="flex items-center gap-3">
+                  <div className="relative">
+                    <span className="bg-blue-600 text-white rounded-full size-7 flex items-center justify-center text-xs font-bold shrink-0">
+                      {highPriorityItems.length + index + 1}
+                    </span>
                   </div>
+                  <p
+                    className={cn('text-slate-800 text-sm font-medium flex-1')}
+                  >
+                    {item.content}
+                  </p>
                 </div>
-              )
-            })}
+              </div>
+            ))}
           </div>
         </div>
 

@@ -60,7 +60,7 @@ const CountdownTimer = () => {
           </div>
           <div>
             <h3 className="text-3xl font-bold text-white mb-1">
-              Countdown Menuju 6 September 2025
+              Countdown Sampai 5 September 2025
             </h3>
             <p className="text-white text-lg">
               Waktu tersisa untuk aksi bersama
@@ -118,7 +118,7 @@ const CountdownTimer = () => {
           <h3 className="text-3xl font-bold text-white mb-1">
             {isExpired
               ? 'Waktu Telah Tiba!'
-              : 'Countdown Menuju 6 September 2025'}
+              : 'Countdown Sampai 5 September 2025'}
           </h3>
           <p className="text-lg text-white">
             {isExpired

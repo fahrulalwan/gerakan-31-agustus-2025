@@ -3,7 +3,7 @@ import { AlertTriangle, TrendingUp, ArrowRight } from 'lucide-react'
 import CountdownTimer from '@/components/page/tuntutan/countdown-timer'
 import TuntutanTabs from '@/components/page/tuntutan/tuntutan-tabs'
 
-const TuntutanPage = () => (
+const TuntutanPage = ({ searchParams }: { searchParams: { tab: string } }) => (
   <div className="min-h-screen bg-white">
     {/* Hero Section */}
     <div
@@ -80,7 +80,7 @@ const TuntutanPage = () => (
     </div>
 
     {/* Tabs and Content */}
-    <TuntutanTabs />
+    <TuntutanTabs tab={searchParams.tab === '1' ? 1 : 0} />
 
     {/* Support Section */}
     <div className="px-6 py-16 bg-white">

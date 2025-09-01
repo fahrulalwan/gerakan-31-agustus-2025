@@ -1,7 +1,6 @@
 export interface ChecklistItem {
   id: string
   content: string
-  status?: boolean
   priority?: 'high' | 'medium' | 'low'
 }
 
