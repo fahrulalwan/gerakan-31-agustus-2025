@@ -10,6 +10,7 @@ import {
 } from 'lucide-react'
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { redirect } from 'next/navigation'
 
 import CountdownSection from '@/components/page/home/countdown-section'
 
@@ -104,6 +105,8 @@ const Home = () => {
       '@id': 'https://gerakan-31-agustus-2025.vercel.app'
     }
   }
+
+  redirect('/tuntutan')
 
   return (
     <>
