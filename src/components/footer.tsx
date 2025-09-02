@@ -8,7 +8,8 @@ const Footer = () => {
   ]
 
   const importantInfo = [
-    { name: 'Tentang Gerakan', href: '/tentang' },
+    { name: 'Tentang Tuntutan', href: '/tentang' },
+    { name: 'Kontak Darurat', href: '/panduan-demo?category=kontak-darurat' },
     { name: 'Hak Hukum', href: '/panduan-demo?category=hak-hukum' }
   ]
 
@@ -76,36 +77,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-
-      {/* Bottom Bar */}
-      {/* <div className="border-t border-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-          <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="flex items-center space-x-2 text-gray-400 text-sm">
-              <span>17+8 Tuntutan Rakyat.</span>
-              <span>Dibuat dengan</span>
-              <Heart className="w-4 h-4 text-red-500" />
-              <span>untuk Indonesia.</span>
-            </div>
-
-            <div className="flex items-center space-x-6 text-sm text-gray-400">
-              <Link
-                href="/tentang"
-                className="hover:text-white transition-colors duration-200"
-              >
-                Tentang
-              </Link>
-              <Link
-                href="/informasi"
-                className="hover:text-white transition-colors duration-200"
-              >
-                Informasi
-              </Link>
-              <span className="text-xs">Gerakan Rakyat untuk Perubahan</span>
-            </div>
-          </div>
-        </div>
-      </div> */}
     </footer>
   )
 }

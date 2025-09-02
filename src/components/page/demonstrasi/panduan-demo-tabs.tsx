@@ -1,5 +1,8 @@
+'use client'
+
 import { Shield, CheckCircle, Phone, Scale, Clock } from 'lucide-react'
 import Link from 'next/link'
+import { useEffect, useRef } from 'react'
 
 import { cn } from '@/lib/utils'
 
@@ -63,10 +66,26 @@ const PanduanDemoTabs = ({
     tabs.find((tab) => tab.category === category)?.component ??
     EmergencyContacts
 
+  const contentRef = useRef<HTMLDivElement>(null)
+
+  const handleScrollToContent = () => {
+    contentRef.current?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+      inline: 'nearest'
+    })
+  }
+
+  useEffect(() => {
+    if (category && category !== 'persiapan') {
+      handleScrollToContent()
+    }
+  }, [category])
+
   return (
     <>
       {/* Enhanced Tab Navigation */}
-      <div className="bg-gray-900 px-4 py-12">
+      <div className="bg-gray-900 px-4 py-12" ref={contentRef}>
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold mb-4 text-[#EB8FBD]">
@@ -87,6 +106,7 @@ const PanduanDemoTabs = ({
                 <Link
                   href={`/panduan-demo?category=${tab.category}`}
                   scroll={false}
+                  onClick={handleScrollToContent}
                   key={tab.id}
                   className={cn(
                     'group relative rounded-2xl p-6 text-center transition-all duration-300 hover:scale-105 border-2 cursor-pointer border-[#037033]',
