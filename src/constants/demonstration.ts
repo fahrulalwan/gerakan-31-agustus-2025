@@ -17,6 +17,7 @@ export interface EmergencyContact {
   type: 'legal' | 'medical' | 'emergency' | 'other'
   region?: string
   isNational?: boolean
+  isWhatsappAvailable?: boolean
   address?: string
 }
 
@@ -329,10 +330,11 @@ export const NATIONAL_EMERGENCY_CONTACTS: EmergencyContact[] = [
   },
   {
     name: 'Dompet Dhuafa',
-    number: '0804-100-4000',
+    number: '0811-161-7101',
     description: 'Crisis Center Dompet Dhuafa',
     type: 'other',
     isNational: true,
+    isWhatsappAvailable: true,
     address:
       'Philanthropy Building Jl. Warung Jati Barat No.14, Jakarta Selatan 12540'
   }
