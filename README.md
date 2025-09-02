@@ -1,8 +1,8 @@
-# Gerakan 31 Agustus 2025 🇮🇩🌑
+# 17+8: Tuntutan Rakyat 🇮🇩🌑
 
-Gerakan 31 Agustus 2025 is a community-driven platform designed to provide a reliable source of information and tools during times of civil unrest in Indonesia. Our mission is to combat misinformation and empower citizens by creating a centralized, verifiable platform for news and protest resources.
+17+8: Tuntutan Rakyat is a community-driven platform designed to provide a reliable source of information and tools during times of civil unrest in Indonesia. Our mission is to combat misinformation and empower citizens by creating a centralized, verifiable platform for news and protest resources.
 
-The name "Gerakan 31 Agustus 2025" is a sub-movement of #IndonesiaGelap, a powerful reference to the ongoing demonstrations and the need for transparency and truth.
+The name "17+8: Tuntutan Rakyat" is a sub-movement of #IndonesiaGelap, a powerful reference to the ongoing demonstrations and the need for transparency and truth.
 
 ## Features
 
@@ -33,7 +33,7 @@ The platform will be built with a modern web stack, using real-time updates and 
 This project is open-source, and we welcome contributions from developers, designers, journalists, and activists.
 
 1. **Fork the repository:** Start by forking this repository to your own GitHub account.
-2. **Clone the project:** `git clone https://github.com/fahrulalwan/gerakan-31-agustus-2025.git`
+2. **Clone the project:** `git clone https://github.com/fahrulalwan/tuntutan-rakyat.git`
 3. **Create a new branch:** `git checkout -b feature/your-feature-name`
 4. **Make your changes:** Implement your feature or fix a bug.
 5. **Commit and push:** `git commit -m "feat: your feature description"` followed by `git push origin feature/your-feature-name`

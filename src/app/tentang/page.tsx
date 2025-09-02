@@ -1,5 +1,6 @@
 // import { Heart, Scale, Shield, Target, Users } from 'lucide-react'
 import type { Metadata } from 'next'
+import Link from 'next/link'
 
 // const visiMisi = [
 //   {
@@ -64,26 +65,17 @@ export const metadata: Metadata = {
     title: 'Tentang 17+8 Tuntutan Rakyat | Transparansi. Reformasi. Empati.',
     description:
       '17+8 Tuntutan Rakyat. Hasil rangkuman beberapa tuntutan yang beredar di media sosial dalam beberapa hari.',
-    url: 'https://gerakan-31-agustus-2025.vercel.app/tentang',
-    type: 'article',
-    images: [
-      {
-        url: '/opengraph-image.png',
-        width: 1200,
-        height: 630,
-        alt: 'Tentang Gerakan 31 Agustus 2025'
-      }
-    ]
+    url: 'https://tuntutan-rakyat.vercel.app/tentang',
+    type: 'article'
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Tentang 17+8 Tuntutan Rakyat | Transparansi. Reformasi. Empati.',
     description:
-      '17+8 Tuntutan Rakyat. Hasil rangkuman beberapa tuntutan yang beredar di media sosial dalam beberapa hari.',
-    images: ['/twitter-image.png']
+      '17+8 Tuntutan Rakyat. Hasil rangkuman beberapa tuntutan yang beredar di media sosial dalam beberapa hari.'
   },
   alternates: {
-    canonical: 'https://gerakan-31-agustus-2025.vercel.app/tentang'
+    canonical: 'https://tuntutan-rakyat.vercel.app/tentang'
   }
 }
 
@@ -123,7 +115,7 @@ const TentangPage = () => {
       name: '17+8 Tuntutan Rakyat | Transparansi. Reformasi. Empati.',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://gerakan-31-agustus-2025.vercel.app/android-chrome-512x512.png'
+        url: 'https://tuntutan-rakyat.vercel.app/android-chrome-512x512.png'
       }
     },
     datePublished: '2025-08-31',
@@ -137,7 +129,7 @@ const TentangPage = () => {
         // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <div className="min-h-screen bg-gray-900">
+      <div className="bg-gray-900">
         {/* Hero Section */}
         <div className="py-20">
           <div className="mx-auto max-w-2xl text-center px-6 lg:px-8 mb-10">
@@ -149,9 +141,95 @@ const TentangPage = () => {
               desakan yang beredar di media sosial dalam beberapa hari terakhir
             </p>
           </div>
-          <p className="text-4xl md:text-6xl lg:text-[120px] text-pink-200 font-semibold text-center">
+          <p className="text-4xl md:text-6xl lg:text-8xl text-pink-200 font-semibold text-center">
             #ResetIndonesia
           </p>
+        </div>
+
+        {/* Sumber Tuntutan Section */}
+        <div className="py-16 sm:py-24">
+          <div className="mx-auto max-w-4xl px-6 lg:px-8 text-gray-300">
+            <div className="mx-auto max-w-2xl lg:text-center">
+              <h2 className="text-base font-semibold leading-7 text-green-300">
+                Sumber Tuntutan
+              </h2>
+              <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+                Dirangkum Dari Berbagai Suara
+              </p>
+            </div>
+            <div className="mt-10 text-lg text-gray-300 space-y-6">
+              <p>
+                17+8 tuntutan ini adalah rangkuman
+                <Link
+                  href="#footnote-1"
+                  id="footnote-ref-1"
+                  className="text-pink-300 no-underline"
+                >
+                  <sup>*</sup>
+                </Link>{' '}
+                atas berbagai tuntutan dan desakan yang beredar di media sosial
+                dalam beberapa hari terakhir, di antaranya:
+              </p>
+              <ul className="list-disc space-y-3 pl-6">
+                <li>
+                  Tuntutan 7 hari{' '}
+                  <a
+                    href="https://www.instagram.com/salsaer"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-pink-300 hover:underline"
+                  >
+                    @salsaer
+                  </a>{' '}
+                  <a
+                    href="https://www.instagram.com/jeromepolin"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-pink-300 hover:underline"
+                  >
+                    @jeromepolin
+                  </a>{' '}
+                  <a
+                    href="https://www.instagram.com/cherylmarella"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-pink-300 hover:underline"
+                  >
+                    @cherylmarella
+                  </a>{' '}
+                  hasil rembukan jutaan suara rakyat di kolom komentar &
+                  Instagram Story.
+                </li>
+                <li>
+                  Desakan 211 organisasi masyarakat sipil yang dipublikasi
+                  melalui website YLBHI
+                </li>
+                <li>
+                  Siaran Pers Pusat Studi Hukum dan Kebijakan Indonesia (PSHK)
+                </li>
+                <li>
+                  Pernyataan Sikap Ikatan Mahasiswa Magister Kenotariatan Ul
+                </li>
+                <li>
+                  Pernyataan Sikap Center for Environmental Law & Climate
+                  Justice Universitas Indonesia
+                </li>
+                <li>Tuntutan Demo Buruh 28 Agustus 2025</li>
+                <li>
+                  12 Tuntutan Rakyat Menuju Reformasi Transparansi & Keadilan
+                  oleh Reformasi Indonesia di Change.org yang sudah menerima
+                  lebih dari 40.000 dukungan
+                </li>
+              </ul>
+              <p id="footnote-1" className="text-base text-gray-400 italic">
+                <sup>*</sup>Rangkuman ini berupaya menangkap esensi dari
+                berbagai sumber referensi di atas dan mungkin tidak
+                mengikutsertakan seluruh detil secara utuh. Rangkuman ini juga
+                tidak bermaksud mengesampingkan tuntutan-tuntutan lain yang
+                mungkin juga beredar di waktu yang sama.
+              </p>
+            </div>
+          </div>
         </div>
 
         {/* Visi Misi Section */}

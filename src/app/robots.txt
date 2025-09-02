@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://gerakan-31-agustus-2025.vercel.app/sitemap.xml
+Sitemap: https://tuntutan-rakyat.vercel.app/sitemap.xml

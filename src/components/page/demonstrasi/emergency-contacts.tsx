@@ -165,9 +165,9 @@ const EmergencyContacts = ({ wilayah }: { wilayah: string }) => {
   }
 
   return (
-    <div className="max-w-5xl mx-auto px-4 lg:px-0 pb-10">
+    <div className="max-w-3xl mx-auto px-4 lg:px-0 pb-10">
       <div className="text-center mb-6">
-        <h2 className="text-3xl font-bold text-green-800 mb-2">
+        <h2 className="text-3xl font-bold text-[#EB8FBD] mb-2">
           Kontak Darurat & Bantuan
         </h2>
         <p className="text-slate-900 mb-4">
@@ -178,8 +178,8 @@ const EmergencyContacts = ({ wilayah }: { wilayah: string }) => {
       {/* Region Selector */}
       <div className="mb-6">
         <div className="flex items-center gap-2 mb-5">
-          <MapPin className="text-green-800 size-5" />
-          <h3 className="font-bold text-green-800">Pilih Wilayah</h3>
+          <MapPin className="text-[#EB8FBD] size-5" />
+          <h3 className="font-bold text-[#EB8FBD]">Pilih Wilayah</h3>
         </div>
         <Select
           value={wilayah}

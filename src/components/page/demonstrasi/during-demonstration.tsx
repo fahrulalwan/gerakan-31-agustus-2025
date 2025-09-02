@@ -13,7 +13,7 @@ const DuringDemonstration = () => {
   )
 
   return (
-    <div className="max-w-5xl mx-auto px-4 md:px-0 pb-12">
+    <div className="max-w-3xl mx-auto px-4 md:px-0 pb-12">
       {/* Header Section */}
       <div className="text-center mb-6">
         <h2 className="text-3xl font-bold text-green-800 mb-2">

@@ -14,7 +14,7 @@ const DemonstrasiPage = async ({
     : 'nasional'
 
   return (
-    <div className="min-h-screen bg-gray-900">
+    <div className="bg-gray-900">
       {/* Hero Section */}
       <div className="px-4 py-16 bg-[#037033]">
         <div className="max-w-6xl mx-auto text-center">
@@ -36,7 +36,7 @@ const DemonstrasiPage = async ({
       <div className="bg-gray-900 px-4 py-12">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold mb-4 text-[#037033]">
+            <h2 className="text-3xl font-bold mb-4 text-[#EB8FBD]">
               Pelajari Rute Demonstrasi
             </h2>
             <p className="text-lg text-gray-200 max-w-3xl mx-auto">
