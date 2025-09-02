@@ -186,12 +186,12 @@ const Home = () => {
 
               {/* Right Column - Countdown */}
               <div className="flex flex-col items-center gap-6">
-                <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2">
+                {/* <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm rounded-full px-4 py-2">
                   <div className="w-2 h-2 bg-green-300 rounded-full animate-pulse" />
                   <span className="text-green-100 text-sm font-medium">
                     Live Update
                   </span>
-                </div>
+                </div> */}
 
                 <div className="flex justify-center">
                   <CountdownSection />
