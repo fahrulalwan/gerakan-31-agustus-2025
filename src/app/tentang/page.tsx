@@ -46,11 +46,10 @@ import type { Metadata } from 'next'
 // ]
 
 export const metadata: Metadata = {
-  title: 'Tentang Gerakan',
+  title: 'Tentang 17+8 Tuntutan Rakyat | Transparansi, Reformasi, Empati',
   description:
-    'Tentang Gerakan 31 Agustus 2025 - Latar belakang, visi, misi, dan nilai-nilai gerakan rakyat Indonesia untuk mewujudkan perubahan menyeluruh menuju Indonesia yang lebih demokratis, adil, dan sejahtera.',
+    '17+8 Tuntutan Rakyat. Hasil rangkuman beberapa tuntutan yang beredar di media sosial dalam beberapa hari.',
   keywords: [
-    'tentang gerakan 31 agustus 2025',
     'latar belakang gerakan',
     'visi misi gerakan',
     'nilai-nilai gerakan',
@@ -62,9 +61,9 @@ export const metadata: Metadata = {
     'aspirasi rakyat'
   ],
   openGraph: {
-    title: 'Tentang Gerakan 31 Agustus 2025 | Latar Belakang & Visi Misi',
+    title: 'Tentang 17+8 Tuntutan Rakyat | Transparansi, Reformasi, Empati',
     description:
-      'Pelajari latar belakang, visi, misi, dan nilai-nilai Gerakan 31 Agustus 2025 untuk mewujudkan Indonesia yang lebih demokratis, adil, dan sejahtera.',
+      '17+8 Tuntutan Rakyat. Hasil rangkuman beberapa tuntutan yang beredar di media sosial dalam beberapa hari.',
     url: 'https://gerakan-31-agustus-2025.vercel.app/tentang',
     type: 'article',
     images: [
@@ -78,9 +77,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Tentang Gerakan 31 Agustus 2025 | Latar Belakang & Visi Misi',
+    title: 'Tentang 17+8 Tuntutan Rakyat | Transparansi, Reformasi, Empati',
     description:
-      'Pelajari latar belakang, visi, misi, dan nilai-nilai Gerakan 31 Agustus 2025.',
+      '17+8 Tuntutan Rakyat. Hasil rangkuman beberapa tuntutan yang beredar di media sosial dalam beberapa hari.',
     images: ['/twitter-image.png']
   },
   alternates: {
@@ -92,14 +91,14 @@ const TentangPage = () => {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'AboutPage',
-    name: 'Tentang Gerakan 31 Agustus 2025',
+    name: 'Tentang 17+8 Tuntutan Rakyat | Transparansi, Reformasi, Empati',
     description:
-      'Latar belakang, visi, misi, dan nilai-nilai Gerakan 31 Agustus 2025 dalam memperjuangkan reformasi menyeluruh untuk Indonesia yang lebih baik.',
+      '17+8 Tuntutan Rakyat. Hasil rangkuman beberapa tuntutan yang beredar di media sosial dalam beberapa hari.',
     mainEntity: {
       '@type': 'Organization',
-      name: 'Gerakan 31 Agustus 2025',
+      name: '17+8 Tuntutan Rakyat | Transparansi, Reformasi, Empati',
       description:
-        'Gerakan rakyat untuk reformasi menyeluruh Indonesia melalui 25 tuntutan yang mencakup aspek politik, ekonomi, sosial, dan hukum.',
+        '17+8 Tuntutan Rakyat. Hasil rangkuman beberapa tuntutan yang beredar di media sosial dalam beberapa hari.',
       foundingDate: '2025-08-31',
       mission:
         'Mewujudkan Indonesia yang lebih adil, demokratis, dan sejahtera melalui reformasi menyeluruh yang melibatkan partisipasi aktif masyarakat.',
@@ -117,11 +116,11 @@ const TentangPage = () => {
     },
     author: {
       '@type': 'Organization',
-      name: 'Gerakan 31 Agustus 2025'
+      name: '17+8 Tuntutan Rakyat | Transparansi, Reformasi, Empati'
     },
     publisher: {
       '@type': 'Organization',
-      name: 'Gerakan 31 Agustus 2025',
+      name: '17+8 Tuntutan Rakyat | Transparansi, Reformasi, Empati',
       logo: {
         '@type': 'ImageObject',
         url: 'https://gerakan-31-agustus-2025.vercel.app/android-chrome-512x512.png'
