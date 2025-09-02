@@ -2,7 +2,7 @@ import { ImageResponse } from 'next/og'
 
 export const runtime = 'edge'
 
-export const alt = 'Gerakan 31 Agustus 2025 - Tuntutan Rakyat Indonesia'
+export const alt = '17+8 Tuntutan Rakyat | Transparansi. Reformasi. Empati.'
 export const size = {
   width: 1200,
   height: 630
@@ -44,7 +44,7 @@ export default async function Image() {
               color: 'white'
             }}
           >
-            Gerakan 31 Agustus 2025
+            17+8 Tuntutan Rakyat
           </div>
           <div
             style={{
@@ -54,7 +54,7 @@ export default async function Image() {
               color: '#EB8FBD'
             }}
           >
-            Tuntutan Rakyat Indonesia
+            Transparansi. Reformasi. Empati.
           </div>
           <div
             style={{
@@ -65,7 +65,8 @@ export default async function Image() {
               textAlign: 'center'
             }}
           >
-            Demonstrasi Aman • Perubahan Bermartabat
+            Daftar lengkap 25 tuntutan rakyat Indonesia untuk reformasi
+            menyeluruh. 17 tuntutan dalam 1 minggu dan 8 tuntutan dalam 1 tahun.
           </div>
         </div>
       </div>
