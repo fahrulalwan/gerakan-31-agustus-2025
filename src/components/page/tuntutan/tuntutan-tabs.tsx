@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { useRef } from 'react'
 
+import useVisible from '@/hooks/use-visible'
 import { cn } from '@/lib/utils'
 
 import OneWeekDemand from './one-week-demand'
@@ -12,6 +13,7 @@ const TuntutanTabs = ({ jangka }: { jangka: string }) => {
   const tabRef = useRef<HTMLDivElement>(null)
   const secondTabRef = useRef<HTMLDivElement>(null)
   const contentRef = useRef<HTMLDivElement>(null)
+  const isFirstTabVisible = useVisible(tabRef)
 
   return (
     <>
@@ -54,10 +56,10 @@ const TuntutanTabs = ({ jangka }: { jangka: string }) => {
       </div>
 
       <div
-        className="px-6 pb-8 sticky"
+        className="px-6 pb-8 sticky transition-all duration-300"
         ref={secondTabRef}
         style={{
-          bottom: 0
+          bottom: isFirstTabVisible ? -200 : 0
         }}
       >
         <div className="max-w-3xl mx-auto">
