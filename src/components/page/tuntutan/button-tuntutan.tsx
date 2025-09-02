@@ -2,12 +2,13 @@
 
 import { ArrowDownIcon } from 'lucide-react'
 import { useEffect, useState } from 'react'
+import { isMobile } from 'react-device-detect'
 
 const ButtonTuntutan = () => {
-  const [deviceHeight, setDeviceHeight] = useState(0)
+  const [topPosition, setTopPosition] = useState(0)
 
   useEffect(() => {
-    setDeviceHeight(window.innerHeight)
+    setTopPosition(window.innerHeight - (isMobile ? 44 : 120))
   }, [])
 
   return (
@@ -16,10 +17,12 @@ const ButtonTuntutan = () => {
         type="button"
         className="text-center flex items-center justify-center gap-2 rounded-full bg-green-600 text-gray-900 px-4 py-2 cursor-pointer w-fit mx-auto font-bold transition-transform duration-300 absolute left-0 right-0 scale-pulse"
         style={{
-          top: deviceHeight - 80
+          top: topPosition
         }}
         onClick={() => {
-          window.scrollTo({ top: deviceHeight, behavior: 'smooth' })
+          document
+            .getElementById('content-ref')
+            ?.scrollIntoView({ behavior: 'smooth' })
         }}
       >
         Lihat Tuntutan

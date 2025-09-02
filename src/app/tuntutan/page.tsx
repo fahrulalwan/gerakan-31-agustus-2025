@@ -119,7 +119,7 @@ const TuntutanPage = async ({
         </div>
 
         {/* Important Notice */}
-        <div className="px-6 py-6 md:py-12">
+        <div className="px-6 py-6 md:py-12" id="content-ref">
           {/* <div className="max-w-5xl mx-auto">
             <div className="rounded-3xl p-8 shadow-2xl border-2 bg-[#EB8FBD] border-[#EB8FBD]">
               <div className="flex items-start gap-4">
