@@ -1,6 +1,5 @@
-// import { AlertTriangle } from 'lucide-react'
-
 import type { Metadata } from 'next'
+import Link from 'next/link'
 
 import ButtonTuntutan from '@/components/page/tuntutan/button-tuntutan'
 import CountdownTimer from '@/components/page/tuntutan/countdown-timer'
@@ -143,6 +142,92 @@ const TuntutanPage = async ({
 
         {/* Tabs and Content */}
         <TuntutanTabs jangka={awaitedSearchParams.jangka ?? '1-minggu'} />
+
+        {/* Sumber Tuntutan Section */}
+        <div className="py-4 pb-10 sm:py-10 md:px-0 px-4">
+          <div className="mx-auto max-w-3xl px-6 lg:px-8 text-gray-300 border-pink-200 border-2 rounded-2xl p-4">
+            <div className="mx-auto max-w-2xl lg:text-center">
+              <h2 className="text-sm font-semibold leading-7 text-green-300">
+                Sumber Tuntutan
+              </h2>
+              <p className="mt-2 text-base font-bold tracking-tight text-white sm:text-lg">
+                Dirangkum Dari Berbagai Suara
+              </p>
+            </div>
+            <div className="mt-2 text-sm text-gray-300 space-y-3">
+              <p>
+                17+8 tuntutan ini adalah rangkuman
+                <Link
+                  href="#footnote-1"
+                  id="footnote-ref-1"
+                  className="text-pink-300 no-underline"
+                >
+                  <sup>*</sup>
+                </Link>{' '}
+                atas berbagai tuntutan dan desakan yang beredar di media sosial
+                dalam beberapa hari terakhir, di antaranya:
+              </p>
+              <ul className="list-disc space-y-2 pl-6">
+                <li>
+                  Tuntutan 7 hari{' '}
+                  <a
+                    href="https://www.instagram.com/salsaer"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-pink-300 hover:underline"
+                  >
+                    @salsaer
+                  </a>{' '}
+                  <a
+                    href="https://www.instagram.com/jeromepolin"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-pink-300 hover:underline"
+                  >
+                    @jeromepolin
+                  </a>{' '}
+                  <a
+                    href="https://www.instagram.com/cherylmarella"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-pink-300 hover:underline"
+                  >
+                    @cherylmarella
+                  </a>{' '}
+                  hasil rembukan jutaan suara rakyat di kolom komentar &
+                  Instagram Story.
+                </li>
+                <li>
+                  Desakan 211 organisasi masyarakat sipil yang dipublikasi
+                  melalui website YLBHI
+                </li>
+                <li>
+                  Siaran Pers Pusat Studi Hukum dan Kebijakan Indonesia (PSHK)
+                </li>
+                <li>
+                  Pernyataan Sikap Ikatan Mahasiswa Magister Kenotariatan Ul
+                </li>
+                <li>
+                  Pernyataan Sikap Center for Environmental Law & Climate
+                  Justice Universitas Indonesia
+                </li>
+                <li>Tuntutan Demo Buruh 28 Agustus 2025</li>
+                <li>
+                  12 Tuntutan Rakyat Menuju Reformasi Transparansi & Keadilan
+                  oleh Reformasi Indonesia di Change.org yang sudah menerima
+                  lebih dari 40.000 dukungan
+                </li>
+              </ul>
+              <p id="footnote-1" className="text-xs text-gray-400 italic">
+                <sup>*</sup>Rangkuman ini berupaya menangkap esensi dari
+                berbagai sumber referensi di atas dan mungkin tidak
+                mengikutsertakan seluruh detil secara utuh. Rangkuman ini juga
+                tidak bermaksud mengesampingkan tuntutan-tuntutan lain yang
+                mungkin juga beredar di waktu yang sama.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </>
   )
