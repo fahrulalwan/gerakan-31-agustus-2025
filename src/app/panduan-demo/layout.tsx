@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     title: 'Panduan Demonstrasi Aman | Transparansi. Reformasi. Empati.',
     description:
       'Panduan lengkap untuk berpartisipasi dalam demonstrasi dengan aman dan bertanggung jawab. Checklist, protokol keamanan, dan hak hukum.',
-    url: 'https://tuntutan-rakyat.vercel.app/panduan-demo',
+    url: 'https://tuntutanrakyat.vercel.app/panduan-demo',
     type: 'article'
   },
   twitter: {
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
       'Panduan lengkap untuk berpartisipasi dalam demonstrasi dengan aman dan bertanggung jawab.'
   },
   alternates: {
-    canonical: 'https://tuntutan-rakyat.vercel.app/panduan-demo'
+    canonical: 'https://tuntutanrakyat.vercel.app/panduan-demo'
   }
 }
 

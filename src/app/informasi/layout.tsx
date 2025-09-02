@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     title: 'Informasi & Panduan | 17+8 Tuntutan Rakyat',
     description:
       'Kumpulan artikel dan panduan lengkap untuk mendukung demonstrasi yang aman, efektif, dan bermartabat. Informasi terkini seputar 17+8 Tuntutan Rakyat dan panduan partisipasi yang bertanggung jawab.',
-    url: 'https://tuntutan-rakyat.vercel.app/informasi',
+    url: 'https://tuntutanrakyat.vercel.app/informasi',
     type: 'website'
   },
   twitter: {
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
       'Kumpulan artikel dan panduan lengkap untuk mendukung demonstrasi yang aman, efektif, dan bermartabat. Informasi terkini seputar 17+8 Tuntutan Rakyat dan panduan partisipasi yang bertanggung jawab.'
   },
   alternates: {
-    canonical: 'https://tuntutan-rakyat.vercel.app/informasi'
+    canonical: 'https://tuntutanrakyat.vercel.app/informasi'
   }
 }
 

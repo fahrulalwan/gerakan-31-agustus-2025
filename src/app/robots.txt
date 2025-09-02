@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://tuntutan-rakyat.vercel.app/sitemap.xml
+Sitemap: https://tuntutanrakyat.vercel.app/sitemap.xml

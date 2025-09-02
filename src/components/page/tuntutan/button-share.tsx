@@ -21,7 +21,7 @@ Bersuara perlu strategi, bukan sekadar emosi. TuntutanRakyat menyediakan panduan
       <p className="text-center text-white text-lg font-bold">Share via:</p>
       <div className="flex gap-2 justify-center">
         <WhatsappShareButton
-          url="https://tuntutan-rakyat.vercel.app"
+          url="https://tuntutanrakyat.vercel.app"
           title={title}
           className=""
         >
@@ -29,7 +29,7 @@ Bersuara perlu strategi, bukan sekadar emosi. TuntutanRakyat menyediakan panduan
         </WhatsappShareButton>
 
         <TwitterShareButton
-          url="https://tuntutan-rakyat.vercel.app"
+          url="https://tuntutanrakyat.vercel.app"
           title={title}
           className=""
         >
@@ -37,7 +37,7 @@ Bersuara perlu strategi, bukan sekadar emosi. TuntutanRakyat menyediakan panduan
         </TwitterShareButton>
 
         <ThreadsShareButton
-          url="https://tuntutan-rakyat.vercel.app"
+          url="https://tuntutanrakyat.vercel.app"
           title={title}
           className=""
         >
@@ -45,7 +45,7 @@ Bersuara perlu strategi, bukan sekadar emosi. TuntutanRakyat menyediakan panduan
         </ThreadsShareButton>
 
         <LinkedinShareButton
-          url="https://tuntutan-rakyat.vercel.app"
+          url="https://tuntutanrakyat.vercel.app"
           title={title}
           className=""
         >
@@ -53,7 +53,7 @@ Bersuara perlu strategi, bukan sekadar emosi. TuntutanRakyat menyediakan panduan
         </LinkedinShareButton>
 
         <TelegramShareButton
-          url="https://tuntutan-rakyat.vercel.app"
+          url="https://tuntutanrakyat.vercel.app"
           title={title}
           className=""
         >

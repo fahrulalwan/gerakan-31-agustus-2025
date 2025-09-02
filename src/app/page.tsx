@@ -21,10 +21,10 @@ export const metadata: Metadata = {
     title: '17+8 Tuntutan Rakyat | Transparansi. Reformasi. Empati.',
     description:
       'Daftar 17+8 Tuntutan Rakyat. Hasil rangkuman beberapa tuntutan yang beredar di media sosial dalam beberapa hari.',
-    url: 'https://tuntutan-rakyat.vercel.app',
+    url: 'https://tuntutanrakyat.vercel.app',
     images: [
       {
-        url: 'https://tuntutan-rakyat.vercel.app/ogimage.png',
+        url: 'https://tuntutanrakyat.vercel.app/ogimage.png',
         width: 1200,
         height: 630
       }
@@ -38,14 +38,14 @@ export const metadata: Metadata = {
       'Daftar 17+8 Tuntutan Rakyat untuk memantau 25 tuntutan rakyat Indonesia kepada pemerintah.',
     images: [
       {
-        url: 'https://tuntutan-rakyat.vercel.app/twitter-card.png',
+        url: 'https://tuntutanrakyat.vercel.app/twitter-card.png',
         width: 1200,
         height: 630
       }
     ]
   },
   alternates: {
-    canonical: 'https://tuntutan-rakyat.vercel.app'
+    canonical: 'https://tuntutanrakyat.vercel.app'
   }
 }
 

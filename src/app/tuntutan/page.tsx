@@ -26,10 +26,10 @@ export const metadata: Metadata = {
     title: '17+8 Tuntutan Rakyat Indonesia | Transparansi. Reformasi. Empati.',
     description:
       'Daftar lengkap 25 tuntutan rakyat Indonesia untuk reformasi menyeluruh. 17 tuntutan dalam 1 minggu dan 8 tuntutan dalam 1 tahun.',
-    url: 'https://tuntutan-rakyat.vercel.app/tuntutan',
+    url: 'https://tuntutanrakyat.vercel.app/tuntutan',
     images: [
       {
-        url: 'https://tuntutan-rakyat.vercel.app/ogimage.png',
+        url: 'https://tuntutanrakyat.vercel.app/ogimage.png',
         width: 1200,
         height: 630
       }
@@ -43,14 +43,14 @@ export const metadata: Metadata = {
       'Daftar lengkap 25 tuntutan rakyat Indonesia untuk reformasi menyeluruh. 17 tuntutan dalam 1 minggu dan 8 tuntutan dalam 1 tahun.',
     images: [
       {
-        url: 'https://tuntutan-rakyat.vercel.app/twitter-card.png',
+        url: 'https://tuntutanrakyat.vercel.app/twitter-card.png',
         width: 1200,
         height: 630
       }
     ]
   },
   alternates: {
-    canonical: 'https://tuntutan-rakyat.vercel.app/tuntutan'
+    canonical: 'https://tuntutanrakyat.vercel.app/tuntutan'
   }
 }
 
@@ -75,14 +75,14 @@ const TuntutanPage = async ({
       name: '17+8 Tuntutan Rakyat | Transparansi. Reformasi. Empati.',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://tuntutan-rakyat.vercel.app/android-chrome-512x512.png'
+        url: 'https://tuntutanrakyat.vercel.app/android-chrome-512x512.png'
       }
     },
     datePublished: '2025-08-31',
     dateModified: '2025-09-01',
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': 'https://tuntutan-rakyat.vercel.app/tuntutan'
+      '@id': 'https://tuntutanrakyat.vercel.app/tuntutan'
     },
     articleSection: 'Politik',
     keywords: [

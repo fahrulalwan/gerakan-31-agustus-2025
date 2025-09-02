@@ -12,7 +12,7 @@ const rubik = Rubik({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://tuntutan-rakyat.vercel.app'),
+  metadataBase: new URL('https://tuntutanrakyat.vercel.app'),
   title: {
     default: '17+8 Tuntutan Rakyat | Transparansi. Reformasi. Empati.',
     template: ''
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'id_ID',
-    url: 'https://tuntutan-rakyat.vercel.app',
+    url: 'https://tuntutanrakyat.vercel.app',
     title: '17+8 Tuntutan Rakyat | Transparansi. Reformasi. Empati.',
     description:
       'Daftar 17+8 Tuntutan Rakyat. Hasil rangkuman beberapa tuntutan yang beredar di media sosial dalam beberapa hari.',
@@ -64,9 +64,9 @@ export const metadata: Metadata = {
     }
   },
   alternates: {
-    canonical: 'https://tuntutan-rakyat.vercel.app',
+    canonical: 'https://tuntutanrakyat.vercel.app',
     languages: {
-      'id-ID': 'https://tuntutan-rakyat.vercel.app'
+      'id-ID': 'https://tuntutanrakyat.vercel.app'
     }
   },
   category: 'politics',

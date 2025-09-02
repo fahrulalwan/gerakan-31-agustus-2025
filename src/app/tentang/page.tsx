@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     title: 'Tentang 17+8 Tuntutan Rakyat | Transparansi. Reformasi. Empati.',
     description:
       '17+8 Tuntutan Rakyat. Hasil rangkuman beberapa tuntutan yang beredar di media sosial dalam beberapa hari.',
-    url: 'https://tuntutan-rakyat.vercel.app/tentang',
+    url: 'https://tuntutanrakyat.vercel.app/tentang',
     type: 'article'
   },
   twitter: {
@@ -75,7 +75,7 @@ export const metadata: Metadata = {
       '17+8 Tuntutan Rakyat. Hasil rangkuman beberapa tuntutan yang beredar di media sosial dalam beberapa hari.'
   },
   alternates: {
-    canonical: 'https://tuntutan-rakyat.vercel.app/tentang'
+    canonical: 'https://tuntutanrakyat.vercel.app/tentang'
   }
 }
 
@@ -115,7 +115,7 @@ const TentangPage = () => {
       name: '17+8 Tuntutan Rakyat | Transparansi. Reformasi. Empati.',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://tuntutan-rakyat.vercel.app/android-chrome-512x512.png'
+        url: 'https://tuntutanrakyat.vercel.app/android-chrome-512x512.png'
       }
     },
     datePublished: '2025-08-31',
