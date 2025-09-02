@@ -1,13 +1,13 @@
 import { Analytics } from '@vercel/analytics/react'
 import type { Metadata } from 'next'
-import { Geist } from 'next/font/google'
+import { Rubik } from 'next/font/google'
 
 import './globals.css'
 import Footer from '@/components/footer'
 import Navbar from '@/components/navbar'
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
+const rubik = Rubik({
+  variable: '--font-rubik',
   subsets: ['latin']
 })
 
@@ -82,7 +82,7 @@ const RootLayout = ({
   children: React.ReactNode
 }>) => (
   <html lang="id">
-    <body className={`${geistSans.className} antialiased`}>
+    <body className={`${rubik.className} antialiased`}>
       <Navbar />
       <main>{children}</main>
       <Footer />
