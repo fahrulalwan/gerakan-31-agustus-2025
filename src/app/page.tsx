@@ -26,8 +26,8 @@ export const metadata: Metadata = {
     title: '17+8 Tuntutan Rakyat Indonesia | Transparansi. Reformasi. Empati.',
     description:
       'Daftar lengkap 25 tuntutan rakyat Indonesia untuk reformasi menyeluruh. 17 tuntutan dalam 1 minggu dan 8 tuntutan dalam 1 tahun.',
-    url: 'https://gerakan-31-agustus-2025.vercel.app/tuntutan',
-    type: 'article',
+    url: 'https://gerakan-31-agustus-2025.vercel.app',
+    type: 'website',
     images: [
       {
         url: '/opengraph-image.png',
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     images: ['/twitter-image.png']
   },
   alternates: {
-    canonical: 'https://gerakan-31-agustus-2025.vercel.app/tuntutan'
+    canonical: 'https://gerakan-31-agustus-2025.vercel.app'
   }
 }
 
