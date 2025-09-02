@@ -14,9 +14,9 @@ import Link from 'next/link'
 import CountdownSection from '@/components/page/home/countdown-section'
 
 export const metadata: Metadata = {
-  title: 'Beranda',
+  title: '17+8 Tuntutan Rakyat | Transparansi, Reformasi, Empati',
   description:
-    'Platform resmi gerakan 31 Agustus 2025 untuk memantau 25 tuntutan rakyat Indonesia kepada pemerintah. Akses panduan demonstrasi aman dan bergabung dalam perubahan yang damai dan bermartabat.',
+    '17+8 Tuntutan Rakyat. Hasil rangkuman beberapa tuntutan yang beredar di media sosial dalam beberapa hari.',
   keywords: [
     'gerakan 31 agustus 2025',
     'tuntutan rakyat indonesia',
@@ -30,9 +30,9 @@ export const metadata: Metadata = {
     'indonesia baru'
   ],
   openGraph: {
-    title: 'Gerakan 31 Agustus 2025 | Tuntutan Rakyat Indonesia',
+    title: '17+8 Tuntutan Rakyat | Transparansi, Reformasi, Empati',
     description:
-      'Platform resmi gerakan 31 Agustus 2025 untuk memantau 25 tuntutan rakyat Indonesia kepada pemerintah. Bergabung dalam perubahan yang damai dan bermartabat.',
+      '17+8 Tuntutan Rakyat. Hasil rangkuman beberapa tuntutan yang beredar di media sosial dalam beberapa hari.',
     url: 'https://gerakan-31-agustus-2025.vercel.app',
     type: 'website',
     images: [
@@ -40,13 +40,13 @@ export const metadata: Metadata = {
         url: '/opengraph-image.png',
         width: 1200,
         height: 630,
-        alt: 'Gerakan 31 Agustus 2025 - Beranda'
+        alt: '17+8 Tuntutan Rakyat | Transparansi, Reformasi, Empati'
       }
     ]
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Gerakan 31 Agustus 2025 | Tuntutan Rakyat Indonesia',
+    title: '17+8 Tuntutan Rakyat | Transparansi, Reformasi, Empati',
     description:
       'Platform resmi gerakan 31 Agustus 2025 untuk memantau 25 tuntutan rakyat Indonesia kepada pemerintah.',
     images: ['/twitter-image.png']
@@ -85,12 +85,12 @@ const Home = () => {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'Gerakan 31 Agustus 2025',
+    name: '17+8 Tuntutan Rakyat | Transparansi, Reformasi, Empati',
     description:
-      'Platform resmi gerakan 31 Agustus 2025 untuk memantau 25 tuntutan rakyat Indonesia kepada pemerintah',
+      '17+8 Tuntutan Rakyat. Hasil rangkuman beberapa tuntutan yang beredar di media sosial dalam beberapa hari.',
     url: 'https://gerakan-31-agustus-2025.vercel.app',
     logo: 'https://gerakan-31-agustus-2025.vercel.app/android-chrome-512x512.png',
-    sameAs: ['@gerakan31agustus'],
+    sameAs: ['@17+8TuntutanRakyat'],
     foundingDate: '2025',
     areaServed: 'Indonesia',
     knowsAbout: [
