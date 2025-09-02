@@ -15,7 +15,7 @@ const ButtonTuntutan = () => {
     <>
       <button
         type="button"
-        className="text-center flex items-center justify-center gap-2 rounded-full bg-green-600 text-gray-900 px-4 py-2 cursor-pointer w-fit mx-auto font-bold transition-transform duration-300 absolute left-0 right-0 scale-pulse"
+        className="text-center flex items-center justify-center gap-2 rounded-full bg-green-600 text-gray-900 px-4 py-2 cursor-pointer w-fit mx-auto font-bold transition-transform duration-300 scale-pulse mb-8"
         style={{
           top: topPosition
         }}
