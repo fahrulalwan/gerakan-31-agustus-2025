@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 
+import ButtonShare from '@/components/page/tuntutan/button-share'
 import ButtonTuntutan from '@/components/page/tuntutan/button-tuntutan'
 import CountdownTimer from '@/components/page/tuntutan/countdown-timer'
 import TuntutanTabs from '@/components/page/tuntutan/tuntutan-tabs'
@@ -89,7 +90,7 @@ const TuntutanPage = async ({
       <div className="bg-gray-900">
         {/* Hero Section */}
         <div className="bg-[#037033] pb-12 pt-6 -mt-[65px] h-screen relative ">
-          <div className="px-6 py-16">
+          <div className="px-6 h-full flex flex-col justify-center items-center">
             <div className="max-w-7xl mx-auto">
               <div className="text-center md:mb-12">
                 <h1 className="text-3xl lg:text-6xl font-bold text-white mb-6 leading-tight">
@@ -231,6 +232,8 @@ const TuntutanPage = async ({
             </div>
           </div>
         </div>
+
+        <ButtonShare />
       </div>
     </>
   )
