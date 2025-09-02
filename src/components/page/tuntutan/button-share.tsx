@@ -20,6 +20,14 @@ Bersuara perlu strategi, bukan sekadar emosi. TuntutanRakyat menyediakan panduan
     <div className="px-6 space-y-2 pb-10">
       <p className="text-center text-white text-lg font-bold">Share via:</p>
       <div className="flex gap-2 justify-center">
+        <TelegramShareButton
+          url="https://tuntutanrakyat.vercel.app"
+          title={title}
+          className=""
+        >
+          <TelegramIcon className="rounded-full size-10" />
+        </TelegramShareButton>
+
         <WhatsappShareButton
           url="https://tuntutanrakyat.vercel.app"
           title={title}
@@ -27,14 +35,6 @@ Bersuara perlu strategi, bukan sekadar emosi. TuntutanRakyat menyediakan panduan
         >
           <WhatsappIcon className="rounded-full size-10" />
         </WhatsappShareButton>
-
-        <TwitterShareButton
-          url="https://tuntutanrakyat.vercel.app"
-          title={title}
-          className=""
-        >
-          <XIcon className="rounded-full size-10" />
-        </TwitterShareButton>
 
         <ThreadsShareButton
           url="https://tuntutanrakyat.vercel.app"
@@ -44,6 +44,14 @@ Bersuara perlu strategi, bukan sekadar emosi. TuntutanRakyat menyediakan panduan
           <ThreadsIcon className="rounded-full size-10" />
         </ThreadsShareButton>
 
+        <TwitterShareButton
+          url="https://tuntutanrakyat.vercel.app"
+          title={title}
+          className=""
+        >
+          <XIcon className="rounded-full size-10" />
+        </TwitterShareButton>
+
         <LinkedinShareButton
           url="https://tuntutanrakyat.vercel.app"
           title={title}
@@ -51,14 +59,6 @@ Bersuara perlu strategi, bukan sekadar emosi. TuntutanRakyat menyediakan panduan
         >
           <LinkedinIcon className="rounded-full size-10" />
         </LinkedinShareButton>
-
-        <TelegramShareButton
-          url="https://tuntutanrakyat.vercel.app"
-          title={title}
-          className=""
-        >
-          <TelegramIcon className="rounded-full size-10" />
-        </TelegramShareButton>
       </div>
     </div>
   )
