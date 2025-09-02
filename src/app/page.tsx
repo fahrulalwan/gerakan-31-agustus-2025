@@ -14,7 +14,7 @@ import Link from 'next/link'
 import CountdownSection from '@/components/page/home/countdown-section'
 
 export const metadata: Metadata = {
-  title: '17+8 Tuntutan Rakyat | Transparansi, Reformasi, Empati',
+  title: '17+8 Tuntutan Rakyat | Transparansi. Reformasi. Empati.',
   description:
     '17+8 Tuntutan Rakyat. Hasil rangkuman beberapa tuntutan yang beredar di media sosial dalam beberapa hari.',
   keywords: [
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     'indonesia baru'
   ],
   openGraph: {
-    title: '17+8 Tuntutan Rakyat | Transparansi, Reformasi, Empati',
+    title: '17+8 Tuntutan Rakyat | Transparansi. Reformasi. Empati.',
     description:
       '17+8 Tuntutan Rakyat. Hasil rangkuman beberapa tuntutan yang beredar di media sosial dalam beberapa hari.',
     url: 'https://gerakan-31-agustus-2025.vercel.app',
@@ -40,13 +40,13 @@ export const metadata: Metadata = {
         url: '/opengraph-image.png',
         width: 1200,
         height: 630,
-        alt: '17+8 Tuntutan Rakyat | Transparansi, Reformasi, Empati'
+        alt: '17+8 Tuntutan Rakyat | Transparansi. Reformasi. Empati.'
       }
     ]
   },
   twitter: {
     card: 'summary_large_image',
-    title: '17+8 Tuntutan Rakyat | Transparansi, Reformasi, Empati',
+    title: '17+8 Tuntutan Rakyat | Transparansi. Reformasi. Empati.',
     description:
       'Platform resmi gerakan 31 Agustus 2025 untuk memantau 25 tuntutan rakyat Indonesia kepada pemerintah.',
     images: ['/twitter-image.png']
@@ -85,7 +85,7 @@ const Home = () => {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: '17+8 Tuntutan Rakyat | Transparansi, Reformasi, Empati',
+    name: '17+8 Tuntutan Rakyat | Transparansi. Reformasi. Empati.',
     description:
       '17+8 Tuntutan Rakyat. Hasil rangkuman beberapa tuntutan yang beredar di media sosial dalam beberapa hari.',
     url: 'https://gerakan-31-agustus-2025.vercel.app',

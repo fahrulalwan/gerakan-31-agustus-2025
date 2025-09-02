@@ -7,7 +7,7 @@ import CountdownTimer from '@/components/page/tuntutan/countdown-timer'
 import TuntutanTabs from '@/components/page/tuntutan/tuntutan-tabs'
 
 export const metadata: Metadata = {
-  title: '17+8 Tuntutan Rakyat | Transparansi, Reformasi, Empati',
+  title: '17+8 Tuntutan Rakyat | Transparansi. Reformasi. Empati.',
   description:
     'Daftar lengkap 25 tuntutan rakyat Indonesia untuk reformasi menyeluruh. 17 tuntutan dalam 1 minggu dan 8 tuntutan dalam 1 tahun.',
   keywords: [
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     'indonesia baru'
   ],
   openGraph: {
-    title: '17+8 Tuntutan Rakyat Indonesia | Transparansi, Reformasi, Empati',
+    title: '17+8 Tuntutan Rakyat Indonesia | Transparansi. Reformasi. Empati.',
     description:
       'Daftar lengkap 25 tuntutan rakyat Indonesia untuk reformasi menyeluruh. 17 tuntutan dalam 1 minggu dan 8 tuntutan dalam 1 tahun.',
     url: 'https://gerakan-31-agustus-2025.vercel.app/tuntutan',
@@ -33,13 +33,13 @@ export const metadata: Metadata = {
         url: '/opengraph-image.png',
         width: 1200,
         height: 630,
-        alt: '17+8 Tuntutan Rakyat Indonesia | Transparansi, Reformasi, Empati'
+        alt: '17+8 Tuntutan Rakyat Indonesia | Transparansi. Reformasi. Empati.'
       }
     ]
   },
   twitter: {
     card: 'summary_large_image',
-    title: '17+8 Tuntutan Rakyat Indonesia | Transparansi, Reformasi, Empati',
+    title: '17+8 Tuntutan Rakyat Indonesia | Transparansi. Reformasi. Empati.',
     description:
       'Daftar lengkap 25 tuntutan rakyat Indonesia untuk reformasi menyeluruh. 17 tuntutan dalam 1 minggu dan 8 tuntutan dalam 1 tahun.',
     images: ['/twitter-image.png']
@@ -58,16 +58,16 @@ const TuntutanPage = async ({
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: '17+8 Tuntutan Rakyat | Transparansi, Reformasi, Empati',
+    headline: '17+8 Tuntutan Rakyat | Transparansi. Reformasi. Empati.',
     description:
       'Daftar lengkap 25 tuntutan rakyat Indonesia untuk reformasi menyeluruh. 17 tuntutan dalam 1 minggu dan 8 tuntutan dalam 1 tahun.',
     author: {
       '@type': 'Organization',
-      name: '17+8 Tuntutan Rakyat | Transparansi, Reformasi, Empati'
+      name: '17+8 Tuntutan Rakyat | Transparansi. Reformasi. Empati.'
     },
     publisher: {
       '@type': 'Organization',
-      name: '17+8 Tuntutan Rakyat | Transparansi, Reformasi, Empati',
+      name: '17+8 Tuntutan Rakyat | Transparansi. Reformasi. Empati.',
       logo: {
         '@type': 'ImageObject',
         url: 'https://gerakan-31-agustus-2025.vercel.app/android-chrome-512x512.png'

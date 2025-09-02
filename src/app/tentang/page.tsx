@@ -46,7 +46,7 @@ import type { Metadata } from 'next'
 // ]
 
 export const metadata: Metadata = {
-  title: 'Tentang 17+8 Tuntutan Rakyat | Transparansi, Reformasi, Empati',
+  title: 'Tentang 17+8 Tuntutan Rakyat | Transparansi. Reformasi. Empati.',
   description:
     '17+8 Tuntutan Rakyat. Hasil rangkuman beberapa tuntutan yang beredar di media sosial dalam beberapa hari.',
   keywords: [
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     'aspirasi rakyat'
   ],
   openGraph: {
-    title: 'Tentang 17+8 Tuntutan Rakyat | Transparansi, Reformasi, Empati',
+    title: 'Tentang 17+8 Tuntutan Rakyat | Transparansi. Reformasi. Empati.',
     description:
       '17+8 Tuntutan Rakyat. Hasil rangkuman beberapa tuntutan yang beredar di media sosial dalam beberapa hari.',
     url: 'https://gerakan-31-agustus-2025.vercel.app/tentang',
@@ -77,7 +77,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Tentang 17+8 Tuntutan Rakyat | Transparansi, Reformasi, Empati',
+    title: 'Tentang 17+8 Tuntutan Rakyat | Transparansi. Reformasi. Empati.',
     description:
       '17+8 Tuntutan Rakyat. Hasil rangkuman beberapa tuntutan yang beredar di media sosial dalam beberapa hari.',
     images: ['/twitter-image.png']
@@ -91,12 +91,12 @@ const TentangPage = () => {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'AboutPage',
-    name: 'Tentang 17+8 Tuntutan Rakyat | Transparansi, Reformasi, Empati',
+    name: 'Tentang 17+8 Tuntutan Rakyat | Transparansi. Reformasi. Empati.',
     description:
       '17+8 Tuntutan Rakyat. Hasil rangkuman beberapa tuntutan yang beredar di media sosial dalam beberapa hari.',
     mainEntity: {
       '@type': 'Organization',
-      name: '17+8 Tuntutan Rakyat | Transparansi, Reformasi, Empati',
+      name: '17+8 Tuntutan Rakyat | Transparansi. Reformasi. Empati.',
       description:
         '17+8 Tuntutan Rakyat. Hasil rangkuman beberapa tuntutan yang beredar di media sosial dalam beberapa hari.',
       foundingDate: '2025-08-31',
@@ -116,11 +116,11 @@ const TentangPage = () => {
     },
     author: {
       '@type': 'Organization',
-      name: '17+8 Tuntutan Rakyat | Transparansi, Reformasi, Empati'
+      name: '17+8 Tuntutan Rakyat | Transparansi. Reformasi. Empati.'
     },
     publisher: {
       '@type': 'Organization',
-      name: '17+8 Tuntutan Rakyat | Transparansi, Reformasi, Empati',
+      name: '17+8 Tuntutan Rakyat | Transparansi. Reformasi. Empati.',
       logo: {
         '@type': 'ImageObject',
         url: 'https://gerakan-31-agustus-2025.vercel.app/android-chrome-512x512.png'

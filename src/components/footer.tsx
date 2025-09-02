@@ -23,7 +23,7 @@ const Footer = () => {
               <div>
                 <h3 className="font-bold text-xl">17+8 Tuntutan Rakyat</h3>
                 <p className="text-sm text-green-600 font-medium">
-                  Transparansi, Reformasi, Empati
+                  Transparansi. Reformasi. Empati.
                 </p>
               </div>
             </div>
