@@ -52,7 +52,7 @@
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
-      "eslint --cache --fix ./src"
+      "eslint --cache --fix ./src && npm run build"
     ]
   }
 }
