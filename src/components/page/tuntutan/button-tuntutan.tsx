@@ -12,7 +12,7 @@ const ButtonTuntutan = () => {
 
   return (
     <div
-      className="text-center flex items-center justify-center gap-2 rounded-full bg-green-500 text-gray-900 px-4 py-2 cursor-pointer w-fit mx-auto font-bold hover:scale-105"
+      className="text-center flex items-center justify-center gap-2 rounded-full bg-green-500 text-gray-900 px-4 py-2 cursor-pointer w-fit mx-auto font-bold hover:scale-105 transition-all duration-300"
       onClick={() => {
         window.scrollTo({ top: deviceHeight, behavior: 'smooth' })
       }}

@@ -17,7 +17,7 @@ const OneWeekDemand = () => {
         Deadline: 5 September 2025
       </p>
 
-      <div className="">
+      <div className="mt-8">
         <div className="grid grid-cols-2 gap-4">
           {ONE_WEEK_DEMANDS.map((demand, index) => (
             <div
