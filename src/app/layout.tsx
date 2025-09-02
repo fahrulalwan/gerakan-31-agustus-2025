@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://tuntutan-rakyat.vercel.app'),
   title: {
     default: '17+8 Tuntutan Rakyat | Transparansi. Reformasi. Empati.',
-    template: '%s | 17+8 Tuntutan Rakyat'
+    template: ''
   },
   description:
     'Daftar 17+8 Tuntutan Rakyat. Hasil rangkuman beberapa tuntutan yang beredar di media sosial dalam beberapa hari.',
@@ -32,9 +32,6 @@ export const metadata: Metadata = {
     'panduan demo',
     'indonesia baru'
   ],
-  // authors: [{ name: 'Masyarakat Sipil' }],
-  // creator: 'Masyarakat Sipil',
-  // publisher: 'Masyarakat Sipil',
   formatDetection: {
     email: false,
     address: false,

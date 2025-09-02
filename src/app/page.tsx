@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import { redirect } from 'next/navigation'
 
 export const metadata: Metadata = {
-  title: '17+8 Tuntutan Rakyat | Transparansi. Reformasi. Empati.',
+  title: 'Transparansi. Reformasi. Empati.',
   description:
     '17+8 Tuntutan Rakyat. Hasil rangkuman beberapa tuntutan yang beredar di media sosial dalam beberapa hari.',
   keywords: [
