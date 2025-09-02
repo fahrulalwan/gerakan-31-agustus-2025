@@ -22,7 +22,8 @@ export default async function Image() {
           justifyContent: 'center',
           backgroundColor: '#037033',
           fontSize: 32,
-          fontWeight: 600
+          fontWeight: 600,
+          fontFamily: 'Inter, system-ui, sans-serif'
         }}
       >
         <div
@@ -41,7 +42,9 @@ export default async function Image() {
               fontSize: 64,
               fontWeight: 800,
               marginBottom: 20,
-              color: 'white'
+              color: 'white',
+              fontFamily: 'Inter, system-ui, sans-serif',
+              lineHeight: 1.2
             }}
           >
             17+8 Tuntutan Rakyat
@@ -51,28 +54,28 @@ export default async function Image() {
               fontSize: 40,
               fontWeight: 600,
               marginBottom: 20,
+              fontFamily: 'Inter, system-ui, sans-serif',
+              lineHeight: 1.2,
               color: '#EB8FBD'
             }}
           >
             Transparansi. Reformasi. Empati.
           </div>
-          <div
-            style={{
-              fontSize: 28,
-              fontWeight: 400,
-              color: '#E8F5E8',
-              maxWidth: 700,
-              textAlign: 'center'
-            }}
-          >
-            Daftar lengkap 25 tuntutan rakyat Indonesia untuk reformasi
-            menyeluruh. 17 tuntutan dalam 1 minggu dan 8 tuntutan dalam 1 tahun.
-          </div>
         </div>
       </div>
     ),
     {
-      ...size
+      ...size,
+      fonts: [
+        {
+          name: 'Inter',
+          data: await fetch(
+            new URL(
+              'https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap'
+            )
+          ).then((res) => res.arrayBuffer())
+        }
+      ]
     }
   )
 }
