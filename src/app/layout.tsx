@@ -17,15 +17,15 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://gerakan-31-agustus-2025.vercel.app'),
+  metadataBase: new URL('https://tuntutan-rakyat.vercel.app'),
   title: {
-    default: 'Gerakan 31 Agustus 2025 | Tuntutan Rakyat Indonesia',
-    template: '%s | Gerakan 31 Agustus 2025'
+    default: '17+8 Tuntutan Rakyat | Transparansi. Reformasi. Empati.',
+    template: '%s | 17+8 Tuntutan Rakyat'
   },
   description:
-    'Platform resmi gerakan 31 Agustus 2025 untuk memantau 25 tuntutan rakyat Indonesia kepada pemerintah. Akses panduan demonstrasi aman, informasi terkini, dan bergabung dalam perubahan yang damai dan bermartabat.',
+    'Daftar 17+8 Tuntutan Rakyat. Hasil rangkuman beberapa tuntutan yang beredar di media sosial dalam beberapa hari.',
   keywords: [
-    'gerakan 31 agustus 2025',
+    '17+8 Tuntutan Rakyat',
     'tuntutan rakyat indonesia',
     'demonstrasi aman',
     'reformasi indonesia',
@@ -36,9 +36,9 @@ export const metadata: Metadata = {
     'panduan demo',
     'indonesia baru'
   ],
-  authors: [{ name: 'Gerakan 31 Agustus 2025' }],
-  creator: 'Gerakan 31 Agustus 2025',
-  publisher: 'Gerakan 31 Agustus 2025',
+  // authors: [{ name: 'Masyarakat Sipil' }],
+  // creator: 'Masyarakat Sipil',
+  // publisher: 'Masyarakat Sipil',
   formatDetection: {
     email: false,
     address: false,
@@ -47,27 +47,26 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'id_ID',
-    url: 'https://gerakan-31-agustus-2025.vercel.app',
-    title: 'Gerakan 31 Agustus 2025 | Tuntutan Rakyat Indonesia',
+    url: 'https://tuntutan-rakyat.vercel.app',
+    title: '17+8 Tuntutan Rakyat | Transparansi. Reformasi. Empati.',
     description:
-      'Platform resmi gerakan 31 Agustus 2025 untuk memantau 25 tuntutan rakyat Indonesia kepada pemerintah. Bergabung dalam perubahan yang damai dan bermartabat.',
-    siteName: 'Gerakan 31 Agustus 2025',
+      'Daftar 17+8 Tuntutan Rakyat. Hasil rangkuman beberapa tuntutan yang beredar di media sosial dalam beberapa hari.',
+    siteName: '17+8 Tuntutan Rakyat',
     images: [
       {
         url: '/opengraph-image.png',
         width: 1200,
         height: 630,
-        alt: 'Gerakan 31 Agustus 2025 - Tuntutan Rakyat Indonesia'
+        alt: '17+8 Tuntutan Rakyat | Transparansi. Reformasi. Empati.'
       }
     ]
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Gerakan 31 Agustus 2025 | Tuntutan Rakyat Indonesia',
+    title: '17+8 Tuntutan Rakyat | Transparansi. Reformasi. Empati.',
     description:
-      'Platform resmi gerakan 31 Agustus 2025 untuk memantau 25 tuntutan rakyat Indonesia kepada pemerintah.',
-    images: ['/twitter-image.png'],
-    creator: '@gerakan31agustus'
+      'Daftar 17+8 Tuntutan Rakyat. Hasil rangkuman beberapa tuntutan yang beredar di media sosial dalam beberapa hari.',
+    images: ['/twitter-image.png']
   },
   robots: {
     index: true,
@@ -80,14 +79,10 @@ export const metadata: Metadata = {
       'max-snippet': -1
     }
   },
-  verification: {
-    google: 'your-google-verification-code',
-    yandex: 'your-yandex-verification-code'
-  },
   alternates: {
-    canonical: 'https://gerakan-31-agustus-2025.vercel.app',
+    canonical: 'https://tuntutan-rakyat.vercel.app',
     languages: {
-      'id-ID': 'https://gerakan-31-agustus-2025.vercel.app'
+      'id-ID': 'https://tuntutan-rakyat.vercel.app'
     }
   },
   category: 'politics',
@@ -95,8 +90,7 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
-      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
-      { url: '/favicon.ico', sizes: 'any' }
+      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' }
     ],
     apple: [
       { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }

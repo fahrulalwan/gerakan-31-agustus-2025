@@ -64,14 +64,14 @@ export const metadata: Metadata = {
     title: 'Tentang 17+8 Tuntutan Rakyat | Transparansi. Reformasi. Empati.',
     description:
       '17+8 Tuntutan Rakyat. Hasil rangkuman beberapa tuntutan yang beredar di media sosial dalam beberapa hari.',
-    url: 'https://gerakan-31-agustus-2025.vercel.app/tentang',
+    url: 'https://tuntutan-rakyat.vercel.app/tentang',
     type: 'article',
     images: [
       {
         url: '/opengraph-image.png',
         width: 1200,
         height: 630,
-        alt: 'Tentang Gerakan 31 Agustus 2025'
+        alt: 'Tentang 17+8 Tuntutan Rakyat'
       }
     ]
   },
@@ -83,7 +83,7 @@ export const metadata: Metadata = {
     images: ['/twitter-image.png']
   },
   alternates: {
-    canonical: 'https://gerakan-31-agustus-2025.vercel.app/tentang'
+    canonical: 'https://tuntutan-rakyat.vercel.app/tentang'
   }
 }
 

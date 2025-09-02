@@ -1,8 +1,8 @@
-# Gerakan 31 Agustus 2025 🇮🇩🌑
+# 17+8: Tuntutan Rakyat 🇮🇩🌑
 
-Gerakan 31 Agustus 2025 is a community-driven platform designed to provide a reliable source of information and tools during times of civil unrest in Indonesia. Our mission is to combat misinformation and empower citizens by creating a centralized, verifiable platform for news and protest resources.
+17+8: Tuntutan Rakyat is a community-driven platform designed to provide a reliable source of information and tools during times of civil unrest in Indonesia. Our mission is to combat misinformation and empower citizens by creating a centralized, verifiable platform for news and protest resources.
 
-The name "Gerakan 31 Agustus 2025" is a sub-movement of #IndonesiaGelap, a powerful reference to the ongoing demonstrations and the need for transparency and truth.
+The name "17+8: Tuntutan Rakyat" is a sub-movement of #IndonesiaGelap, a powerful reference to the ongoing demonstrations and the need for transparency and truth.
 
 ## Features
 
