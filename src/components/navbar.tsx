@@ -1,6 +1,13 @@
 'use client'
 
-import { Menu, X, Home, FileText, HelpCircle, Megaphone } from 'lucide-react'
+import {
+  Menu,
+  X,
+  // Home,
+  FileText,
+  HelpCircle,
+  Megaphone
+} from 'lucide-react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
@@ -8,7 +15,7 @@ import { useState } from 'react'
 import { cn } from '@/lib/utils'
 
 const navigationItems = [
-  { name: 'Beranda', href: '/', icon: Home },
+  // { name: 'Beranda', href: '/', icon: Home },
   { name: 'Tuntutan', href: '/tuntutan', icon: FileText },
   { name: 'Panduan Demo', href: '/panduan-demo', icon: Megaphone },
   // { name: 'Informasi', href: '/informasi', icon: Info },
