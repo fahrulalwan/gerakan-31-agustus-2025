@@ -1,9 +1,8 @@
 'use client'
 
 import Link from 'next/link'
-import { useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
-import useVisible from '@/hooks/use-visible'
 import { cn } from '@/lib/utils'
 
 import OneWeekDemand from './one-week-demand'
@@ -13,7 +12,22 @@ const TuntutanTabs = ({ jangka }: { jangka: string }) => {
   const tabRef = useRef<HTMLDivElement>(null)
   const secondTabRef = useRef<HTMLDivElement>(null)
   const contentRef = useRef<HTMLDivElement>(null)
-  const isFirstTabVisible = useVisible(tabRef)
+  const [isBottomTabsActive, setIsBottomTabsActive] = useState(false)
+
+  useEffect(() => {
+    const updateActive = () => {
+      const scrollY = window.scrollY || window.pageYOffset || 0
+      const threshold = (window.innerHeight || 0) + 140
+      setIsBottomTabsActive(scrollY >= threshold)
+    }
+    updateActive()
+    window.addEventListener('scroll', updateActive, { passive: true })
+    window.addEventListener('resize', updateActive)
+    return () => {
+      window.removeEventListener('scroll', updateActive)
+      window.removeEventListener('resize', updateActive)
+    }
+  }, [])
 
   return (
     <>
@@ -59,7 +73,7 @@ const TuntutanTabs = ({ jangka }: { jangka: string }) => {
         className="px-6 pb-8 sticky transition-all duration-300"
         ref={secondTabRef}
         style={{
-          bottom: isFirstTabVisible ? -200 : 0
+          bottom: isBottomTabsActive ? 0 : -200
         }}
       >
         <div className="max-w-3xl mx-auto">
