@@ -1,6 +1,8 @@
-import { AlertTriangle } from 'lucide-react'
+// import { AlertTriangle } from 'lucide-react'
+
 import type { Metadata } from 'next'
 
+import ButtonTuntutan from '@/components/page/tuntutan/button-tuntutan'
 import CountdownTimer from '@/components/page/tuntutan/countdown-timer'
 import TuntutanTabs from '@/components/page/tuntutan/tuntutan-tabs'
 
@@ -94,15 +96,15 @@ const TuntutanPage = async ({
         // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <div className="min-h-screen bg-white">
+      <div className="min-h-screen bg-gray-900">
         {/* Hero Section */}
-        <div className="bg-[#037033]">
+        <div className="bg-[#037033] h-screen">
           <div className="relative px-6 py-16">
             <div className="max-w-7xl mx-auto">
               <div className="text-center mb-12">
                 <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight">
-                  17+8: Suara Rakyat untuk
-                  <span className="block text-[#EB8FBD]">Indonesia Baru</span>
+                  17+8 Tuntutan Rakyat
+                  <span className="block text-[#EB8FBD]">#ResetIndonesia</span>
                 </h1>
 
                 <p className="text-xl text-white mb-8 max-w-3xl mx-auto leading-relaxed">
@@ -114,15 +116,19 @@ const TuntutanPage = async ({
 
               {/* Countdown Timer */}
               <div className="max-w-5xl mx-auto">
-                <CountdownTimer />
+                <CountdownTimer
+                  jangka={awaitedSearchParams.jangka ?? '1-minggu'}
+                />
               </div>
             </div>
           </div>
+
+          <ButtonTuntutan />
         </div>
 
         {/* Important Notice */}
         <div className="px-6 py-12">
-          <div className="max-w-5xl mx-auto">
+          {/* <div className="max-w-5xl mx-auto">
             <div className="rounded-3xl p-8 shadow-2xl border-2 bg-[#EB8FBD] border-[#EB8FBD]">
               <div className="flex items-start gap-4">
                 <div className="bg-white/20 rounded-full p-3 shrink-0">
@@ -142,7 +148,7 @@ const TuntutanPage = async ({
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
 
         {/* Tabs and Content */}

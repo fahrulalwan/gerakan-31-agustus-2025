@@ -14,7 +14,7 @@ const DemonstrasiPage = async ({
     : 'nasional'
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gray-900">
       {/* Hero Section */}
       <div className="px-4 py-16 bg-[#037033]">
         <div className="max-w-6xl mx-auto text-center">
@@ -24,7 +24,7 @@ const DemonstrasiPage = async ({
             <span className="text-[#EB8FBD]">Suara yang Terdengar</span>
           </h1>
 
-          <p className="text-xl text-slate-300 mb-12 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-200 mb-12 max-w-4xl mx-auto leading-relaxed">
             Panduan lengkap untuk berpartisipasi dalam demonstrasi dengan aman
             dan bertanggung jawab. Ketahui hak-hak Anda dan ikuti protokol
             keamanan yang tepat.
@@ -33,70 +33,61 @@ const DemonstrasiPage = async ({
       </div>
 
       {/* Route Learning Section */}
-      <div className="bg-white px-4 py-12">
+      <div className="bg-gray-900 px-4 py-12">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold mb-4 text-[#037033]">
               Pelajari Rute Demonstrasi
             </h2>
-            <p className="text-lg text-slate-600 max-w-3xl mx-auto">
+            <p className="text-lg text-gray-200 max-w-3xl mx-auto">
               Memahami rute dan titik kumpul adalah bagian penting dari
               persiapan demonstrasi yang aman
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            <div
-              className="bg-white rounded-2xl p-6 border-2 hover:shadow-lg transition-shadow"
-              style={{ borderColor: '#037033' }}
-            >
-              <MapPin className="size-12 mb-4 text-[#037033]" />
-              <h3 className="text-xl font-bold mb-3 text-[#037033]">
+            <div className="bg-green-800 rounded-2xl p-6 border-2 hover:shadow-lg transition-shadow">
+              <MapPin className="size-12 mb-4 text-pink-200" />
+              <h3 className="text-xl font-bold mb-3 text-pink-200">
                 Titik Kumpul
               </h3>
-              <p className="text-slate-600 mb-4">
+              <p className="text-gray-200 mb-4">
                 Identifikasi lokasi berkumpul utama dan alternatif. Pastikan
                 mudah diakses transportasi umum.
               </p>
-              <ul className="text-sm text-slate-500 space-y-1">
+              <ul className="text-sm text-pink-200 space-y-1">
                 <li>• Cek aksesibilitas lokasi</li>
                 <li>• Siapkan rute alternatif</li>
                 <li>• Koordinasi dengan tim</li>
               </ul>
             </div>
 
-            <div
-              className="bg-white rounded-2xl p-6 border-2 hover:shadow-lg transition-shadow"
-              style={{ borderColor: '#EB8FBD' }}
-            >
-              <Route className="size-12 mb-4 text-[#EB8FBD]" />
-              <h3 className="text-xl font-bold mb-3 text-[#037033]">
+            <div className="bg-green-800 rounded-2xl p-6 border-2 hover:shadow-lg transition-shadow">
+              <Route className="size-12 mb-4 text-pink-200" />
+              <h3 className="text-xl font-bold mb-3 text-pink-200">
                 Jalur Demonstrasi
               </h3>
-              <p className="text-slate-600 mb-4">
+              <p className="text-gray-200 mb-4">
                 Pelajari rute yang akan dilalui, termasuk jalan alternatif jika
                 terjadi situasi darurat.
               </p>
-              <ul className="text-sm text-slate-500 space-y-1">
+              <ul className="text-sm text-pink-200 space-y-1">
                 <li>• Peta jalur utama</li>
                 <li>• Rute evakuasi darurat</li>
                 <li>• Fasilitas umum terdekat</li>
               </ul>
             </div>
 
-            <div
-              className="bg-white rounded-2xl p-6 border-2 hover:shadow-lg transition-shadow"
-              style={{ borderColor: '#037033' }}
-            >
-              <Navigation className="size-12 mb-4 text-[#037033]" />
-              <h3 className="text-xl font-bold mb-3 text-[#037033]">
+            <div className="bg-green-800 rounded-2xl p-6 border-2 hover:shadow-lg transition-shadow">
+              <Navigation className="size-12 mb-4 text-pink-200" />
+              <h3 className="text-xl font-bold mb-3 text-pink-200">
                 Navigasi Aman
               </h3>
-              <p className="text-slate-600 mb-4">
+              <p className="text-gray-200 mb-4">
                 Gunakan aplikasi navigasi dan simpan koordinat penting untuk
                 kemudahan akses.
               </p>
-              <ul className="text-sm text-slate-500 space-y-1">
+              <ul className="text-sm text-pink-200 space-y-1">
                 <li>• Download peta offline</li>
                 <li>• Simpan koordinat GPS</li>
                 <li>• Bagikan lokasi real-time</li>
@@ -110,7 +101,7 @@ const DemonstrasiPage = async ({
       <div className="px-4 py-8" style={{ backgroundColor: '#EB8FBD' }}>
         <div className="max-w-5xl mx-auto">
           <div
-            className="bg-white border-l-4 rounded-2xl p-8 shadow-sm"
+            className="bg-pink-200 border-l-4 rounded-2xl p-8 shadow-sm"
             style={{ borderLeftColor: '#037033' }}
           >
             <div className="flex items-start gap-4">
@@ -127,7 +118,7 @@ const DemonstrasiPage = async ({
                 </p>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                   <div
-                    className="bg-white border-2 rounded-xl p-4"
+                    className="bg-green-200 border-2 rounded-xl p-4"
                     style={{ borderColor: '#037033' }}
                   >
                     <div className="font-semibold mb-2 text-[#037033]">
@@ -138,8 +129,8 @@ const DemonstrasiPage = async ({
                     </div>
                   </div>
                   <div
-                    className="bg-white border-2 rounded-xl p-4"
-                    style={{ borderColor: '#EB8FBD' }}
+                    className="bg-green-200 border-2 rounded-xl p-4"
+                    style={{ borderColor: '#037033' }}
                   >
                     <div className="font-semibold mb-2 text-[#037033]">
                       🤝 Tetap Damai
@@ -149,7 +140,7 @@ const DemonstrasiPage = async ({
                     </div>
                   </div>
                   <div
-                    className="bg-white border-2 rounded-xl p-4"
+                    className="bg-green-200 border-2 rounded-xl p-4"
                     style={{ borderColor: '#037033' }}
                   >
                     <div className="font-semibold mb-2 text-[#037033]">

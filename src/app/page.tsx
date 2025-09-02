@@ -151,7 +151,7 @@ const Home = () => {
                 </div>
 
                 {/* Emergency Access */}
-                <div className="mb-8 p-3 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 max-w-sm mx-auto lg:mx-0">
+                <div className="mb-8 p-3 bg-white/10 backdrop-blur-sm rounded-xl border border-white/20 lg:max-w-sm lg:mx-0">
                   <div className="flex items-center gap-2 mb-2">
                     <AlertTriangle className="size-4 text-red-300" />
                     <h3 className="font-medium text-white text-sm">
@@ -219,13 +219,13 @@ const Home = () => {
         </section>
 
         {/* Focus Section - Main Actions */}
-        <section className="py-20 px-4 bg-gray-50">
+        <section className="py-20 px-4 bg-gray-900">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
                 Dua Fokus Utama Gerakan
               </h2>
-              <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              <p className="text-lg text-gray-200 max-w-2xl mx-auto">
                 Akses langsung ke tuntutan rakyat dan panduan demonstrasi yang
                 aman untuk perubahan yang bermakna
               </p>
@@ -233,7 +233,7 @@ const Home = () => {
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               {/* Tuntutan Card */}
-              <div className="group bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border-2 border-transparent hover:border-green-200 flex flex-col">
+              <div className="group bg-green-800 rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border-2 border-transparent hover:border-green-200 flex flex-col">
                 <div className="flex items-center gap-4 mb-6">
                   <div className="bg-green-100 p-4 rounded-2xl group-hover:bg-green-200 transition-colors">
                     <CheckSquare className="size-8 text-green-600" />
@@ -248,7 +248,7 @@ const Home = () => {
                   </div>
                 </div>
 
-                <p className="text-gray-600 mb-6 leading-relaxed">
+                <p className="text-gray-200 mb-6 leading-relaxed">
                   Daftar lengkap tuntutan masyarakat yang harus dipenuhi
                   pemerintah dalam jangka waktu 1 minggu dan 1 tahun ke depan.
                 </p>
@@ -278,7 +278,7 @@ const Home = () => {
               </div>
 
               {/* Demonstrasi Card */}
-              <div className="group bg-white rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border-2 border-transparent hover:border-pink-200">
+              <div className="group bg-green-800 rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-500 border-2 border-transparent hover:border-pink-200">
                 <div className="flex items-center gap-4 mb-6">
                   <div className="bg-pink-100 p-4 rounded-2xl group-hover:bg-pink-200 transition-colors">
                     <Users className="size-8 text-pink-600" />
@@ -287,13 +287,13 @@ const Home = () => {
                     <h3 className="text-2xl font-bold text-gray-900">
                       Panduan Demonstrasi
                     </h3>
-                    <p className="text-pink-600 font-medium">
+                    <p className="text-pink-200 font-medium">
                       Aksi Aman & Bermartabat
                     </p>
                   </div>
                 </div>
 
-                <p className="text-gray-600 mb-6 leading-relaxed">
+                <p className="text-pink-200 mb-6 leading-relaxed">
                   Checklist lengkap dan panduan keamanan untuk demonstrasi yang
                   efektif, aman, dan sesuai dengan hukum yang berlaku.
                 </p>

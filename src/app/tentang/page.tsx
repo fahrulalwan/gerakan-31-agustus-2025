@@ -1,49 +1,49 @@
-import { Heart, Scale, Shield, Target, Users } from 'lucide-react'
+// import { Heart, Scale, Shield, Target, Users } from 'lucide-react'
 import type { Metadata } from 'next'
 
-const visiMisi = [
-  {
-    title: 'Visi',
-    icon: Target,
-    content:
-      'Mewujudkan Indonesia yang demokratis, adil, dan sejahtera melalui partisipasi aktif rakyat dalam proses politik dan pengambilan keputusan.',
-    color: 'bg-green-100 text-green-800'
-  },
-  {
-    title: 'Misi',
-    icon: Users,
-    content:
-      'Mengorganisir gerakan rakyat yang damai, terstruktur, dan berkelanjutan untuk memperjuangkan tuntutan reformasi yang menyeluruh.',
-    color: 'bg-pink-100 text-pink-800'
-  }
-]
+// const visiMisi = [
+//   {
+//     title: 'Visi',
+//     icon: Target,
+//     content:
+//       'Mewujudkan Indonesia yang demokratis, adil, dan sejahtera melalui partisipasi aktif rakyat dalam proses politik dan pengambilan keputusan.',
+//     color: 'bg-green-100 text-green-800'
+//   },
+//   {
+//     title: 'Misi',
+//     icon: Users,
+//     content:
+//       'Mengorganisir gerakan rakyat yang damai, terstruktur, dan berkelanjutan untuk memperjuangkan tuntutan reformasi yang menyeluruh.',
+//     color: 'bg-pink-100 text-pink-800'
+//   }
+// ]
 
-const nilaiNilai = [
-  {
-    title: 'Demokrasi',
-    icon: Scale,
-    description:
-      'Menghormati proses demokratis dan hak-hak konstitusional setiap warga negara'
-  },
-  {
-    title: 'Kedamaian',
-    icon: Heart,
-    description:
-      'Menjunjung tinggi demonstrasi damai tanpa kekerasan dalam bentuk apapun'
-  },
-  {
-    title: 'Transparansi',
-    icon: Shield,
-    description:
-      'Keterbukaan dalam setiap proses dan pengambilan keputusan gerakan'
-  },
-  {
-    title: 'Persatuan',
-    icon: Users,
-    description:
-      'Mengedepankan persatuan di atas perbedaan untuk kepentingan bangsa'
-  }
-]
+// const nilaiNilai = [
+//   {
+//     title: 'Demokrasi',
+//     icon: Scale,
+//     description:
+//       'Menghormati proses demokratis dan hak-hak konstitusional setiap warga negara'
+//   },
+//   {
+//     title: 'Kedamaian',
+//     icon: Heart,
+//     description:
+//       'Menjunjung tinggi demonstrasi damai tanpa kekerasan dalam bentuk apapun'
+//   },
+//   {
+//     title: 'Transparansi',
+//     icon: Shield,
+//     description:
+//       'Keterbukaan dalam setiap proses dan pengambilan keputusan gerakan'
+//   },
+//   {
+//     title: 'Persatuan',
+//     icon: Users,
+//     description:
+//       'Mengedepankan persatuan di atas perbedaan untuk kepentingan bangsa'
+//   }
+// ]
 
 export const metadata: Metadata = {
   title: 'Tentang Gerakan',
@@ -138,31 +138,34 @@ const TentangPage = () => {
         // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <div className="min-h-screen bg-white">
+      <div className="min-h-screen bg-gray-900">
         {/* Hero Section */}
-        <div className="py-20 bg-[#037033]">
-          <div className="mx-auto max-w-2xl text-center px-6 lg:px-8">
+        <div className="py-20">
+          <div className="mx-auto max-w-2xl text-center px-6 lg:px-8 mb-10">
             <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
-              Tentang <span className="text-white">Gerakan</span>
+              Tentang <span className="text-white">Tuntutan</span>
             </h1>
-            <p className="mt-6 text-lg leading-8 text-green-100">
-              Mengenal lebih dalam latar belakang, visi, misi, dan nilai-nilai
-              yang menjadi fondasi Gerakan 31 Agustus 2025
+            <p className="mt-6 text-lg leading-6 text-green-100">
+              17+8 tuntutan ini adalah rangkuman atas berbagai tuntutan dan
+              desakan yang beredar di media sosial dalam beberapa hari terakhir
             </p>
           </div>
+          <p className="text-4xl md:text-6xl lg:text-[120px] text-pink-200 font-semibold text-center">
+            #ResetIndonesia
+          </p>
         </div>
 
         {/* Visi Misi Section */}
-        <div className="py-24 sm:py-32">
+        {/* <div className="py-24 sm:py-32">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-2xl lg:text-center">
               <h2 className="text-base font-semibold leading-7 text-green-600">
                 Visi & Misi
               </h2>
-              <p className="mt-2 text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+              <p className="mt-2 text-3xl font-bold tracking-tight text-gray-200 sm:text-4xl">
                 Fondasi Gerakan
               </p>
-              <p className="mt-6 text-lg leading-8 text-gray-600">
+              <p className="mt-6 text-lg leading-8 text-gray-200">
                 Visi dan misi yang menjadi panduan dalam setiap langkah
                 perjuangan untuk Indonesia yang lebih baik
               </p>
@@ -172,7 +175,7 @@ const TentangPage = () => {
               <dl className="grid max-w-xl grid-cols-1 gap-x-8 gap-y-16 lg:max-w-none lg:grid-cols-2">
                 {visiMisi.map((item, index) => (
                   <div key={index} className="flex flex-col">
-                    <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-900">
+                    <dt className="flex items-center gap-x-3 text-base font-semibold leading-7 text-gray-200">
                       <div
                         className={`flex h-10 w-10 items-center justify-center rounded-lg ${item.color}`}
                       >
@@ -180,7 +183,7 @@ const TentangPage = () => {
                       </div>
                       {item.title}
                     </dt>
-                    <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-600">
+                    <dd className="mt-4 flex flex-auto flex-col text-base leading-7 text-gray-200">
                       <p className="flex-auto">{item.content}</p>
                     </dd>
                   </div>
@@ -188,9 +191,9 @@ const TentangPage = () => {
               </dl>
             </div>
           </div>
-        </div>
+        </div> */}
         {/* Nilai-Nilai Section */}
-        <div className="bg-gray-50 py-24 sm:py-32">
+        {/* <div className="bg-pink-200 py-24 sm:py-32">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-2xl lg:text-center">
               <h2 className="text-base font-semibold leading-7 text-green-600">
@@ -226,7 +229,7 @@ const TentangPage = () => {
               </dl>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </>
   )

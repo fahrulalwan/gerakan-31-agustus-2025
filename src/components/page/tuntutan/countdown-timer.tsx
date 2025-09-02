@@ -10,7 +10,7 @@ interface TimeLeft {
   seconds: number
 }
 
-const CountdownTimer = () => {
+const CountdownTimer = ({ jangka }: { jangka: string }) => {
   const [timeLeft, setTimeLeft] = useState<TimeLeft>({
     days: 0,
     hours: 0,
@@ -18,12 +18,14 @@ const CountdownTimer = () => {
     seconds: 0
   })
   const [isClient, setIsClient] = useState(false)
+  const targetWeekDate = new Date('2025-09-06T00:00:00+07:00') // September 6, 2025 00:00 WIB
+  const targetYearDate = new Date('2026-08-31T00:00:00+07:00') // August 31, 2026 00:00 WIB
+  const targetDate = jangka === '1-minggu' ? targetWeekDate : targetYearDate
 
   useEffect(() => {
     setIsClient(true)
 
     const calculateTimeLeft = (): TimeLeft => {
-      const targetDate = new Date('2025-09-06T00:00:00+07:00') // September 6, 2025 00:00 WIB
       const now = new Date()
       const difference = targetDate.getTime() - now.getTime()
 
@@ -46,22 +48,20 @@ const CountdownTimer = () => {
     setTimeLeft(calculateTimeLeft())
 
     return () => clearInterval(timer)
-  }, [])
+  }, [jangka])
 
   if (!isClient) {
     return (
-      <div className="rounded-2xl md:rounded-3xl p-4 md:p-6 lg:p-8 shadow-2xl max-w-3xl mx-auto bg-[#EB8FBD]">
+      <div className="rounded-2xl md:rounded-3xl p-4 md:p-6 lg:p-8 shadow-2xl max-w-3xl mx-auto bg-pink-200 ">
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3 md:gap-4 mb-4 md:mb-6">
           <div className="bg-white/20 rounded-full p-2 md:p-3">
             <Clock className="size-6 md:size-8 text-white" />
           </div>
           <div className="text-center sm:text-left">
             <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#EB8FBD] mb-1">
-              Countdown Sampai 5 September 2025
+              Countdown Sampai{' '}
+              {jangka === '1-minggu' ? '5 September 2025' : '31 Agustus 2026'}
             </h3>
-            <p className="text-white text-sm md:text-lg">
-              Waktu tersisa untuk aksi bersama
-            </p>
           </div>
         </div>
 
@@ -110,14 +110,9 @@ const CountdownTimer = () => {
         <div className="text-center sm:text-left">
           <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-1">
             {isExpired
-              ? 'Waktu Telah Tiba!'
-              : 'Countdown Sampai 5 September 2025'}
+              ? ''
+              : `Countdown Sampai ${jangka === '1-minggu' ? '5 September 2025' : '31 Agustus 2026'}`}
           </h3>
-          <p className="text-sm md:text-lg text-white">
-            {isExpired
-              ? 'Saatnya aksi bersama dimulai'
-              : 'Waktu tersisa untuk aksi bersama'}
-          </p>
         </div>
       </div>
 
@@ -147,14 +142,6 @@ const CountdownTimer = () => {
           </div>
         ))}
       </div>
-
-      {!isExpired && (
-        <div className="mt-4 md:mt-6 text-center">
-          <p className="text-white text-xs sm:text-sm">
-            Bersiaplah untuk bergabung dalam gerakan perubahan Indonesia
-          </p>
-        </div>
-      )}
     </div>
   )
 }
