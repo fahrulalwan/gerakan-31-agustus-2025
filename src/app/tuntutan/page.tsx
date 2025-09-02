@@ -99,7 +99,7 @@ const TuntutanPage = async ({
                 <p className="lg:text-xl text-white mb-8 max-w-3xl mx-auto leading-relaxed">
                   Daftar lengkap tuntutan yang harus dipenuhi untuk mewujudkan
                   Indonesia yang lebih adil, demokratis, dan sejahtera bagi
-                  seluruh rakyat
+                  seluruh rakyat.
                 </p>
               </div>
 

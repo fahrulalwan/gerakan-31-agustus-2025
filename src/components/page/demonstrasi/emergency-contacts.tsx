@@ -145,7 +145,12 @@ const EmergencyContacts = ({ wilayah }: { wilayah: string }) => {
         </div>
 
         <Link
-          href={`tel:${contact.number.replace(/\D/g, '')}`}
+          href={
+            contact.isWhatsappAvailable
+              ? `https://wa.me/${contact.number.replace(/^0/, '62').replace(/\D/g, '')}`
+              : `tel:${contact.number.replace(/\D/g, '')}`
+          }
+          target={contact.isWhatsappAvailable ? '_blank' : '_self'}
           className={cn(
             'w-full p-3 rounded-xl font-bold text-white flex items-center justify-center gap-2 hover:opacity-90 transition-opacity',
             contact.type === 'emergency'
