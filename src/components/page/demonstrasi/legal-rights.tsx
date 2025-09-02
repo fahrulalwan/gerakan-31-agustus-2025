@@ -88,13 +88,13 @@ const LegalRights = () => (
 
     {/* Footnotes Section */}
     <div className="mt-8 pt-6 border-t border-green-200">
-      <h3 className="text-lg font-bold text-green-800 mb-3 flex items-center gap-2">
+      <h3 className="text-lg font-bold text-green-600 mb-3 flex items-center gap-2">
         <LinkIcon className="size-5" />
         Sumber & Dasar Hukum
       </h3>
       <ul className="space-y-2 text-sm">
         {LEGAL_RIGHTS_INFO.footnotes.map((note) => (
-          <li key={note.id} className="text-green-800/90">
+          <li key={note.id} className="text-green-600">
             {note.text}
             {note.link && (
               <a
