@@ -96,7 +96,7 @@ const TuntutanPage = async ({
                   17+8 Tuntutan Rakyat
                   <span className="block text-[#EB8FBD]">#ResetIndonesia</span>
                 </h1>
-                <p className="lg:text-xl text-white mb-8 max-w-3xl mx-auto leading-5">
+                <p className="lg:text-xl text-white mb-8 max-w-3xl mx-auto leading-relaxed">
                   Daftar lengkap tuntutan yang harus dipenuhi untuk mewujudkan
                   Indonesia yang lebih adil, demokratis, dan sejahtera bagi
                   seluruh rakyat
