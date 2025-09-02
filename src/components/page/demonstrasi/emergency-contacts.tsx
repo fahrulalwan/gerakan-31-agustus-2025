@@ -170,7 +170,7 @@ const EmergencyContacts = ({ wilayah }: { wilayah: string }) => {
         <h2 className="text-3xl font-bold text-[#EB8FBD] mb-2">
           Kontak Darurat & Bantuan
         </h2>
-        <p className="text-slate-900 mb-4">
+        <p className="text-gray-200 mb-4">
           Nomor-nomor penting yang dapat dihubungi dalam situasi darurat
         </p>
       </div>

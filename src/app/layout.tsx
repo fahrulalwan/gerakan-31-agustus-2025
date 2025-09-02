@@ -1,6 +1,6 @@
 import { Analytics } from '@vercel/analytics/react'
 import type { Metadata } from 'next'
-import { Geist, Geist_Mono } from 'next/font/google'
+import { Geist } from 'next/font/google'
 
 import './globals.css'
 import Footer from '@/components/footer'
@@ -8,11 +8,6 @@ import Navbar from '@/components/navbar'
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
-  subsets: ['latin']
-})
-
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
   subsets: ['latin']
 })
 
@@ -87,7 +82,7 @@ const RootLayout = ({
   children: React.ReactNode
 }>) => (
   <html lang="id">
-    <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+    <body className={`${geistSans.className} antialiased`}>
       <Navbar />
       <main>{children}</main>
       <Footer />

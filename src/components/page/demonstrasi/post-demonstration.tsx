@@ -9,10 +9,10 @@ import { cn } from '@/lib/utils'
 const PostDemonstration = () => (
   <div className="max-w-3xl mx-auto px-4 md:px-0 pb-10">
     <div className="text-center mb-6">
-      <h2 className="text-3xl font-bold text-green-800 mb-2">
+      <h2 className="text-3xl font-bold text-[#EB8FBD] mb-2">
         {POST_DEMONSTRATION_CHECKLIST.title}
       </h2>
-      <p className="text-slate-900 mb-4">
+      <p className="text-gray-200 mb-4">
         {POST_DEMONSTRATION_CHECKLIST.description}
       </p>
     </div>
