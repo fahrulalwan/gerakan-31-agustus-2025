@@ -5,7 +5,7 @@ export const ONE_WEEK_DEMANDS = [
       {
         content:
           '<b class="text-green-900">Tarik TNI dari pengamanan sipil</b> dan pastikan tidak ada kriminalisasi demonstran.',
-        status: true
+        status: false
       },
       {
         content:

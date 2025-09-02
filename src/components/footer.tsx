@@ -13,7 +13,7 @@ const Footer = () => {
   ]
 
   return (
-    <footer className="bg-[#036033] text-white">
+    <footer className="bg-gray-900 text-white">
       {/* Main Footer Content */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -22,7 +22,7 @@ const Footer = () => {
             <div className="flex items-center space-x-2 mb-4">
               <div>
                 <h3 className="font-bold text-xl">17+8 Tuntutan Rakyat</h3>
-                <p className="text-sm text-[#EB8FBD] font-medium">
+                <p className="text-sm text-green-600 font-medium">
                   Transparansi, Reformasi, Empati
                 </p>
               </div>

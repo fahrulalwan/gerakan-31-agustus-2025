@@ -66,13 +66,13 @@ const PanduanDemoTabs = ({
   return (
     <>
       {/* Enhanced Tab Navigation */}
-      <div className="bg-white px-4 py-12">
+      <div className="bg-gray-900 px-4 py-12">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-8">
-            <h2 className="text-3xl font-bold mb-4 text-[#037033]">
+            <h2 className="text-3xl font-bold mb-4 text-green-800">
               Pilih Panduan yang Anda Butuhkan
             </h2>
-            <p className="text-lg text-slate-600">
+            <p className="text-lg text-gray-200">
               Panduan terkategorisasi untuk memudahkan navigasi dan fokus
             </p>
           </div>
@@ -92,7 +92,7 @@ const PanduanDemoTabs = ({
                     'group relative rounded-2xl p-6 text-center transition-all duration-300 hover:scale-105 border-2 cursor-pointer border-[#037033]',
                     isActive
                       ? 'text-white shadow-lg bg-[#037033]'
-                      : 'bg-white text-slate-700 hover:shadow-md'
+                      : 'bg-green-100 text-slate-700 hover:shadow-md'
                   )}
                 >
                   <Icon
@@ -137,7 +137,7 @@ const PanduanDemoTabs = ({
                     'w-full flex items-center gap-4 rounded-2xl p-4 text-left transition-all duration-300 border-2 border-[#037033]',
                     isActive
                       ? 'text-white shadow-lg bg-[#037033]'
-                      : 'bg-white text-slate-700'
+                      : 'bg-green-100 text-slate-700'
                   )}
                 >
                   <Icon
@@ -172,7 +172,7 @@ const PanduanDemoTabs = ({
       </div>
 
       {/* Content */}
-      <div className="bg-white">
+      <div className="bg-gray-900">
         <ActiveComponent wilayah={wilayah} />
       </div>
     </>
