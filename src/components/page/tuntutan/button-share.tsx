@@ -22,7 +22,6 @@ Bersuara perlu strategi, bukan sekadar emosi. TuntutanRakyat menyediakan panduan
       <div className="flex gap-2 justify-center">
         <WhatsappShareButton
           url="https://tuntutan-rakyat.vercel.app"
-          separator=" | "
           title={title}
           className=""
         >
