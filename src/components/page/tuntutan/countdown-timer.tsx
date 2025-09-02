@@ -60,8 +60,13 @@ const CountdownTimer = ({ jangka }: { jangka: string }) => {
             <Clock className="size-6 md:size-8 text-white" />
           </div>
           <div className="text-center sm:text-left">
-            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#EB8FBD] mb-1">
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#EB8FBD] mb-1 hidden sm:block">
               Countdown Sampai{' '}
+              {jangka === '1-minggu' ? '5 September 2025' : '31 Agustus 2026'}
+            </h3>
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#EB8FBD] mb-1 block sm:hidden">
+              Countdown Sampai
+              <br />
               {jangka === '1-minggu' ? '5 September 2025' : '31 Agustus 2026'}
             </h3>
           </div>
@@ -110,10 +115,15 @@ const CountdownTimer = ({ jangka }: { jangka: string }) => {
           )}
         </div>
         <div className="text-center sm:text-left">
-          <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-1">
+          <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-1 hidden sm:block">
             {isExpired
               ? ''
               : `Countdown Sampai ${jangka === '1-minggu' ? '5 September 2025' : '31 Agustus 2026'}`}
+          </h3>
+          <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-1 block sm:hidden">
+            Countdown Sampai
+            <br />
+            {jangka === '1-minggu' ? '5 September 2025' : '31 Agustus 2026'}
           </h3>
         </div>
       </div>
