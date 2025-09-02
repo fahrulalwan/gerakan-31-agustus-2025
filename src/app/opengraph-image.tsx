@@ -65,17 +65,7 @@ export default async function Image() {
       </div>
     ),
     {
-      ...size,
-      fonts: [
-        {
-          name: 'Inter',
-          data: await fetch(
-            new URL(
-              'https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap'
-            )
-          ).then((res) => res.arrayBuffer())
-        }
-      ]
+      ...size
     }
   )
 }
