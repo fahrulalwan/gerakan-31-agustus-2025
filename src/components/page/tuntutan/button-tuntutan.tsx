@@ -7,11 +7,12 @@ const ButtonTuntutan = () => {
   const [deviceHeight, setDeviceHeight] = useState(0)
 
   useEffect(() => {
-    setDeviceHeight(window.innerHeight)
+    setDeviceHeight(window.innerHeight * 0.8)
   }, [])
 
   return (
-    <div
+    <button
+      type="button"
       className="text-center flex items-center justify-center gap-2 rounded-full bg-green-500 text-gray-900 px-4 py-2 cursor-pointer w-fit mx-auto font-bold hover:scale-105 transition-all duration-300"
       onClick={() => {
         window.scrollTo({ top: deviceHeight, behavior: 'smooth' })
@@ -19,7 +20,7 @@ const ButtonTuntutan = () => {
     >
       Lihat Tuntutan
       <ArrowDownIcon className="size-5 text-gray-900" />
-    </div>
+    </button>
   )
 }
 

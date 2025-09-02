@@ -11,13 +11,10 @@ const TuntutanTabs = ({ jangka }: { jangka: string }) => (
   <>
     {/* Jangka Navigation */}
     <div className="px-6 pb-8">
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-3xl mx-auto">
         <div className="bg-gray-800 rounded-2xl p-2 shadow-lg border border-gray-800 flex justify-center w-fit mx-auto gap-2">
           <Link
             href="/tuntutan?jangka=1-minggu"
-            onClick={() => {
-              window.scrollTo({ top: 0, behavior: 'smooth' })
-            }}
             scroll={false}
             className={cn(
               'rounded-xl px-8 py-4 font-semibold transition-all duration-300 flex items-center gap-3',
@@ -31,9 +28,6 @@ const TuntutanTabs = ({ jangka }: { jangka: string }) => (
 
           <Link
             href="/tuntutan?jangka=1-tahun"
-            onClick={() => {
-              window.scrollTo({ top: 0, behavior: 'smooth' })
-            }}
             scroll={false}
             className={cn(
               'rounded-xl px-8 py-4 font-semibold transition-all duration-300 flex items-center gap-3',

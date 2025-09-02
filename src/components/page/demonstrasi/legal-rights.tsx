@@ -3,7 +3,7 @@ import { Shield, AlertCircle, Phone } from 'lucide-react'
 import { LEGAL_RIGHTS_INFO } from '@/constants/demonstration'
 
 const LegalRights = () => (
-  <div className="max-w-5xl mx-auto px-4 md:px-0 pb-10">
+  <div className="max-w-3xl mx-auto px-4 md:px-0 pb-10">
     <div className="text-center mb-6">
       <h2 className="text-3xl font-bold text-green-800 mb-2">
         {LEGAL_RIGHTS_INFO.title}

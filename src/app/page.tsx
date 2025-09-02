@@ -33,23 +33,14 @@ export const metadata: Metadata = {
     title: '17+8 Tuntutan Rakyat | Transparansi. Reformasi. Empati.',
     description:
       'Daftar 17+8 Tuntutan Rakyat. Hasil rangkuman beberapa tuntutan yang beredar di media sosial dalam beberapa hari.',
-    url: 'https://gerakan-31-agustus-2025.vercel.app',
-    type: 'website',
-    images: [
-      {
-        url: '/opengraph-image.png',
-        width: 1200,
-        height: 630,
-        alt: '17+8 Tuntutan Rakyat | Transparansi. Reformasi. Empati.'
-      }
-    ]
+    url: 'https://tuntutan-rakyat.vercel.app',
+    type: 'website'
   },
   twitter: {
     card: 'summary_large_image',
     title: '17+8 Tuntutan Rakyat | Transparansi. Reformasi. Empati.',
     description:
-      'Daftar 17+8 Tuntutan Rakyat untuk memantau 25 tuntutan rakyat Indonesia kepada pemerintah.',
-    images: ['/twitter-image.png']
+      'Daftar 17+8 Tuntutan Rakyat untuk memantau 25 tuntutan rakyat Indonesia kepada pemerintah.'
   },
   alternates: {
     canonical: 'https://tuntutan-rakyat.vercel.app'
@@ -88,8 +79,8 @@ const Home = () => {
     name: '17+8 Tuntutan Rakyat | Transparansi. Reformasi. Empati.',
     description:
       'Daftar 17+8 Tuntutan Rakyat. Hasil rangkuman beberapa tuntutan yang beredar di media sosial dalam beberapa hari.',
-    url: 'https://gerakan-31-agustus-2025.vercel.app',
-    logo: 'https://gerakan-31-agustus-2025.vercel.app/android-chrome-512x512.png',
+    url: 'https://tuntutan-rakyat.vercel.app',
+    logo: 'https://tuntutan-rakyat.vercel.app/android-chrome-512x512.png',
     sameAs: ['@17+8TuntutanRakyat'],
     foundingDate: '2025',
     areaServed: 'Indonesia',
@@ -101,7 +92,7 @@ const Home = () => {
     ],
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': 'https://gerakan-31-agustus-2025.vercel.app'
+      '@id': 'https://tuntutan-rakyat.vercel.app'
     }
   }
 
@@ -112,7 +103,7 @@ const Home = () => {
         // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <div className="min-h-screen bg-white">
+      <div className="bg-white">
         {/* Hero Section */}
         <section className="relative bg-green-800 px-4 py-20 md:py-32">
           <div className="max-w-6xl mx-auto">

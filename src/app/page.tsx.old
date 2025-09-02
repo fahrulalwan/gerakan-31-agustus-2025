@@ -26,26 +26,17 @@ export const metadata: Metadata = {
     title: '17+8 Tuntutan Rakyat Indonesia | Transparansi. Reformasi. Empati.',
     description:
       'Daftar lengkap 25 tuntutan rakyat Indonesia untuk reformasi menyeluruh. 17 tuntutan dalam 1 minggu dan 8 tuntutan dalam 1 tahun.',
-    url: 'https://gerakan-31-agustus-2025.vercel.app',
+    url: 'https://tuntutan-rakyat.vercel.app',
     type: 'website',
-    images: [
-      {
-        url: '/opengraph-image.png',
-        width: 1200,
-        height: 630,
-        alt: '17+8 Tuntutan Rakyat Indonesia | Transparansi. Reformasi. Empati.'
-      }
-    ]
   },
   twitter: {
     card: 'summary_large_image',
     title: '17+8 Tuntutan Rakyat Indonesia | Transparansi. Reformasi. Empati.',
     description:
       'Daftar lengkap 25 tuntutan rakyat Indonesia untuk reformasi menyeluruh. 17 tuntutan dalam 1 minggu dan 8 tuntutan dalam 1 tahun.',
-    images: ['/twitter-image.png']
   },
   alternates: {
-    canonical: 'https://gerakan-31-agustus-2025.vercel.app'
+    canonical: 'https://tuntutan-rakyat.vercel.app'
   }
 }
 
@@ -70,14 +61,14 @@ const TuntutanPage = async ({
       name: '17+8 Tuntutan Rakyat | Transparansi. Reformasi. Empati.',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://gerakan-31-agustus-2025.vercel.app/android-chrome-512x512.png'
+        url: 'https://tuntutan-rakyat.vercel.app/android-chrome-512x512.png'
       }
     },
     datePublished: '2025-08-31',
     dateModified: '2025-09-01',
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': 'https://gerakan-31-agustus-2025.vercel.app/tuntutan'
+      '@id': 'https://tuntutan-rakyat.vercel.app/tuntutan'
     },
     articleSection: 'Politik',
     keywords: [
@@ -96,9 +87,9 @@ const TuntutanPage = async ({
         // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <div className="min-h-screen bg-gray-900">
+      <div className="bg-gray-900">
         {/* Hero Section */}
-        <div className="bg-[#037033] h-screen">
+        <div className="bg-[#037033]">
           <div className="relative px-6 py-16">
             <div className="max-w-7xl mx-auto">
               <div className="text-center mb-12">

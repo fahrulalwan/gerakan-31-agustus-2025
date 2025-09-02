@@ -10,6 +10,9 @@ interface TimeLeft {
   seconds: number
 }
 
+const targetWeekDate = new Date('2025-09-06T00:00:00+07:00') // September 6, 2025 00:00 WIB
+const targetYearDate = new Date('2026-08-31T00:00:00+07:00') // August 31, 2026 00:00 WIB
+
 const CountdownTimer = ({ jangka }: { jangka: string }) => {
   const [timeLeft, setTimeLeft] = useState<TimeLeft>({
     days: 0,
@@ -18,8 +21,7 @@ const CountdownTimer = ({ jangka }: { jangka: string }) => {
     seconds: 0
   })
   const [isClient, setIsClient] = useState(false)
-  const targetWeekDate = new Date('2025-09-06T00:00:00+07:00') // September 6, 2025 00:00 WIB
-  const targetYearDate = new Date('2026-08-31T00:00:00+07:00') // August 31, 2026 00:00 WIB
+
   const targetDate = jangka === '1-minggu' ? targetWeekDate : targetYearDate
 
   useEffect(() => {
@@ -48,11 +50,11 @@ const CountdownTimer = ({ jangka }: { jangka: string }) => {
     setTimeLeft(calculateTimeLeft())
 
     return () => clearInterval(timer)
-  }, [jangka])
+  }, [targetDate])
 
   if (!isClient) {
     return (
-      <div className="rounded-2xl md:rounded-3xl p-4 md:p-6 lg:p-8 shadow-2xl max-w-3xl mx-auto bg-pink-200 ">
+      <div className="rounded-2xl md:rounded-3xl p-4 md:p-6 lg:p-8 shadow-2xl max-w-3xl mx-auto bg-[#EB8FBD]">
         <div className="flex flex-col sm:flex-row items-center justify-center gap-3 md:gap-4 mb-4 md:mb-6">
           <div className="bg-white/20 rounded-full p-2 md:p-3">
             <Clock className="size-6 md:size-8 text-white" />

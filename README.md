@@ -33,7 +33,7 @@ The platform will be built with a modern web stack, using real-time updates and 
 This project is open-source, and we welcome contributions from developers, designers, journalists, and activists.
 
 1. **Fork the repository:** Start by forking this repository to your own GitHub account.
-2. **Clone the project:** `git clone https://github.com/fahrulalwan/gerakan-31-agustus-2025.git`
+2. **Clone the project:** `git clone https://github.com/fahrulalwan/tuntutan-rakyat.git`
 3. **Create a new branch:** `git checkout -b feature/your-feature-name`
 4. **Make your changes:** Implement your feature or fix a bug.
 5. **Commit and push:** `git commit -m "feat: your feature description"` followed by `git push origin feature/your-feature-name`

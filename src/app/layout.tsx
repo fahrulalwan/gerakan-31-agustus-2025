@@ -25,6 +25,7 @@ export const metadata: Metadata = {
   description:
     'Daftar 17+8 Tuntutan Rakyat. Hasil rangkuman beberapa tuntutan yang beredar di media sosial dalam beberapa hari.',
   keywords: [
+    'tuntutan rakyat',
     '17+8 Tuntutan Rakyat',
     'tuntutan rakyat indonesia',
     'demonstrasi aman',
@@ -51,22 +52,13 @@ export const metadata: Metadata = {
     title: '17+8 Tuntutan Rakyat | Transparansi. Reformasi. Empati.',
     description:
       'Daftar 17+8 Tuntutan Rakyat. Hasil rangkuman beberapa tuntutan yang beredar di media sosial dalam beberapa hari.',
-    siteName: '17+8 Tuntutan Rakyat',
-    images: [
-      {
-        url: '/opengraph-image.png',
-        width: 1200,
-        height: 630,
-        alt: '17+8 Tuntutan Rakyat | Transparansi. Reformasi. Empati.'
-      }
-    ]
+    siteName: '17+8 Tuntutan Rakyat'
   },
   twitter: {
     card: 'summary_large_image',
     title: '17+8 Tuntutan Rakyat | Transparansi. Reformasi. Empati.',
     description:
-      'Daftar 17+8 Tuntutan Rakyat. Hasil rangkuman beberapa tuntutan yang beredar di media sosial dalam beberapa hari.',
-    images: ['/twitter-image.png']
+      'Daftar 17+8 Tuntutan Rakyat. Hasil rangkuman beberapa tuntutan yang beredar di media sosial dalam beberapa hari.'
   },
   robots: {
     index: true,
@@ -86,28 +78,7 @@ export const metadata: Metadata = {
     }
   },
   category: 'politics',
-  classification: 'Social Movement',
-  icons: {
-    icon: [
-      { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
-      { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' }
-    ],
-    apple: [
-      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }
-    ],
-    other: [
-      {
-        url: '/android-chrome-192x192.png',
-        sizes: '192x192',
-        type: 'image/png'
-      },
-      {
-        url: '/android-chrome-512x512.png',
-        sizes: '512x512',
-        type: 'image/png'
-      }
-    ]
-  }
+  classification: 'Social Movement'
 }
 
 const RootLayout = ({

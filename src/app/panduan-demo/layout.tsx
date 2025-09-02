@@ -20,26 +20,17 @@ export const metadata: Metadata = {
     title: 'Panduan Demonstrasi Aman | Transparansi. Reformasi. Empati.',
     description:
       'Panduan lengkap untuk berpartisipasi dalam demonstrasi dengan aman dan bertanggung jawab. Checklist, protokol keamanan, dan hak hukum.',
-    url: 'https://gerakan-31-agustus-2025.vercel.app/panduan-demo',
-    type: 'article',
-    images: [
-      {
-        url: '/opengraph-image.png',
-        width: 1200,
-        height: 630,
-        alt: 'Panduan Demonstrasi Aman - Transparansi. Reformasi. Empati.'
-      }
-    ]
+    url: 'https://tuntutan-rakyat.vercel.app/panduan-demo',
+    type: 'article'
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Panduan Demonstrasi Aman | Transparansi. Reformasi. Empati.',
     description:
-      'Panduan lengkap untuk berpartisipasi dalam demonstrasi dengan aman dan bertanggung jawab.',
-    images: ['/twitter-image.png']
+      'Panduan lengkap untuk berpartisipasi dalam demonstrasi dengan aman dan bertanggung jawab.'
   },
   alternates: {
-    canonical: 'https://gerakan-31-agustus-2025.vercel.app/panduan-demo'
+    canonical: 'https://tuntutan-rakyat.vercel.app/panduan-demo'
   }
 }
 

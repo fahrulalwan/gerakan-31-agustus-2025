@@ -21,22 +21,13 @@ export const metadata: Metadata = {
     description:
       'Kumpulan artikel dan panduan lengkap untuk mendukung demonstrasi yang aman, efektif, dan bermartabat. Informasi terkini seputar 17+8 Tuntutan Rakyat dan panduan partisipasi yang bertanggung jawab.',
     url: 'https://tuntutan-rakyat.vercel.app/informasi',
-    type: 'website',
-    images: [
-      {
-        url: '/opengraph-image.png',
-        width: 1200,
-        height: 630,
-        alt: 'Informasi & Panduan - 17+8 Tuntutan Rakyat'
-      }
-    ]
+    type: 'website'
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Informasi & Panduan | 17+8 Tuntutan Rakyat',
     description:
-      'Kumpulan artikel dan panduan lengkap untuk mendukung demonstrasi yang aman, efektif, dan bermartabat. Informasi terkini seputar 17+8 Tuntutan Rakyat dan panduan partisipasi yang bertanggung jawab.',
-    images: ['/twitter-image.png']
+      'Kumpulan artikel dan panduan lengkap untuk mendukung demonstrasi yang aman, efektif, dan bermartabat. Informasi terkini seputar 17+8 Tuntutan Rakyat dan panduan partisipasi yang bertanggung jawab.'
   },
   alternates: {
     canonical: 'https://tuntutan-rakyat.vercel.app/informasi'

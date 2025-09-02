@@ -4,7 +4,7 @@ import { ONE_YEAR_DEMANDS } from '@/constants/demands'
 import { cn } from '@/lib/utils'
 
 const OneWeekDemand = () => (
-  <div className="max-w-5xl mx-auto pb-10">
+  <div className="max-w-3xl mx-auto pb-10">
     <div className="flex items-center justify-center gap-4 max-w-[400px] mx-auto text-[#037033]">
       <p className="text-[80px] font-bold">8</p>
       <p className="text-2xl font-bold">TUNTUTAN RAKYAT DALAM 1 TAHUN</p>
