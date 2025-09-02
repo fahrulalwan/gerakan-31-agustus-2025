@@ -1,6 +1,7 @@
 import { Analytics } from '@vercel/analytics/react'
 import type { Metadata } from 'next'
 import { Rubik } from 'next/font/google'
+import Script from 'next/script'
 
 import './globals.css'
 import Footer from '@/components/footer'
@@ -79,6 +80,22 @@ const RootLayout = ({
   children: React.ReactNode
 }>) => (
   <html lang="id">
+    <head>
+      {/* Google Analytics */}
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-SFPWV522H8"
+        strategy="afterInteractive"
+      />
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-SFPWV522H8');
+        `}
+      </Script>
+    </head>
     <body className={`${rubik.className} antialiased`}>
       <Navbar />
       <main>{children}</main>
