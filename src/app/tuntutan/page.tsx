@@ -27,13 +27,27 @@ export const metadata: Metadata = {
     description:
       'Daftar lengkap 25 tuntutan rakyat Indonesia untuk reformasi menyeluruh. 17 tuntutan dalam 1 minggu dan 8 tuntutan dalam 1 tahun.',
     url: 'https://tuntutan-rakyat.vercel.app/tuntutan',
+    images: [
+      {
+        url: 'https://tuntutan-rakyat.vercel.app/ogimage.png',
+        width: 1200,
+        height: 630
+      }
+    ],
     type: 'article'
   },
   twitter: {
     card: 'summary_large_image',
     title: '17+8 Tuntutan Rakyat Indonesia | Transparansi. Reformasi. Empati.',
     description:
-      'Daftar lengkap 25 tuntutan rakyat Indonesia untuk reformasi menyeluruh. 17 tuntutan dalam 1 minggu dan 8 tuntutan dalam 1 tahun.'
+      'Daftar lengkap 25 tuntutan rakyat Indonesia untuk reformasi menyeluruh. 17 tuntutan dalam 1 minggu dan 8 tuntutan dalam 1 tahun.',
+    images: [
+      {
+        url: 'https://tuntutan-rakyat.vercel.app/twitter-card.png',
+        width: 1200,
+        height: 630
+      }
+    ]
   },
   alternates: {
     canonical: 'https://tuntutan-rakyat.vercel.app/tuntutan'
