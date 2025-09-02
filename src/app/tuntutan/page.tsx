@@ -88,10 +88,10 @@ const TuntutanPage = async ({
       />
       <div className="bg-gray-900">
         {/* Hero Section */}
-        <div className="bg-[#037033] pb-12">
-          <div className="relative px-6 py-16">
+        <div className="bg-[#037033] pb-12 pt-6 -mt-[65px] h-screen relative ">
+          <div className="px-6 py-16">
             <div className="max-w-7xl mx-auto">
-              <div className="text-center mb-12">
+              <div className="text-center md:mb-12">
                 <h1 className="text-3xl lg:text-6xl font-bold text-white mb-6 leading-tight">
                   17+8 Tuntutan Rakyat
                   <span className="block text-[#EB8FBD]">#ResetIndonesia</span>
@@ -119,7 +119,7 @@ const TuntutanPage = async ({
         </div>
 
         {/* Important Notice */}
-        <div className="px-6 py-12">
+        <div className="px-6 py-6 md:py-12">
           {/* <div className="max-w-5xl mx-auto">
             <div className="rounded-3xl p-8 shadow-2xl border-2 bg-[#EB8FBD] border-[#EB8FBD]">
               <div className="flex items-start gap-4">

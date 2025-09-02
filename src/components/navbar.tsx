@@ -10,7 +10,7 @@ import {
 } from 'lucide-react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 import { cn } from '@/lib/utils'
 
@@ -24,6 +24,9 @@ const navigationItems = [
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
+  const [isHidden, setIsHidden] = useState(false)
+  const lastScrollYRef = useRef(0)
+  const tickingRef = useRef(false)
   const pathname = usePathname()
 
   const isActive = (href: string) => {
@@ -33,8 +36,42 @@ const Navbar = () => {
     return pathname.startsWith(href)
   }
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (tickingRef.current) return
+      tickingRef.current = true
+      window.requestAnimationFrame(() => {
+        const currentY = window.scrollY || 0
+        const lastY = lastScrollYRef.current
+
+        // Always show when at the very top
+        if (currentY <= 0) {
+          setIsHidden(false)
+        } else {
+          const isScrollingDown = currentY > lastY
+          // Don't hide if mobile menu is open
+          setIsHidden(!isOpen && isScrollingDown)
+        }
+
+        lastScrollYRef.current = currentY
+        tickingRef.current = false
+      })
+    }
+
+    lastScrollYRef.current = window.scrollY || 0
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [isOpen])
+
   return (
-    <nav className="bg-pink-200 shadow-lg border-b border-gray-900 sticky top-0 z-50">
+    <nav
+      className={cn(
+        'bg-pink-200 shadow-lg border-b border-gray-900 sticky top-0 z-50 transition-transform duration-300 will-change-transform',
+        isHidden ? '-translate-y-full' : 'translate-y-0'
+      )}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           {/* Logo */}
@@ -86,7 +123,7 @@ const Navbar = () => {
 
       {/* Mobile Navigation */}
       {isOpen && (
-        <div className="md:hidden bg-pink-200 border-t border-gray-900 shadow-lg">
+        <div className="md:hidden bg-pink-200 border-t border-gray-900 shadow-lg absolute top-[65px] left-0 right-0">
           <div className="px-2 pt-2 pb-3 space-y-1">
             {navigationItems.map((item) => {
               const Icon = item.icon
