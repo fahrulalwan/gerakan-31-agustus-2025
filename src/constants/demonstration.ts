@@ -186,36 +186,85 @@ export const POST_DEMONSTRATION_CHECKLIST: ChecklistSection = {
 export const LEGAL_RIGHTS_INFO = {
   title: 'Hak-Hak Warga Negara dalam Demonstrasi',
   description:
-    'Informasi penting tentang hak asasi manusia saat berdemonstrasi',
+    'Informasi penting mengenai hak dan kewajiban hukum Anda saat berdemonstrasi, didasarkan pada peraturan perundang-undangan yang berlaku di Indonesia. Informasi ini bertujuan untuk memastikan Anda dapat menyuarakan pendapat dengan aman dan terlindungi.',
   sections: [
     {
-      title: 'Hak Dasar',
+      title: 'Hak Fundamental Demonstran',
       items: [
-        'Hak untuk menyampaikan pendapat di muka umum (UUD 1945 Pasal 28)',
-        'Hak untuk berkumpul dan berserikat (UUD 1945 Pasal 28E)',
-        'Hak untuk tidak disiksa atau diperlakukan tidak manusiawi',
-        'Hak untuk mendapat perlindungan hukum yang adil'
+        '**Kebebasan Berpendapat:** Dijamin oleh UUD 1945 Pasal 28E ayat (3) dan UU No. 9/1998. Anda berhak mengeluarkan pikiran secara bebas, baik lisan maupun tulisan.',
+        '**Perlindungan Hukum:** Aparat keamanan wajib memberikan perlindungan dan tidak boleh menggunakan kekerasan terhadap massa aksi (Pasal 7 UU No. 9/1998).',
+        '**Tidak Perlu Izin, Cukup Pemberitahuan:** Demonstrasi tidak memerlukan "izin", melainkan "surat pemberitahuan" kepada kepolisian selambat-lambatnya 3x24 jam sebelum aksi (Pasal 10 UU No. 9/1998).',
+        '**Hak Atas Bantuan Hukum:** Setiap orang yang ditangkap atau ditahan berhak mendapatkan bantuan hukum dari pengacara pilihannya (Pasal 54 KUHAP).'
       ]
     },
     {
-      title: 'Jika Ditahan',
+      title: 'Prosedur Penangkapan & Penahanan',
       items: [
-        'Anda berhak mengetahui alasan penangkapan',
-        'Anda berhak menghubungi keluarga atau pengacara',
-        'Anda berhak mendapat bantuan hukum',
-        'Penangkapan tanpa surat perintah hanya boleh dilakukan dalam flagrante delicto (tertangkap tangan)',
-        'Penahanan maksimal 1x24 jam tanpa surat perintah'
+        '**Surat Tugas & Alasan Penangkapan:** Petugas wajib menunjukkan surat tugas dan memberikan alasan penangkapan, kecuali dalam kasus tertangkap tangan (Pasal 18 KUHAP).',
+        '**Durasi Penangkapan Awal:** Penangkapan awal hanya dapat dilakukan untuk maksimal 1x24 jam (Pasal 19 KUHAP).',
+        '**Hak Menghubungi Keluarga/Pengacara:** Setelah ditangkap, Anda berhak segera menghubungi dan didampingi oleh keluarga atau penasihat hukum (Pasal 57 KUHAP).',
+        '**Penolakan Tanda Tangan BAP:** Anda berhak menolak menandatangani Berita Acara Pemeriksaan (BAP) jika isinya tidak sesuai dengan keterangan Anda, dengan mencatatkan alasan penolakan (Pasal 118 KUHAP).'
       ]
     },
     {
-      title: 'Yang Harus Dilakukan',
+      title: 'Eskalasi & Penggunaan Kekuatan oleh Polisi',
+      description:
+        'Jika situasi memanas, polisi akan bertindak sesuai tahapan penggunaan kekuatan berdasarkan Perkapolri No. 1/2009. Memahami ini dapat membantu Anda mengidentifikasi tindakan yang tidak proporsional.',
       items: [
-        'Tetap tenang dan kooperatif',
-        'Tanyakan identitas dan dasar hukum penangkapan',
-        'Minta untuk menghubungi keluarga/pengacara',
-        'Jangan menandatangani dokumen yang tidak Anda pahami',
-        'Ingat nama, nomor identitas, dan ciri-ciri petugas'
+        '**Tahap 1: Kekuatan Peringatan (Suara):** Perintah lisan seperti "Berhenti!" atau "Bubar!".',
+        '**Tahap 2: Kendali Tangan Kosong Lunak:** Tindakan membimbing, menahan, atau mengunci untuk mengarahkan subjek.',
+        '**Tahap 3: Kendali Tangan Kosong Keras:** Pukulan atau tendangan ke area yang tidak vital untuk melumpuhkan perlawanan.',
+        '**Tahap 4: Kendali Senjata Tumpul:** Penggunaan tongkat polisi (tonfa) atau tameng untuk menahan atau memukul.',
+        '**Tahap 5: Kendali dengan Gas Air Mata/Water Cannon:** Digunakan untuk membubarkan massa yang eskalatif dan tidak terkendali.',
+        '**Tahap 6: Penggunaan Senjata Api:** Hanya sebagai upaya terakhir jika nyawa petugas atau orang lain terancam bahaya serius. Dilarang keras digunakan untuk membubarkan massa.'
       ]
+    },
+    {
+      title: 'Melaporkan Pelanggaran oleh Aparat',
+      description:
+        'Jika Anda menyaksikan atau mengalami tindakan aparat yang melanggar hukum (kekerasan, intimidasi, pungli), Anda berhak melaporkannya. Berikut langkah dan saluran yang bisa ditempuh:',
+      items: [
+        '**1. Dokumentasikan Insiden:** Catat nama, pangkat, dan satuan aparat (jika terlihat), waktu, lokasi, dan kronologi kejadian. Ambil foto atau video sebagai bukti jika situasi memungkinkan dan aman.',
+        '**2. Laporkan ke Propam Polri:** Propam adalah divisi internal Polri yang menangani pelanggaran disiplin dan etik. Laporan dapat dilakukan melalui aplikasi Propam Presisi atau mendatangi kantor Propam terdekat.',
+        '**3. Adukan ke Komnas HAM:** Jika pelanggaran bersifat hak asasi manusia (penyiksaan, perlakuan tidak manusiawi), adukan ke Komisi Nasional Hak Asasi Manusia melalui situs pengaduan online mereka.',
+        '**4. Lapor ke Kompolnas:** Sebagai lembaga pengawas eksternal, Komisi Kepolisian Nasional menerima keluhan masyarakat terkait kinerja kepolisian dan dapat memberikan rekomendasi kepada Presiden.'
+      ]
+    }
+  ],
+  footnotes: [
+    {
+      id: 'uud-1945',
+      text: 'UUD 1945 Pasal 28E ayat (3): "Setiap orang berhak atas kebebasan berserikat, berkumpul, dan mengeluarkan pendapat."'
+    },
+    {
+      id: 'uu-9-1998',
+      text: 'UU No. 9 Tahun 1998 tentang Kemerdekaan Menyampaikan Pendapat di Muka Umum.',
+      link: 'https://peraturan.bpk.go.id/Details/45478/uu-no-9-tahun-1998'
+    },
+    {
+      id: 'kuhap',
+      text: 'Kitab Undang-Undang Hukum Acara Pidana (UU No. 8 Tahun 1981).',
+      link: 'https://jdih.mahkamahagung.go.id/legal-product/kitab-undang-undang-hukum-acara-pidana/download'
+    },
+    {
+      id: 'perkap-1-2009',
+      text: 'Peraturan Kapolri No. 1 Tahun 2009 tentang Penggunaan Kekuatan dalam Tindakan Kepolisian.',
+      link: 'https://paralegal.id/peraturan/peraturan-kepala-kepolisian-negara-nomor-1-tahun-2009/'
+    },
+    {
+      id: 'propam',
+      text: 'Pengaduan Divisi Profesi dan Pengamanan (Propam) Polri dapat dilakukan via aplikasi Propam Presisi.',
+      link: 'https://www.kompas.com/tren/read/2022/08/23/113000165/cara-melaporkan-polisi-lewat-aplikasi-propam-presisi-polri'
+    },
+    {
+      id: 'komnas-ham',
+      text: 'Pengaduan online Komisi Nasional Hak Asasi Manusia (Komnas HAM).',
+      link: 'https://pengaduan.komnasham.go.id/'
+    },
+    {
+      id: 'kompolnas',
+      text: 'Pengaduan Komisi Kepolisian Nasional (Kompolnas) RI.',
+      link: 'https://www.kompolnas.go.id/'
     }
   ]
 }
@@ -253,6 +302,14 @@ export const NATIONAL_EMERGENCY_CONTACTS: EmergencyContact[] = [
     type: 'emergency',
     isNational: true,
     address: 'Tersedia di seluruh Indonesia - hubungi dari telepon manapun'
+  },
+  {
+    name: 'Kompolnas RI',
+    number: '021-739-2315',
+    description: 'Komisi Kepolisian Nasional (Pengawas Eksternal Polri)',
+    type: 'legal',
+    isNational: true,
+    address: 'Jl. Tirtayasa VII No.20, Kebayoran Baru, Jakarta Selatan'
   },
   {
     name: 'Komnas HAM',

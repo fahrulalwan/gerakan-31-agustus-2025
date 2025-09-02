@@ -72,7 +72,7 @@ const Navbar = () => {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsOpen((state) => !state)}
-              className="text-gray-200 hover:text-gray-900 focus:outline-none focus:text-gray-900 p-2"
+              className="text-[#036033] hover:text-gray-900 focus:outline-none focus:text-gray-900 p-2"
             >
               {isOpen ? (
                 <X className="w-6 h-6" />
@@ -86,7 +86,7 @@ const Navbar = () => {
 
       {/* Mobile Navigation */}
       {isOpen && (
-        <div className="md:hidden bg-gray-900 border-t border-gray-900 shadow-lg">
+        <div className="md:hidden bg-pink-200 border-t border-gray-900 shadow-lg">
           <div className="px-2 pt-2 pb-3 space-y-1">
             {navigationItems.map((item) => {
               const Icon = item.icon
@@ -98,7 +98,7 @@ const Navbar = () => {
                     'px-3 py-2 rounded-lg text-base font-medium transition-all duration-200 flex items-center space-x-3',
                     isActive(item.href)
                       ? 'text-white shadow-md bg-[#037033]'
-                      : 'text-gray-200 hover:text-white hover:shadow-md bg-transparent'
+                      : 'text-[#037033] hover:bg-white/50 hover:shadow-md bg-transparent'
                   )}
                   onClick={() => setIsOpen(false)}
                 >
