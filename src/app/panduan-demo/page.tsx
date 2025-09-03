@@ -1,5 +1,7 @@
 import { AlertTriangle, MapPin, Route, Navigation } from 'lucide-react'
 
+import ButtonHero from '@/components/page/home/button-hero'
+
 import PanduanDemoTabs from '../../components/page/demonstrasi/panduan-demo-tabs'
 
 const DemonstrasiPage = async ({
@@ -16,7 +18,7 @@ const DemonstrasiPage = async ({
   return (
     <div className="bg-gray-900">
       {/* Hero Section */}
-      <div className="px-4 py-16 bg-[#037033]">
+      <div className="px-4 py-16 bg-[#037033] min-h-screen relative flex flex-col justify-center items-center">
         <div className="max-w-6xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
             Demonstrasi Yang aman,
@@ -30,10 +32,12 @@ const DemonstrasiPage = async ({
             keamanan yang tepat.
           </p>
         </div>
+
+        <ButtonHero label="Lihat Panduan" className="bg-pink-200" />
       </div>
 
       {/* Route Learning Section */}
-      <div className="bg-gray-900 px-4 py-12">
+      <div className="bg-gray-900 px-4 py-12" id="content-ref">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold mb-4 text-[#EB8FBD]">

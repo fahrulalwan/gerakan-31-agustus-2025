@@ -2,6 +2,8 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 
+import ButtonHero from '@/components/page/home/button-hero'
+
 // const visiMisi = [
 //   {
 //     title: 'Visi',
@@ -129,25 +131,27 @@ const TentangPage = () => {
         // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <div className="bg-gray-900">
+      <div className="bg-green-800">
         {/* Hero Section */}
-        <div className="py-20">
+        <div className="py-20 min-h-screen relative flex flex-col justify-center items-center">
           <div className="mx-auto max-w-2xl text-center px-6 lg:px-8 mb-10">
             <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
               Tentang <span className="text-white">Tuntutan</span>
             </h1>
             <p className="mt-6 text-lg leading-6 text-green-100">
               17+8 tuntutan ini adalah rangkuman atas berbagai tuntutan dan
-              desakan yang beredar di media sosial dalam beberapa hari terakhir
+              desakan yang beredar di media sosial dalam beberapa hari terakhir.
             </p>
           </div>
-          <p className="text-4xl md:text-6xl lg:text-8xl text-pink-200 font-semibold text-center">
+          {/* <p className="text-4xl md:text-6xl lg:text-8xl text-pink-200 font-semibold text-center mb-10">
             #ResetIndonesia
-          </p>
+          </p> */}
+
+          <ButtonHero label="Lihat Sumber" className="bg-pink-200" />
         </div>
 
         {/* Sumber Tuntutan Section */}
-        <div className="py-16 sm:py-24">
+        <div className="py-16 sm:py-16 bg-gray-900" id="content-ref">
           <div className="mx-auto max-w-4xl px-6 lg:px-8 text-gray-300">
             <div className="mx-auto max-w-2xl lg:text-center">
               <h2 className="text-base font-semibold leading-7 text-green-300">

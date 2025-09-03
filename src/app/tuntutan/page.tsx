@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 
+import ButtonHero from '@/components/page/home/button-hero'
 import ButtonShare from '@/components/page/tuntutan/button-share'
-import ButtonTuntutan from '@/components/page/tuntutan/button-tuntutan'
 import CountdownTimer from '@/components/page/tuntutan/countdown-timer'
 import TuntutanTabs from '@/components/page/tuntutan/tuntutan-tabs'
 
@@ -119,7 +119,7 @@ const TuntutanPage = async ({
               </p>
             </div>
 
-            <ButtonTuntutan />
+            <ButtonHero label="Lihat Tuntutan" className="bg-pink-200" />
 
             {/* Countdown Timer */}
             <div className="max-w-5xl mx-auto">
