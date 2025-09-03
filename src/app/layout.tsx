@@ -2,6 +2,7 @@ import { Analytics } from '@vercel/analytics/react'
 import type { Metadata } from 'next'
 import { Rubik } from 'next/font/google'
 import Script from 'next/script'
+import { Suspense } from 'react'
 
 import './globals.css'
 import Footer from '@/components/footer'
@@ -97,7 +98,9 @@ const RootLayout = ({
       </Script>
     </head>
     <body className={`${rubik.className} antialiased`}>
-      <Navbar />
+      <Suspense fallback={<div className="h-16 bg-gray-900" />}>
+        <Navbar />
+      </Suspense>
       <main>{children}</main>
       <Footer />
       <Analytics />

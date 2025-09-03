@@ -1,5 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import { Suspense } from 'react'
 
 import ButtonHero from '@/components/page/home/button-hero'
 import ButtonShare from '@/components/page/tuntutan/button-share'
@@ -121,7 +122,13 @@ const TuntutanPage = async () => {
         <div className="px-6 py-6 md:py-12" id="content-ref" />
 
         {/* Tabs and Content */}
-        <TuntutanTabs />
+        <Suspense
+          fallback={
+            <div className="h-96 bg-gray-800 animate-pulse rounded-2xl mx-6" />
+          }
+        >
+          <TuntutanTabs />
+        </Suspense>
 
         {/* Sumber Tuntutan Section */}
         <div className="py-4 pb-10 sm:py-10 md:px-0 px-4">
