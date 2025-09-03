@@ -136,7 +136,7 @@ const TentangPage = () => {
         <div className="py-20 min-h-screen relative flex flex-col justify-center items-center">
           <div className="mx-auto max-w-2xl text-center px-6 lg:px-8 mb-10">
             <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
-              Tentang <span className="text-white">Tuntutan</span>
+              Tentang <span className="text-[#EB8FBD]">Tuntutan</span>
             </h1>
             <p className="mt-6 text-lg leading-6 text-green-100">
               17+8 tuntutan ini adalah rangkuman atas berbagai tuntutan dan
