@@ -1,127 +1,34 @@
 'use client'
 
-import { Clock, Calendar } from 'lucide-react'
-import { useState, useEffect } from 'react'
+import { useSearchParams } from 'next/navigation'
 
-interface TimeLeft {
-  days: number
-  hours: number
-  minutes: number
-  seconds: number
-}
+import { useCountdown } from '@/hooks/use-countdown'
 
 const targetWeekDate = new Date('2025-09-06T00:00:00+07:00') // September 6, 2025 00:00 WIB
 const targetYearDate = new Date('2026-08-31T00:00:00+07:00') // August 31, 2026 00:00 WIB
 
-const CountdownTimer = ({ jangka }: { jangka: string }) => {
-  const [timeLeft, setTimeLeft] = useState<TimeLeft>({
-    days: 0,
-    hours: 0,
-    minutes: 0,
-    seconds: 0
-  })
-  const [isClient, setIsClient] = useState(false)
+const CountdownTimer = () => {
+  const params = useSearchParams()
+  const jangka = params.get('jangka') ?? '1-minggu'
 
   const targetDate = jangka === '1-minggu' ? targetWeekDate : targetYearDate
+  const { days, hours, minutes, seconds } = useCountdown(targetDate)
 
-  useEffect(() => {
-    setIsClient(true)
-
-    const calculateTimeLeft = (): TimeLeft => {
-      const now = new Date()
-      const difference = targetDate.getTime() - now.getTime()
-
-      if (difference > 0) {
-        return {
-          days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-          hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-          minutes: Math.floor((difference / 1000 / 60) % 60),
-          seconds: Math.floor((difference / 1000) % 60)
-        }
-      }
-
-      return { days: 0, hours: 0, minutes: 0, seconds: 0 }
-    }
-
-    const timer = setInterval(() => {
-      setTimeLeft(calculateTimeLeft())
-    }, 1000)
-
-    setTimeLeft(calculateTimeLeft())
-
-    return () => clearInterval(timer)
-  }, [targetDate])
-
-  if (!isClient) {
-    return (
-      <div className="rounded-2xl md:rounded-3xl p-4 md:p-6 lg:p-8 shadow-2xl max-w-3xl mx-auto bg-[#EB8FBD]">
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-3 md:gap-4 mb-4 md:mb-6">
-          <div className="bg-white/20 rounded-full p-2 md:p-3">
-            <Clock className="size-6 md:size-8 text-white" />
-          </div>
-          <div className="text-center sm:text-left">
-            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#EB8FBD] mb-1 hidden sm:block">
-              Countdown Sampai{' '}
-              {jangka === '1-minggu' ? '5 September 2025' : '31 Agustus 2026'}
-            </h3>
-            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-[#EB8FBD] mb-1 block sm:hidden">
-              Countdown Sampai
-              <br />
-              {jangka === '1-minggu' ? '5 September 2025' : '31 Agustus 2026'}
-            </h3>
-          </div>
-        </div>
-
-        <div className="grid grid-cols-4 gap-2 md:gap-4">
-          {[
-            { label: 'Hari', value: '---' },
-            { label: 'Jam', value: '--' },
-            { label: 'Menit', value: '--' },
-            { label: 'Detik', value: '--' }
-          ].map((item, index) => (
-            <div
-              key={index}
-              className="bg-white/10 backdrop-blur-sm rounded-xl md:rounded-2xl p-3 md:p-4 lg:p-6 text-center border border-white/20"
-            >
-              <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-1 md:mb-2">
-                {item.value}
-              </div>
-              <div className="text-white font-medium text-xs sm:text-sm md:text-base">
-                {item.label}
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    )
-  }
-
-  const isExpired =
-    timeLeft.days === 0 &&
-    timeLeft.hours === 0 &&
-    timeLeft.minutes === 0 &&
-    timeLeft.seconds === 0
+  const isExpired = days === 0 && hours === 0 && minutes === 0 && seconds === 0
 
   return (
     <div
       className={`rounded-2xl md:rounded-3xl p-4 md:p-6 lg:p-8 shadow-2xl border-2 max-w-3xl mx-auto ${isExpired ? 'bg-[#6B7280] border-[#6B7280]' : 'bg-[#EB8FBD] border-[#EB8FBD]'}`}
     >
       <div className="flex flex-col sm:flex-row items-center justify-center gap-3 md:gap-4 mb-4 md:mb-6">
-        <div className="bg-white/20 rounded-full p-2 md:p-3">
-          {isExpired ? (
-            <Calendar className="size-6 md:size-8 text-white" />
-          ) : (
-            <Clock className="size-6 md:size-8 text-white" />
-          )}
-        </div>
         <div className="text-center sm:text-left">
           <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-1 hidden sm:block">
             {isExpired
               ? ''
-              : `Countdown Sampai ${jangka === '1-minggu' ? '5 September 2025' : '31 Agustus 2026'}`}
+              : `Deadline ${jangka === '1-minggu' ? '5 September 2025' : '31 Agustus 2026'}`}
           </h3>
           <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-1 block sm:hidden">
-            Countdown Sampai
+            Deadline
             <br />
             {jangka === '1-minggu' ? '5 September 2025' : '31 Agustus 2026'}
           </h3>
@@ -130,15 +37,15 @@ const CountdownTimer = ({ jangka }: { jangka: string }) => {
 
       <div className="grid grid-cols-4 gap-2 md:gap-4">
         {[
-          { label: 'Hari', value: timeLeft.days.toString().padStart(2, '0') },
-          { label: 'Jam', value: timeLeft.hours.toString().padStart(2, '0') },
+          { label: 'Hari', value: days.toString().padStart(2, '0') },
+          { label: 'Jam', value: hours.toString().padStart(2, '0') },
           {
             label: 'Menit',
-            value: timeLeft.minutes.toString().padStart(2, '0')
+            value: minutes.toString().padStart(2, '0')
           },
           {
             label: 'Detik',
-            value: timeLeft.seconds.toString().padStart(2, '0')
+            value: seconds.toString().padStart(2, '0')
           }
         ].map((item, index) => (
           <div

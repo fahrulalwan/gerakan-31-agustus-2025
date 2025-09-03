@@ -10,10 +10,6 @@ const OneWeekDemand = () => (
       <p className="text-2xl font-bold">TUNTUTAN RAKYAT DALAM 1 TAHUN</p>
     </div>
 
-    <p className="text-center mb-4 px-4 rounded-3xl w-fit mx-auto font-bold text-white bg-[#037033]">
-      Deadline: 31 Agustus 2026
-    </p>
-
     <div className="mt-8">
       <div className="grid grid-cols-1 gap-4">
         {ONE_YEAR_DEMANDS.map((demand, index) => (

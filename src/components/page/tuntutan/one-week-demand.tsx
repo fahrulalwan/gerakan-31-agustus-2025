@@ -13,10 +13,6 @@ const OneWeekDemand = () => {
         <p className="text-2xl font-bold">TUNTUTAN RAKYAT DALAM 1 MINGGU</p>
       </div>
 
-      <p className="text-center mb-4 px-4 rounded-3xl w-fit mx-auto font-bold text-white bg-[#EB8FBD]">
-        Deadline: 5 September 2025
-      </p>
-
       <div className="mt-8">
         <div className="grid grid-cols-2 gap-4">
           {ONE_WEEK_DEMANDS.map((demand, index) => (

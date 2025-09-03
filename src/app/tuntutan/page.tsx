@@ -3,7 +3,6 @@ import Link from 'next/link'
 
 import ButtonHero from '@/components/page/home/button-hero'
 import ButtonShare from '@/components/page/tuntutan/button-share'
-import CountdownTimer from '@/components/page/tuntutan/countdown-timer'
 import TuntutanTabs from '@/components/page/tuntutan/tuntutan-tabs'
 
 export const metadata: Metadata = {
@@ -54,12 +53,7 @@ export const metadata: Metadata = {
   }
 }
 
-const TuntutanPage = async ({
-  searchParams
-}: {
-  searchParams: Promise<{ jangka: string }>
-}) => {
-  const awaitedSearchParams = await searchParams
+const TuntutanPage = async () => {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Article',
@@ -120,13 +114,6 @@ const TuntutanPage = async ({
             </div>
 
             <ButtonHero label="Lihat Tuntutan" className="bg-pink-200" />
-
-            {/* Countdown Timer */}
-            <div className="max-w-5xl mx-auto">
-              <CountdownTimer
-                jangka={awaitedSearchParams.jangka ?? '1-minggu'}
-              />
-            </div>
           </div>
         </div>
 
@@ -134,7 +121,7 @@ const TuntutanPage = async ({
         <div className="px-6 py-6 md:py-12" id="content-ref" />
 
         {/* Tabs and Content */}
-        <TuntutanTabs jangka={awaitedSearchParams.jangka ?? '1-minggu'} />
+        <TuntutanTabs />
 
         {/* Sumber Tuntutan Section */}
         <div className="py-4 pb-10 sm:py-10 md:px-0 px-4">
