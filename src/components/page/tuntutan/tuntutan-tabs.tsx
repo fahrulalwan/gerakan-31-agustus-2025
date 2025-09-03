@@ -78,10 +78,10 @@ const TuntutanTabs = () => {
       </div>
 
       <div
-        className="px-6 pb-8 sticky transition-all duration-300"
-        style={{
-          bottom: isBottomTabsActive ? 0 : -200
-        }}
+        className={cn(
+          'px-6 pb-8 sticky transition-all duration-300',
+          isBottomTabsActive ? 'bottom-10 md:bottom-0' : '-bottom-[200px]'
+        )}
       >
         <div className="max-w-3xl mx-auto">
           <div className="bg-gray-800 rounded-2xl p-2 shadow-lg border border-gray-800 flex justify-center w-fit mx-auto gap-2">

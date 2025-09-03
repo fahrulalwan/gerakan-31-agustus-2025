@@ -30,6 +30,8 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
   const [isHidden, setIsHidden] = useState(false)
   const [isCountdownShow, setIsCountdownShow] = useState(false)
+  const [isCountdownHide, setIsCountdownHide] = useState(true)
+
   const lastScrollYRef = useRef(0)
   const tickingRef = useRef(false)
   const pathname = usePathname()
@@ -60,6 +62,8 @@ const Navbar = () => {
         const thresholdCountdownContent = (window.innerHeight || 0) + 320
         setIsCountdownShow(scrollY >= thresholdCountdownContent)
 
+        setIsCountdownHide(currentY < thresholdCountdownContent * 0.2)
+
         // Always show when at the very top
         if (currentY <= 0) {
           setIsHidden(false)
@@ -85,7 +89,7 @@ const Navbar = () => {
     <>
       <nav
         className={cn(
-          'bg-pink-200 shadow-lg border-b border-gray-900 sticky top-0 z-50 transition-transform duration-300 will-change-transform',
+          'bg-pink-200 shadow-lg border-b border-gray-900 sticky top-0 z-50 transition-transform duration-300 will-change-transform hidden md:block',
           isHidden ? '-translate-y-full' : 'translate-y-0'
         )}
       >
@@ -164,14 +168,14 @@ const Navbar = () => {
         )}
       </nav>
 
-      {isPageTuntutan && (
+      {isPageTuntutan && !isCountdownHide && (
         <div
           className={cn(
-            'bg-[#EB8FBD] sticky top-[64px] z-10 will-change-transform rounded-b-2xl border-pink-200 border-b border-l border-r transition-all duration-300 block md:hidden',
-            isHidden ? '-translate-y-[64px]' : 'translate-y-0'
+            'bg-[#EB8FBD] sticky top-[200px] z-10 will-change-transform rounded-b-2xl border-pink-200 border-b border-l border-r transition-all duration-300 block md:hidden'
+            // isHidden ? '-translate-y-[64px]' : 'translate-y-0'
           )}
           style={{
-            top: isCountdownShow ? 64 : -200
+            top: isCountdownShow ? 0 : -200
           }}
         >
           <div className="flex items-center justify-center">

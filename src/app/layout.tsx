@@ -5,6 +5,7 @@ import Script from 'next/script'
 import { Suspense } from 'react'
 
 import './globals.css'
+import BottomBar from '@/components/bottombar'
 import Footer from '@/components/footer'
 import Navbar from '@/components/navbar'
 
@@ -101,8 +102,11 @@ const RootLayout = ({
       <Suspense fallback={<div className="h-16 bg-gray-900" />}>
         <Navbar />
       </Suspense>
-      <main>{children}</main>
+      <main className="pb-20 md:pb-0">{children}</main>
       <Footer />
+      <Suspense fallback={<div className="h-16 bg-gray-900" />}>
+        <BottomBar />
+      </Suspense>
       <Analytics />
     </body>
   </html>
