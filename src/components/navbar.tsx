@@ -77,9 +77,7 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-2">
-              <span className="font-bold text-xl text-green-800">
-                17+8 Tuntutan Rakyat
-              </span>
+              <span className="font-bold text-xl text-green-800">17+8</span>
             </Link>
           </div>
 
