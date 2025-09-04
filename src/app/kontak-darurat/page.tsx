@@ -62,7 +62,7 @@ const EmergencyContactPage = async ({
         </div>
 
         <ButtonHero
-          label="Lihat Panduan"
+          label="Lihat Detail"
           className="bg-pink-200"
           id="contacts"
         />

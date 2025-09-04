@@ -24,7 +24,7 @@ const bottomBarItems = [
   },
   {
     name: 'Hak Hukum',
-    href: '/panduan-demo?category=hak-hukum',
+    href: '/hak-hukum',
     icon: Scale
   }
 ]

@@ -1,5 +1,3 @@
-'use client'
-
 import {
   Shield,
   AlertTriangle,
@@ -44,7 +42,7 @@ const iconMap: { [key: string]: React.ReactNode } = {
 }
 
 const LegalRights = () => (
-  <div className="max-w-3xl mx-auto px-4 md:px-0 pb-10">
+  <div id="legals" className="max-w-3xl mx-auto px-4 md:px-0 pb-10 pt-12">
     <div className="text-center mb-8">
       <h2 className="text-3xl font-bold text-[#EB8FBD] mb-2">
         {LEGAL_RIGHTS_INFO.title}
