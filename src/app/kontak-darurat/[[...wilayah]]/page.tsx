@@ -38,10 +38,10 @@ export const metadata: Metadata = {
 const EmergencyContactPage = async ({
   params
 }: {
-  params: { wilayah?: string }
+  params: Promise<{ wilayah?: string }>
 }) => {
-  const wilayahParam = params?.wilayah?.[0]
-  const wilayah = wilayahParam ? wilayahParam.toLowerCase() : 'nasional'
+  const { wilayah } = await params
+  const wilayahToPass = wilayah?.[0] ? wilayah?.[0].toLowerCase() : 'nasional'
 
   return (
     <div className="bg-gray-900">
@@ -66,7 +66,7 @@ const EmergencyContactPage = async ({
         />
       </div>
 
-      <EmergencyContacts wilayah={wilayah} />
+      <EmergencyContacts wilayah={wilayahToPass} />
     </div>
   )
 }
