@@ -36,14 +36,12 @@ export const metadata: Metadata = {
 }
 
 const EmergencyContactPage = async ({
-  searchParams
+  params
 }: {
-  searchParams: Promise<{ wilayah: string }>
+  params: Promise<{ wilayah?: string }>
 }) => {
-  const awaitedSearchParams = await searchParams
-  const wilayah = awaitedSearchParams.wilayah
-    ? awaitedSearchParams.wilayah.toLowerCase()
-    : 'nasional'
+  const { wilayah } = await params
+  const wilayahToPass = wilayah?.[0] ? wilayah?.[0].toLowerCase() : 'nasional'
 
   return (
     <div className="bg-gray-900">
@@ -68,7 +66,7 @@ const EmergencyContactPage = async ({
         />
       </div>
 
-      <EmergencyContacts wilayah={wilayah} />
+      <EmergencyContacts wilayah={wilayahToPass} />
     </div>
   )
 }

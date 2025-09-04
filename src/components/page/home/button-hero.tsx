@@ -14,19 +14,16 @@ const ButtonTuntutan = ({
   className?: string
 }) => (
   <>
-    <button
-      type="button"
+    <a
+      href={`#${id}`}
       className={cn(
         'text-center flex items-center justify-center gap-2 rounded-full bg-green-600 text-gray-900 px-4 py-2 cursor-pointer w-fit mx-auto font-bold transition-transform duration-300 scale-pulse mb-8',
         className
       )}
-      onClick={() => {
-        document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' })
-      }}
     >
       {label}
       <ArrowDownIcon className="size-5 text-gray-900" />
-    </button>
+    </a>
 
     <style>{`
         @keyframes scalePulse {

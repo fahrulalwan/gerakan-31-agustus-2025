@@ -189,7 +189,7 @@ const EmergencyContacts = ({ wilayah }: { wilayah: string }) => {
         <Select
           value={wilayah}
           onValueChange={(value) => {
-            router.push(`/kontak-darurat?wilayah=${value}`, {
+            router.push(`/kontak-darurat/${value}`, {
               scroll: false
             })
           }}
