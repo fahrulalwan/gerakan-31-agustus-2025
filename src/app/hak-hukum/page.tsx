@@ -51,7 +51,7 @@ const EmergencyContactPage = () => (
         </p>
       </div>
 
-      <ButtonHero label="Lihat Detail" className="bg-pink-200" id="legals" />
+      <ButtonHero label="Lihat Hak Hukum" className="bg-pink-200" id="legals" />
     </div>
 
     <LegalRights />
