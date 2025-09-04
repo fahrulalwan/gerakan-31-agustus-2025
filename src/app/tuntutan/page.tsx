@@ -10,7 +10,7 @@ import { APP_URL } from '@/constants/app'
 export const metadata: Metadata = {
   title: '17+8 Tuntutan Rakyat | Transparansi. Reformasi. Empati.',
   description:
-    'Daftar lengkap 25 tuntutan rakyat Indonesia untuk reformasi menyeluruh. 17 tuntutan dalam 1 minggu dan 8 tuntutan dalam 1 tahun.',
+    'Daftar 17+8 tuntutan rakyat Indonesia untuk reformasi menyeluruh. 17 tuntutan dalam 1 minggu dan 8 tuntutan dalam 1 tahun. Hasil rangkuman beberapa tuntutan yang beredar di media sosial dalam beberapa hari.',
   keywords: [
     '17+8 tuntutan rakyat',
     'tuntutan rakyat indonesia',
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: '17+8 Tuntutan Rakyat Indonesia | Transparansi. Reformasi. Empati.',
     description:
-      'Daftar lengkap 25 tuntutan rakyat Indonesia untuk reformasi menyeluruh. 17 tuntutan dalam 1 minggu dan 8 tuntutan dalam 1 tahun.',
+      'Daftar 17+8 tuntutan rakyat Indonesia untuk reformasi menyeluruh. 17 tuntutan dalam 1 minggu dan 8 tuntutan dalam 1 tahun. Hasil rangkuman beberapa tuntutan yang beredar di media sosial dalam beberapa hari.',
     url: `${APP_URL}/tuntutan`,
     images: [
       {
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: '17+8 Tuntutan Rakyat Indonesia | Transparansi. Reformasi. Empati.',
     description:
-      'Daftar lengkap 25 tuntutan rakyat Indonesia untuk reformasi menyeluruh. 17 tuntutan dalam 1 minggu dan 8 tuntutan dalam 1 tahun.',
+      'Daftar 17+8 tuntutan rakyat Indonesia untuk reformasi menyeluruh. 17 tuntutan dalam 1 minggu dan 8 tuntutan dalam 1 tahun. Hasil rangkuman beberapa tuntutan yang beredar di media sosial dalam beberapa hari.',
     images: [
       {
         url: `${APP_URL}/twitter-card.png`,
@@ -61,7 +61,7 @@ const TuntutanPage = async () => {
     '@type': 'Article',
     headline: '17+8 Tuntutan Rakyat | Transparansi. Reformasi. Empati.',
     description:
-      'Daftar lengkap 25 tuntutan rakyat Indonesia untuk reformasi menyeluruh. 17 tuntutan dalam 1 minggu dan 8 tuntutan dalam 1 tahun.',
+      'Daftar 17+8 tuntutan rakyat Indonesia untuk reformasi menyeluruh. 17 tuntutan dalam 1 minggu dan 8 tuntutan dalam 1 tahun. Hasil rangkuman beberapa tuntutan yang beredar di media sosial dalam beberapa hari.',
     author: {
       '@type': 'Organization',
       name: '17+8 Tuntutan Rakyat | Transparansi. Reformasi. Empati.'

@@ -5,9 +5,9 @@ import { APP_URL } from '@/constants/app'
 import TuntutanPage from './tuntutan/page'
 
 export const metadata: Metadata = {
-  title: 'Transparansi. Reformasi. Empati.',
+  title: '17+8 Tuntutan Rakyat | Transparansi. Reformasi. Empati.',
   description:
-    '17+8 Tuntutan Rakyat. Hasil rangkuman beberapa tuntutan yang beredar di media sosial dalam beberapa hari.',
+    'Daftar 17+8 tuntutan rakyat Indonesia untuk reformasi menyeluruh. 17 tuntutan dalam 1 minggu dan 8 tuntutan dalam 1 tahun. Hasil rangkuman beberapa tuntutan yang beredar di media sosial dalam beberapa hari.',
   keywords: [
     '17+8 Tuntutan Rakyat',
     'tuntutan rakyat indonesia',
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: '17+8 Tuntutan Rakyat | Transparansi. Reformasi. Empati.',
     description:
-      'Daftar 17+8 Tuntutan Rakyat. Hasil rangkuman beberapa tuntutan yang beredar di media sosial dalam beberapa hari.',
+      'Daftar 17+8 tuntutan rakyat Indonesia untuk reformasi menyeluruh. 17 tuntutan dalam 1 minggu dan 8 tuntutan dalam 1 tahun. Hasil rangkuman beberapa tuntutan yang beredar di media sosial dalam beberapa hari.',
     url: APP_URL,
     images: [
       {
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: '17+8 Tuntutan Rakyat | Transparansi. Reformasi. Empati.',
     description:
-      'Daftar 17+8 Tuntutan Rakyat untuk memantau 25 tuntutan rakyat Indonesia kepada pemerintah.',
+      'Daftar 17+8 tuntutan rakyat Indonesia untuk reformasi menyeluruh. 17 tuntutan dalam 1 minggu dan 8 tuntutan dalam 1 tahun. Hasil rangkuman beberapa tuntutan yang beredar di media sosial dalam beberapa hari.',
     images: [
       {
         url: `${APP_URL}/twitter-card.png`,
