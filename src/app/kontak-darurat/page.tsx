@@ -61,10 +61,13 @@ const EmergencyContactPage = async ({
           </p>
         </div>
 
-        <ButtonHero label="Lihat Panduan" className="bg-pink-200" />
+        <ButtonHero
+          label="Lihat Panduan"
+          className="bg-pink-200"
+          id="contacts"
+        />
       </div>
 
-      <div className="h-12" />
       <EmergencyContacts wilayah={wilayah} />
     </div>
   )

@@ -81,7 +81,7 @@ const RootLayout = ({
 }: Readonly<{
   children: React.ReactNode
 }>) => (
-  <html lang="id">
+  <html lang="id" className="scroll-smooth">
     <head>
       {/* Google Analytics */}
       <Script
