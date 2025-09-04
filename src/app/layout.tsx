@@ -102,7 +102,7 @@ const RootLayout = ({
       <Suspense fallback={<div className="h-16 bg-transparent" />}>
         <Navbar />
       </Suspense>
-      <main className="pb-20 md:pb-0">{children}</main>
+      <main className="pb-16 md:pb-0 bg-slate-900">{children}</main>
       <Footer />
       <Suspense fallback={<div className="h-16 bg-transparent" />}>
         <BottomBar />
