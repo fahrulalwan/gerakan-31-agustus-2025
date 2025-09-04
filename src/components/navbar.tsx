@@ -5,8 +5,10 @@ import {
   X,
   // Home,
   FileText,
-  HelpCircle,
-  Megaphone
+  // HelpCircle,
+  Megaphone,
+  Phone,
+  Scale
 } from 'lucide-react'
 import Link from 'next/link'
 import { usePathname, useSearchParams } from 'next/navigation'
@@ -18,9 +20,9 @@ import { cn } from '@/lib/utils'
 const navigationItems = [
   // { name: 'Beranda', href: '/', icon: Home },
   { name: 'Tuntutan', href: '/tuntutan', icon: FileText },
+  { name: 'Kontak Darurat', href: '/kontak-darurat', icon: Phone },
   { name: 'Panduan Demo', href: '/panduan-demo', icon: Megaphone },
-  // { name: 'Informasi', href: '/informasi', icon: Info },
-  { name: 'Tentang', href: '/tentang', icon: HelpCircle }
+  { name: 'Hak Hukum', href: '/panduan-demo?category=hak-hukum', icon: Scale }
 ]
 
 const targetWeekDate = new Date('2025-09-06T00:00:00+07:00') // September 6, 2025 00:00 WIB
