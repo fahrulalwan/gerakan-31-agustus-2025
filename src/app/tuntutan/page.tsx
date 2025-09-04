@@ -98,7 +98,7 @@ const TuntutanPage = async () => {
       />
       <div className="bg-gray-900">
         {/* Hero Section */}
-        <div className="bg-[#037033] pb-12 pt-6 -mt-[65px] min-h-screen relative flex flex-col justify-center items-center">
+        <div className="bg-[#037033] pb-12 pt-6 min-h-screen relative flex flex-col justify-center items-center">
           <div className="max-w-7xl px-6 mx-auto mt-20">
             <div className="text-center md:mb-12">
               <h1 className="text-3xl lg:text-6xl font-bold text-white mb-6 leading-tight">

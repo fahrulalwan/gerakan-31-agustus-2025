@@ -99,12 +99,12 @@ const RootLayout = ({
       </Script>
     </head>
     <body className={`${rubik.className} antialiased`}>
-      <Suspense fallback={<div className="h-16 bg-gray-900" />}>
+      <Suspense fallback={<div className="h-16 bg-transparent" />}>
         <Navbar />
       </Suspense>
       <main className="pb-20 md:pb-0">{children}</main>
       <Footer />
-      <Suspense fallback={<div className="h-16 bg-gray-900" />}>
+      <Suspense fallback={<div className="h-16 bg-transparent" />}>
         <BottomBar />
       </Suspense>
       <Analytics />
