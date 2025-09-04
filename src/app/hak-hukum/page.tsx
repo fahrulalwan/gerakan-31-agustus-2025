@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 
 import LegalRights from '@/components/page/demonstrasi/legal-rights'
 import ButtonHero from '@/components/page/home/button-hero'
+import { APP_URL } from '@/constants/app'
 import HakHukum from '@/constants/hak-hukum'
 
 export const metadata: Metadata = {
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: HakHukum.title,
     description: HakHukum.description,
-    url: 'https://tuntutanrakyat.vercel.app/hak-hukum',
+    url: `${APP_URL}/hak-hukum`,
     type: 'article'
   },
   twitter: {
@@ -31,7 +32,7 @@ export const metadata: Metadata = {
     description: HakHukum.description
   },
   alternates: {
-    canonical: 'https://tuntutanrakyat.vercel.app/hak-hukum'
+    canonical: `${APP_URL}/hak-hukum`
   }
 }
 

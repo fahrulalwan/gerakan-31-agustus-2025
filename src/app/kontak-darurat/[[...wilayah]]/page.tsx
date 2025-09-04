@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: KontakDarurat.title,
     description: KontakDarurat.description,
-    url: 'https://tuntutanrakyat.vercel.app/kontak-darurat',
+    url: `${APP_URL}/kontak-darurat`,
     type: 'article'
   },
   twitter: {
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     description: KontakDarurat.description
   },
   alternates: {
-    canonical: 'https://tuntutanrakyat.vercel.app/kontak-darurat'
+    canonical: `${APP_URL}/kontak-darurat`
   }
 }
 

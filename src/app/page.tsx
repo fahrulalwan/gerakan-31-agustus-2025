@@ -1,5 +1,8 @@
 import { Metadata } from 'next'
-import { redirect } from 'next/navigation'
+
+import { APP_URL } from '@/constants/app'
+
+import TuntutanPage from './tuntutan/page'
 
 export const metadata: Metadata = {
   title: 'Transparansi. Reformasi. Empati.',
@@ -21,10 +24,10 @@ export const metadata: Metadata = {
     title: '17+8 Tuntutan Rakyat | Transparansi. Reformasi. Empati.',
     description:
       'Daftar 17+8 Tuntutan Rakyat. Hasil rangkuman beberapa tuntutan yang beredar di media sosial dalam beberapa hari.',
-    url: 'https://tuntutanrakyat.vercel.app',
+    url: APP_URL,
     images: [
       {
-        url: 'https://tuntutanrakyat.vercel.app/ogimage.png',
+        url: `${APP_URL}/ogimage.png`,
         width: 1200,
         height: 630
       }
@@ -38,19 +41,17 @@ export const metadata: Metadata = {
       'Daftar 17+8 Tuntutan Rakyat untuk memantau 25 tuntutan rakyat Indonesia kepada pemerintah.',
     images: [
       {
-        url: 'https://tuntutanrakyat.vercel.app/twitter-card.png',
+        url: `${APP_URL}/twitter-card.png`,
         width: 1200,
         height: 630
       }
     ]
   },
   alternates: {
-    canonical: 'https://tuntutanrakyat.vercel.app'
+    canonical: APP_URL
   }
 }
 
-const Home = () => {
-  redirect('/tuntutan')
-}
+const Home = () => <TuntutanPage />
 
 export default Home

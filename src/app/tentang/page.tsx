@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 import ButtonHero from '@/components/page/home/button-hero'
+import { APP_URL } from '@/constants/app'
 
 // const visiMisi = [
 //   {
@@ -67,7 +68,7 @@ export const metadata: Metadata = {
     title: 'Tentang 17+8 Tuntutan Rakyat | Transparansi. Reformasi. Empati.',
     description:
       '17+8 Tuntutan Rakyat. Hasil rangkuman beberapa tuntutan yang beredar di media sosial dalam beberapa hari.',
-    url: 'https://tuntutanrakyat.vercel.app/tentang',
+    url: `${APP_URL}/tentang`,
     type: 'article'
   },
   twitter: {
@@ -77,7 +78,7 @@ export const metadata: Metadata = {
       '17+8 Tuntutan Rakyat. Hasil rangkuman beberapa tuntutan yang beredar di media sosial dalam beberapa hari.'
   },
   alternates: {
-    canonical: 'https://tuntutanrakyat.vercel.app/tentang'
+    canonical: `${APP_URL}/tentang`
   }
 }
 
@@ -117,7 +118,7 @@ const TentangPage = () => {
       name: '17+8 Tuntutan Rakyat | Transparansi. Reformasi. Empati.',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://tuntutanrakyat.vercel.app/android-chrome-512x512.png'
+        url: `${APP_URL}/android-chrome-512x512.png`
       }
     },
     datePublished: '2025-08-31',

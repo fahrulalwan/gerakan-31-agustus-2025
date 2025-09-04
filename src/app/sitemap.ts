@@ -1,16 +1,18 @@
 import { MetadataRoute } from 'next'
 
+import { APP_URL } from '@/constants/app'
+
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://tuntutanrakyat.vercel.app'
+  const baseUrl = APP_URL
   const currentDate = new Date().toISOString()
 
   return [
-    // {
-    //   url: baseUrl,
-    //   lastModified: currentDate,
-    //   changeFrequency: 'daily',
-    //   priority: 1.0
-    // },
+    {
+      url: baseUrl,
+      lastModified: currentDate,
+      changeFrequency: 'daily',
+      priority: 1.0
+    },
     {
       url: `${baseUrl}/tuntutan`,
       lastModified: currentDate,

@@ -8,6 +8,7 @@ import './globals.css'
 import BottomBar from '@/components/bottombar'
 import Footer from '@/components/footer'
 import Navbar from '@/components/navbar'
+import { APP_URL } from '@/constants/app'
 
 const rubik = Rubik({
   variable: '--font-rubik',
@@ -15,7 +16,7 @@ const rubik = Rubik({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://tuntutanrakyat.vercel.app'),
+  metadataBase: new URL(APP_URL),
   title: {
     default: '17+8 Tuntutan Rakyat | Transparansi. Reformasi. Empati.',
     template: ''
@@ -43,7 +44,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'id_ID',
-    url: 'https://tuntutanrakyat.vercel.app',
+    url: APP_URL,
     title: '17+8 Tuntutan Rakyat | Transparansi. Reformasi. Empati.',
     description:
       'Daftar 17+8 Tuntutan Rakyat. Hasil rangkuman beberapa tuntutan yang beredar di media sosial dalam beberapa hari.',
@@ -67,9 +68,9 @@ export const metadata: Metadata = {
     }
   },
   alternates: {
-    canonical: 'https://tuntutanrakyat.vercel.app',
+    canonical: APP_URL,
     languages: {
-      'id-ID': 'https://tuntutanrakyat.vercel.app'
+      'id-ID': APP_URL
     }
   },
   category: 'politics',
