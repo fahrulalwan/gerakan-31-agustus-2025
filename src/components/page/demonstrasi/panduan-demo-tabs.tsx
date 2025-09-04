@@ -1,6 +1,6 @@
 'use client'
 
-import { Shield, CheckCircle, Phone, Scale, Clock } from 'lucide-react'
+import { Shield, CheckCircle, Scale, Clock } from 'lucide-react'
 import Link from 'next/link'
 import { useEffect, useRef } from 'react'
 
@@ -13,14 +13,6 @@ import PostDemonstration from './post-demonstration'
 import PreDemonstration from './pre-demonstration'
 
 const tabs = [
-  {
-    id: 4,
-    label: 'KONTAK DARURAT',
-    component: EmergencyContacts,
-    icon: Phone,
-    description: 'Nomor penting untuk keadaan darurat',
-    category: 'kontak-darurat'
-  },
   {
     id: 0,
     label: 'PERSIAPAN',

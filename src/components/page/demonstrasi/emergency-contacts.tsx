@@ -170,7 +170,7 @@ const EmergencyContacts = ({ wilayah }: { wilayah: string }) => {
   }
 
   return (
-    <div className="max-w-3xl mx-auto px-4 lg:px-0 pb-10">
+    <div id="contacts" className="max-w-3xl mx-auto px-4 lg:px-0 pb-10 pt-12">
       <div className="text-center mb-6">
         <h2 className="text-3xl font-bold text-[#EB8FBD] mb-2">
           Kontak Darurat & Bantuan
@@ -189,12 +189,9 @@ const EmergencyContacts = ({ wilayah }: { wilayah: string }) => {
         <Select
           value={wilayah}
           onValueChange={(value) => {
-            router.push(
-              `/panduan-demo?category=kontak-darurat&wilayah=${value}`,
-              {
-                scroll: false
-              }
-            )
+            router.push(`/kontak-darurat?wilayah=${value}`, {
+              scroll: false
+            })
           }}
         >
           <SelectTrigger className="w-full md:w-auto text-base bg-green-100 border-green-200 text-green-800 font-bold cursor-pointer py-5">
