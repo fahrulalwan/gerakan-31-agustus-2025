@@ -40,18 +40,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: currentDate,
       changeFrequency: 'daily',
       priority: 0.8
-    },
-    {
-      url: `${baseUrl}/kontak-darurat`,
-      lastModified: currentDate,
-      changeFrequency: 'daily',
-      priority: 0.9
-    },
-    {
-      url: `${baseUrl}/hak-hukum`,
-      lastModified: currentDate,
-      changeFrequency: 'daily',
-      priority: 0.9
     }
   ]
 }
