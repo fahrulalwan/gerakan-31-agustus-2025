@@ -14,23 +14,29 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       url: `${baseUrl}/tuntutan`,
       lastModified: currentDate,
-      changeFrequency: 'weekly',
+      changeFrequency: 'daily',
       priority: 0.9
     },
     {
       url: `${baseUrl}/panduan-demo`,
       lastModified: currentDate,
-      changeFrequency: 'weekly',
+      changeFrequency: 'daily',
       priority: 0.9
     },
     {
-      url: `${baseUrl}/tentang`,
+      url: `${baseUrl}/kontak-darurat`,
       lastModified: currentDate,
-      changeFrequency: 'monthly',
+      changeFrequency: 'daily',
       priority: 0.8
     },
     {
-      url: `${baseUrl}/informasi`,
+      url: `${baseUrl}/hak-hukum`,
+      lastModified: currentDate,
+      changeFrequency: 'daily',
+      priority: 0.8
+    },
+    {
+      url: `${baseUrl}/tentang`,
       lastModified: currentDate,
       changeFrequency: 'daily',
       priority: 0.8
