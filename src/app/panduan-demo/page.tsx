@@ -37,7 +37,7 @@ const DemonstrasiPage = async ({
       </div>
 
       {/* Tab Navigation and Content */}
-      <div id="content-ref">
+      <div id="content">
         <PanduanDemoTabs category={category} wilayah={wilayah} />
       </div>
 

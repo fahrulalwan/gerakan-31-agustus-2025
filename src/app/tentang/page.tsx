@@ -152,7 +152,7 @@ const TentangPage = () => {
         </div>
 
         {/* Sumber Tuntutan Section */}
-        <div className="py-16 sm:py-16 bg-gray-900" id="content-ref">
+        <div className="py-16 sm:py-16 bg-gray-900" id="content">
           <div className="mx-auto max-w-4xl px-6 lg:px-8 text-gray-300">
             <div className="mx-auto max-w-2xl lg:text-center">
               <h2 className="text-base font-semibold leading-7 text-green-300">

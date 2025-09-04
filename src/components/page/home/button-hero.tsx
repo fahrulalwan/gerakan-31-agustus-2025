@@ -6,7 +6,7 @@ import { cn } from '@/lib/utils'
 
 const ButtonTuntutan = ({
   label,
-  id = 'content-ref',
+  id = 'content',
   className = ''
 }: {
   label: string

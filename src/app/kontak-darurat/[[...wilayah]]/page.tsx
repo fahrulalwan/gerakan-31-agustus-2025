@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 
 import EmergencyContacts from '@/components/page/demonstrasi/emergency-contacts'
 import ButtonHero from '@/components/page/home/button-hero'
+import { APP_URL } from '@/constants/app'
 import KontakDarurat from '@/constants/kontak-darurat'
 
 export const metadata: Metadata = {

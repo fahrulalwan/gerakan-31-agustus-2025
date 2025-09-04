@@ -120,7 +120,7 @@ const TuntutanPage = async () => {
         </div>
 
         {/* Important Notice */}
-        <div className="px-6 py-6 md:py-12" id="content-ref" />
+        <div className="px-6 py-6 md:py-12" id="content" />
 
         {/* Tabs and Content */}
         <Suspense
