@@ -14,7 +14,7 @@ const bottomBarItems = [
   },
   {
     name: 'Kontak Darurat',
-    href: '/panduan-demo?category=kontak-darurat',
+    href: '/kontak-darurat',
     icon: Phone
   },
   {
