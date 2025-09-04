@@ -36,8 +36,13 @@ const DemonstrasiPage = async ({
         <ButtonHero label="Lihat Panduan" className="bg-pink-200" />
       </div>
 
+      {/* Tab Navigation and Content */}
+      <div id="content-ref">
+        <PanduanDemoTabs category={category} wilayah={wilayah} />
+      </div>
+
       {/* Route Learning Section */}
-      <div className="bg-gray-900 px-4 py-12" id="content-ref">
+      <div className="bg-gray-900 px-4 py-12">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-8">
             <h2 className="text-3xl font-bold mb-4 text-[#EB8FBD]">
@@ -49,7 +54,7 @@ const DemonstrasiPage = async ({
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto mb-10">
             <div className="bg-green-800 rounded-2xl p-6 border-2 hover:shadow-lg transition-shadow">
               <MapPin className="size-12 mb-4 text-pink-200" />
               <h3 className="text-xl font-bold mb-3 text-pink-200">
@@ -98,60 +103,53 @@ const DemonstrasiPage = async ({
               </ul>
             </div>
           </div>
-        </div>
-      </div>
-
-      {/* Safety Alert */}
-      <div className="px-4 py-8" style={{ backgroundColor: '#EB8FBD' }}>
-        <div className="max-w-5xl mx-auto">
-          <div
-            className="bg-pink-200 border-l-4 rounded-2xl p-8 shadow-sm"
-            style={{ borderLeftColor: '#037033' }}
-          >
-            <div className="flex items-start gap-4">
-              <AlertTriangle className="size-8 shrink-0 mt-1 text-[#037033]" />
-              <div>
-                <h3 className="text-2xl font-bold mb-4 text-[#037033]">
-                  Keamanan adalah Prioritas Utama
-                </h3>
-                <p className="text-slate-700 leading-relaxed mb-6 text-lg">
-                  Demonstrasi adalah hak konstitusional setiap warga negara.
-                  Namun, keamanan dan keselamatan harus selalu menjadi prioritas
-                  utama. Ikuti panduan ini dengan seksama untuk memastikan
-                  partisipasi yang aman dan efektif.
-                </p>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                  <div
-                    className="bg-green-200 border-2 rounded-xl p-4"
-                    style={{ borderColor: '#037033' }}
-                  >
-                    <div className="font-semibold mb-2 text-[#037033]">
-                      🛡️ Tetap Aman
+          <div className="max-w-5xl mx-auto">
+            <div className="bg-pink-200 rounded-2xl p-8 shadow-sm">
+              <div className="flex items-start gap-4">
+                <AlertTriangle className="size-8 shrink-0 mt-1 text-[#037033]" />
+                <div>
+                  <h3 className="text-2xl font-bold mb-4 text-[#037033]">
+                    Keamanan adalah Prioritas Utama
+                  </h3>
+                  <p className="text-slate-700 leading-relaxed mb-6 text-lg">
+                    Demonstrasi adalah hak konstitusional setiap warga negara.
+                    Namun, keamanan dan keselamatan harus selalu menjadi
+                    prioritas utama. Ikuti panduan ini dengan seksama untuk
+                    memastikan partisipasi yang aman dan efektif.
+                  </p>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div
+                      className="bg-green-200 border-2 rounded-xl p-4"
+                      style={{ borderColor: '#037033' }}
+                    >
+                      <div className="font-semibold mb-2 text-[#037033]">
+                        🛡️ Tetap Aman
+                      </div>
+                      <div className="text-sm text-slate-600">
+                        Prioritaskan keselamatan pribadi
+                      </div>
                     </div>
-                    <div className="text-sm text-slate-600">
-                      Prioritaskan keselamatan pribadi
+                    <div
+                      className="bg-green-200 border-2 rounded-xl p-4"
+                      style={{ borderColor: '#037033' }}
+                    >
+                      <div className="font-semibold mb-2 text-[#037033]">
+                        🤝 Tetap Damai
+                      </div>
+                      <div className="text-sm text-slate-600">
+                        Hindari tindakan provokatif
+                      </div>
                     </div>
-                  </div>
-                  <div
-                    className="bg-green-200 border-2 rounded-xl p-4"
-                    style={{ borderColor: '#037033' }}
-                  >
-                    <div className="font-semibold mb-2 text-[#037033]">
-                      🤝 Tetap Damai
-                    </div>
-                    <div className="text-sm text-slate-600">
-                      Hindari tindakan provokatif
-                    </div>
-                  </div>
-                  <div
-                    className="bg-green-200 border-2 rounded-xl p-4"
-                    style={{ borderColor: '#037033' }}
-                  >
-                    <div className="font-semibold mb-2 text-[#037033]">
-                      📱 Tetap Terhubung
-                    </div>
-                    <div className="text-sm text-slate-600">
-                      Jaga komunikasi dengan tim
+                    <div
+                      className="bg-green-200 border-2 rounded-xl p-4"
+                      style={{ borderColor: '#037033' }}
+                    >
+                      <div className="font-semibold mb-2 text-[#037033]">
+                        📱 Tetap Terhubung
+                      </div>
+                      <div className="text-sm text-slate-600">
+                        Jaga komunikasi dengan tim
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -160,9 +158,6 @@ const DemonstrasiPage = async ({
           </div>
         </div>
       </div>
-
-      {/* Tab Navigation and Content */}
-      <PanduanDemoTabs category={category} wilayah={wilayah} />
     </div>
   )
 }

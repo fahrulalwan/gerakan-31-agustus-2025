@@ -89,7 +89,7 @@ const PanduanDemoTabs = ({
           </div>
 
           {/* Desktop Tab Navigation */}
-          <div className="hidden md:grid md:grid-cols-5 gap-4 mb-8 max-w-5xl mx-auto">
+          <div className="hidden md:grid md:grid-cols-4 gap-4 mb-8 max-w-5xl mx-auto">
             {tabs.map((tab) => {
               const Icon = tab.icon
               const isActive = category === tab.category
