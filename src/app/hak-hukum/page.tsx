@@ -41,9 +41,11 @@ const EmergencyContactPage = () => (
     <div className="px-4 py-16 bg-[#037033] min-h-screen relative flex flex-col justify-center items-center">
       <div className="max-w-6xl mx-auto text-center">
         <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-          Demonstrasi Yang aman,
+          Kenali Hak Hukum Anda,
           <br />
-          <span className="text-[#EB8FBD]">Aspirasi yang terdengar</span>
+          <span className="text-[#EB8FBD]">
+            Lindungi Diri dengan Pengetahuan
+          </span>
         </h1>
 
         <p className="text-xl text-gray-200 mb-12 max-w-4xl mx-auto leading-relaxed">
