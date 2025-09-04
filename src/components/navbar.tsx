@@ -22,7 +22,7 @@ const navigationItems = [
   { name: 'Tuntutan', href: '/tuntutan', icon: FileText },
   { name: 'Kontak Darurat', href: '/kontak-darurat', icon: Phone },
   { name: 'Panduan Demo', href: '/panduan-demo', icon: Megaphone },
-  { name: 'Hak Hukum', href: '/panduan-demo?category=hak-hukum', icon: Scale }
+  { name: 'Hak Hukum', href: '/hak-hukum', icon: Scale }
 ]
 
 const targetWeekDate = new Date('2025-09-06T00:00:00+07:00') // September 6, 2025 00:00 WIB
