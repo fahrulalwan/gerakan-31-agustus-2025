@@ -189,12 +189,9 @@ const EmergencyContacts = ({ wilayah }: { wilayah: string }) => {
         <Select
           value={wilayah}
           onValueChange={(value) => {
-            router.push(
-              `/panduan-demo?category=kontak-darurat&wilayah=${value}`,
-              {
-                scroll: false
-              }
-            )
+            router.push(`/kontak-darurat?wilayah=${value}`, {
+              scroll: false
+            })
           }}
         >
           <SelectTrigger className="w-full md:w-auto text-base bg-green-100 border-green-200 text-green-800 font-bold cursor-pointer py-5">
