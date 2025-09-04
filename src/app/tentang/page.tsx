@@ -3,10 +3,10 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 
 import ButtonHero from '@/components/page/home/button-hero'
-import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
 import { APP_URL } from '@/constants/app'
 import similarActions from '@/data/similar_actions.json'
-import { TOgData, fetchOgData } from '@/lib/og'
+
+import SimilarActions from './_components/similar-actions'
 
 // const visiMisi = [
 //   {
@@ -85,7 +85,7 @@ export const metadata: Metadata = {
   }
 }
 
-const TentangPage = async () => {
+const TentangPage = () => {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'AboutPage',
@@ -127,8 +127,6 @@ const TentangPage = async () => {
     datePublished: '2025-08-31',
     dateModified: '2025-09-01'
   }
-
-  const data: TOgData[] = await Promise.all(similarActions.map(fetchOgData))
 
   return (
     <>
@@ -318,37 +316,7 @@ const TentangPage = async () => {
           </div>
         </div> */}
 
-        <div className="py-16 sm:py-16 bg-gray-900" id="similar-actions">
-          <div className="mx-auto max-w-2xl px-6 lg:px-8 lg:text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
-              Website Lain dengan Tujuan Sama
-            </h2>
-          </div>
-          <div className="mx-auto max-w-4xl px-6 lg:px-8 text-gray-300 grid grid-cols-1 mt-10 text-lg space-y-6">
-            {data.map((item) => (
-              <a
-                key={item.url}
-                href={item.url}
-                className="rounded-2xl flex items-center justify-start gap-4"
-              >
-                <Avatar className="w-20 h-20 lg:w-24 lg:h-24 object-cover rounded-2xl">
-                  <AvatarImage src={item.ogImage} />
-                  <AvatarFallback className="w-20 h-20 lg:w-24 lg:h-24 object-cover rounded-2xl">
-                    {item.ogTitle.charAt(0)}
-                  </AvatarFallback>
-                </Avatar>
-                <div className="overflow-hidden">
-                  <h2 className="text-sm lg:text-base  font-semibold leading-7 text-green-300 truncate">
-                    {item.ogTitle}
-                  </h2>
-                  <p className="mt-1 text-xs lg:text-sm line-clamp-2">
-                    {item.ogDescription}
-                  </p>
-                </div>
-              </a>
-            ))}
-          </div>
-        </div>
+        <SimilarActions actions={similarActions} />
       </div>
     </>
   )
