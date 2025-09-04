@@ -1,6 +1,6 @@
 'use client'
 
-import { Shield, CheckCircle, Scale, Clock } from 'lucide-react'
+import { Shield, CheckCircle, Clock } from 'lucide-react'
 import Link from 'next/link'
 import { useEffect, useRef } from 'react'
 
@@ -8,7 +8,6 @@ import { cn } from '@/lib/utils'
 
 import DuringDemonstration from './during-demonstration'
 import EmergencyContacts from './emergency-contacts'
-import LegalRights from './legal-rights'
 import PostDemonstration from './post-demonstration'
 import PreDemonstration from './pre-demonstration'
 
@@ -36,14 +35,6 @@ const tabs = [
     icon: Clock,
     description: 'Langkah pasca demonstrasi',
     category: 'setelah'
-  },
-  {
-    id: 3,
-    label: 'HAK HUKUM',
-    component: LegalRights,
-    icon: Scale,
-    description: 'Hak asasi dalam demonstrasi',
-    category: 'hak-hukum'
   }
 ]
 
@@ -89,7 +80,7 @@ const PanduanDemoTabs = ({
           </div>
 
           {/* Desktop Tab Navigation */}
-          <div className="hidden md:grid md:grid-cols-4 gap-4 mb-8 max-w-5xl mx-auto">
+          <div className="hidden md:grid md:grid-cols-3 gap-4 mb-8 max-w-5xl mx-auto">
             {tabs.map((tab) => {
               const Icon = tab.icon
               const isActive = category === tab.category
