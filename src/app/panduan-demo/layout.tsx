@@ -1,5 +1,7 @@
 import type { Metadata } from 'next'
 
+import { APP_URL } from '@/constants/app'
+
 export const metadata: Metadata = {
   title: 'Panduan Demonstrasi | Transparansi. Reformasi. Empati.',
   description:
@@ -20,7 +22,7 @@ export const metadata: Metadata = {
     title: 'Panduan Demonstrasi Aman | Transparansi. Reformasi. Empati.',
     description:
       'Panduan lengkap untuk berpartisipasi dalam demonstrasi dengan aman dan bertanggung jawab. Checklist, protokol keamanan, dan hak hukum.',
-    url: 'https://tuntutanrakyat.vercel.app/panduan-demo',
+    url: `${APP_URL}/panduan-demo`,
     type: 'article'
   },
   twitter: {
@@ -30,7 +32,7 @@ export const metadata: Metadata = {
       'Panduan lengkap untuk berpartisipasi dalam demonstrasi dengan aman dan bertanggung jawab.'
   },
   alternates: {
-    canonical: 'https://tuntutanrakyat.vercel.app/panduan-demo'
+    canonical: `${APP_URL}/panduan-demo`
   }
 }
 

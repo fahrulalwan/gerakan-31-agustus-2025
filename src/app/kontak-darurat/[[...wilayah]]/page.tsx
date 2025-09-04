@@ -2,6 +2,7 @@ import { Metadata } from 'next'
 
 import EmergencyContacts from '@/components/page/demonstrasi/emergency-contacts'
 import ButtonHero from '@/components/page/home/button-hero'
+import { APP_URL } from '@/constants/app'
 import KontakDarurat from '@/constants/kontak-darurat'
 
 export const metadata: Metadata = {
@@ -22,7 +23,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: KontakDarurat.title,
     description: KontakDarurat.description,
-    url: 'https://tuntutanrakyat.vercel.app/kontak-darurat',
+    url: `${APP_URL}/kontak-darurat`,
     type: 'article'
   },
   twitter: {
@@ -31,19 +32,17 @@ export const metadata: Metadata = {
     description: KontakDarurat.description
   },
   alternates: {
-    canonical: 'https://tuntutanrakyat.vercel.app/kontak-darurat'
+    canonical: `${APP_URL}/kontak-darurat`
   }
 }
 
 const EmergencyContactPage = async ({
-  searchParams
+  params
 }: {
-  searchParams: Promise<{ wilayah: string }>
+  params: Promise<{ wilayah?: string }>
 }) => {
-  const awaitedSearchParams = await searchParams
-  const wilayah = awaitedSearchParams.wilayah
-    ? awaitedSearchParams.wilayah.toLowerCase()
-    : 'nasional'
+  const { wilayah } = await params
+  const wilayahToPass = wilayah?.[0] ? wilayah?.[0].toLowerCase() : 'nasional'
 
   return (
     <div className="bg-gray-900">
@@ -68,7 +67,7 @@ const EmergencyContactPage = async ({
         />
       </div>
 
-      <EmergencyContacts wilayah={wilayah} />
+      <EmergencyContacts wilayah={wilayahToPass} />
     </div>
   )
 }

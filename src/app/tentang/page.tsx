@@ -4,6 +4,7 @@ import Link from 'next/link'
 
 import ButtonHero from '@/components/page/home/button-hero'
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar'
+import { APP_URL } from '@/constants/app'
 import similarActions from '@/data/similar_actions.json'
 import { TOgData, fetchOgData } from '@/lib/og'
 
@@ -70,7 +71,7 @@ export const metadata: Metadata = {
     title: 'Tentang 17+8 Tuntutan Rakyat | Transparansi. Reformasi. Empati.',
     description:
       '17+8 Tuntutan Rakyat. Hasil rangkuman beberapa tuntutan yang beredar di media sosial dalam beberapa hari.',
-    url: 'https://tuntutanrakyat.vercel.app/tentang',
+    url: `${APP_URL}/tentang`,
     type: 'article'
   },
   twitter: {
@@ -80,7 +81,7 @@ export const metadata: Metadata = {
       '17+8 Tuntutan Rakyat. Hasil rangkuman beberapa tuntutan yang beredar di media sosial dalam beberapa hari.'
   },
   alternates: {
-    canonical: 'https://tuntutanrakyat.vercel.app/tentang'
+    canonical: `${APP_URL}/tentang`
   }
 }
 
@@ -120,7 +121,7 @@ const TentangPage = async () => {
       name: '17+8 Tuntutan Rakyat | Transparansi. Reformasi. Empati.',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://tuntutanrakyat.vercel.app/android-chrome-512x512.png'
+        url: `${APP_URL}/android-chrome-512x512.png`
       }
     },
     datePublished: '2025-08-31',
@@ -156,7 +157,7 @@ const TentangPage = async () => {
         </div>
 
         {/* Sumber Tuntutan Section */}
-        <div className="py-16 sm:py-16 bg-gray-900" id="content-ref">
+        <div className="py-16 sm:py-16 bg-gray-900" id="content">
           <div className="mx-auto max-w-4xl px-6 lg:px-8 text-gray-300">
             <div className="mx-auto max-w-2xl lg:text-center">
               <h2 className="text-base font-semibold leading-7 text-green-300">

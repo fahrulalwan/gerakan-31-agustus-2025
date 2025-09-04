@@ -5,11 +5,12 @@ import { Suspense } from 'react'
 import ButtonHero from '@/components/page/home/button-hero'
 import ButtonShare from '@/components/page/tuntutan/button-share'
 import TuntutanTabs from '@/components/page/tuntutan/tuntutan-tabs'
+import { APP_URL } from '@/constants/app'
 
 export const metadata: Metadata = {
   title: '17+8 Tuntutan Rakyat | Transparansi. Reformasi. Empati.',
   description:
-    'Daftar lengkap 25 tuntutan rakyat Indonesia untuk reformasi menyeluruh. 17 tuntutan dalam 1 minggu dan 8 tuntutan dalam 1 tahun.',
+    'Daftar 17+8 tuntutan rakyat Indonesia untuk reformasi menyeluruh. 17 tuntutan dalam 1 minggu dan 8 tuntutan dalam 1 tahun. Hasil rangkuman beberapa tuntutan yang beredar di media sosial dalam beberapa hari.',
   keywords: [
     '17+8 tuntutan rakyat',
     'tuntutan rakyat indonesia',
@@ -25,11 +26,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: '17+8 Tuntutan Rakyat Indonesia | Transparansi. Reformasi. Empati.',
     description:
-      'Daftar lengkap 25 tuntutan rakyat Indonesia untuk reformasi menyeluruh. 17 tuntutan dalam 1 minggu dan 8 tuntutan dalam 1 tahun.',
-    url: 'https://tuntutanrakyat.vercel.app/tuntutan',
+      'Daftar 17+8 tuntutan rakyat Indonesia untuk reformasi menyeluruh. 17 tuntutan dalam 1 minggu dan 8 tuntutan dalam 1 tahun. Hasil rangkuman beberapa tuntutan yang beredar di media sosial dalam beberapa hari.',
+    url: `${APP_URL}/tuntutan`,
     images: [
       {
-        url: 'https://tuntutanrakyat.vercel.app/ogimage.png',
+        url: `${APP_URL}/ogimage.png`,
         width: 1200,
         height: 630
       }
@@ -40,17 +41,17 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: '17+8 Tuntutan Rakyat Indonesia | Transparansi. Reformasi. Empati.',
     description:
-      'Daftar lengkap 25 tuntutan rakyat Indonesia untuk reformasi menyeluruh. 17 tuntutan dalam 1 minggu dan 8 tuntutan dalam 1 tahun.',
+      'Daftar 17+8 tuntutan rakyat Indonesia untuk reformasi menyeluruh. 17 tuntutan dalam 1 minggu dan 8 tuntutan dalam 1 tahun. Hasil rangkuman beberapa tuntutan yang beredar di media sosial dalam beberapa hari.',
     images: [
       {
-        url: 'https://tuntutanrakyat.vercel.app/twitter-card.png',
+        url: `${APP_URL}/twitter-card.png`,
         width: 1200,
         height: 630
       }
     ]
   },
   alternates: {
-    canonical: 'https://tuntutanrakyat.vercel.app/tuntutan'
+    canonical: `${APP_URL}/tuntutan`
   }
 }
 
@@ -60,7 +61,7 @@ const TuntutanPage = async () => {
     '@type': 'Article',
     headline: '17+8 Tuntutan Rakyat | Transparansi. Reformasi. Empati.',
     description:
-      'Daftar lengkap 25 tuntutan rakyat Indonesia untuk reformasi menyeluruh. 17 tuntutan dalam 1 minggu dan 8 tuntutan dalam 1 tahun.',
+      'Daftar 17+8 tuntutan rakyat Indonesia untuk reformasi menyeluruh. 17 tuntutan dalam 1 minggu dan 8 tuntutan dalam 1 tahun. Hasil rangkuman beberapa tuntutan yang beredar di media sosial dalam beberapa hari.',
     author: {
       '@type': 'Organization',
       name: '17+8 Tuntutan Rakyat | Transparansi. Reformasi. Empati.'
@@ -70,14 +71,14 @@ const TuntutanPage = async () => {
       name: '17+8 Tuntutan Rakyat | Transparansi. Reformasi. Empati.',
       logo: {
         '@type': 'ImageObject',
-        url: 'https://tuntutanrakyat.vercel.app/android-chrome-512x512.png'
+        url: `${APP_URL}/android-chrome-512x512.png`
       }
     },
     datePublished: '2025-08-31',
     dateModified: '2025-09-01',
     mainEntityOfPage: {
       '@type': 'WebPage',
-      '@id': 'https://tuntutanrakyat.vercel.app/tuntutan'
+      '@id': `${APP_URL}/tuntutan`
     },
     articleSection: 'Politik',
     keywords: [
@@ -119,7 +120,7 @@ const TuntutanPage = async () => {
         </div>
 
         {/* Important Notice */}
-        <div className="px-6 py-6 md:py-12" id="content-ref" />
+        <div className="px-6 py-6 md:py-12" id="content" />
 
         {/* Tabs and Content */}
         <Suspense
