@@ -9,7 +9,7 @@ export const ONE_WEEK_DEMANDS = [
       },
       {
         content:
-          'Bentuk <b class="text-green-900">Tim Investigasi Independen</b> kasus Affan Kurniawan, Umar Amarudin, maupun semua korban kekerasan aparat selama demonstrasi 28–30 Agustus dengan mandat jelas dan transparan.',
+          'Bentuk <b class="text-green-900">Tim Investigasi Independen</b> kasus Affan Kurniawan, Umar Amarudin, maupun semua korban kekerasan aparat selama demonstrasi 28-30 Agustus dengan mandat jelas dan transparan.',
         status: false
       }
     ]
@@ -40,17 +40,17 @@ export const ONE_WEEK_DEMANDS = [
       {
         content:
           'Pecat atau jatuhkan <b class="text-green-900">sanksi tegas</b> kepada kader DPR yang tidak etis dan memicu kemarahan publik.',
-        status: false
+        status: true
       },
       {
         content:
           'Umumkan <b class="text-green-900">komitmen partai</b> untuk berpihak pada rakyat di tengah krisis.',
-        status: false
+        status: true
       },
       {
         content:
           'Libatkan kader dalam ruang dialog publik bersama mahasiswa serta masyarakat sipil.',
-        status: false
+        status: true
       }
     ]
   },
