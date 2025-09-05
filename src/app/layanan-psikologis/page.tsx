@@ -43,7 +43,8 @@ const PsychologicalSupportPage = () => (
     <div className="px-4 py-16 bg-[#037033] min-h-screen relative flex flex-col justify-center items-center">
       <div className="max-w-6xl mx-auto text-center">
         <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
-          Pulihkan Diri,{' '}
+          Pulihkan Diri,
+          <br />
           <span className="text-[#EB8FBD]">Jaga Kesehatan Mental</span>
         </h1>
 

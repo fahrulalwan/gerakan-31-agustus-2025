@@ -1,86 +1,74 @@
-import { FileText, Megaphone } from 'lucide-react'
 import Link from 'next/link'
 
-const Footer = () => {
-  const quickLinks = [
-    { name: 'Tuntutan Rakyat', href: '/tuntutan', icon: FileText },
-    { name: 'Panduan Demonstrasi', href: '/panduan-demo', icon: Megaphone }
-  ]
+import { MAIN_MENU_ITEMS, OTHER_MENU_ITEMS } from '@/constants/menu'
 
-  const importantInfo = [
-    { name: 'Tentang Tuntutan', href: '/tentang' },
-    { name: 'Kontak Darurat', href: '/kontak-darurat' },
-    { name: 'Hak Hukum', href: '/hak-hukum' },
-    { name: 'Layanan Psikologis', href: '/layanan-psikologis' },
-    { name: 'Info Lebih Banyak', href: '/informasi' }
-  ]
-
-  return (
-    <footer className="bg-gray-900 text-white border-t border-gray-800 hidden md:block">
-      {/* Main Footer Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Brand Section */}
-          <div className="lg:col-span-1">
-            <div className="flex items-center space-x-2 mb-4">
-              <div>
-                <h3 className="font-bold text-xl">17+8 Tuntutan Rakyat</h3>
-                <p className="text-sm text-green-600 font-medium">
-                  Transparansi. Reformasi. Empati.
-                </p>
-              </div>
+const Footer = () => (
+  <footer className="bg-gray-900 text-white border-t border-gray-800 hidden md:block">
+    {/* Main Footer Content */}
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        {/* Brand Section */}
+        <div className="lg:col-span-1">
+          <div className="flex items-center space-x-2 mb-4">
+            <div>
+              <h3 className="font-bold text-xl">17+8 Tuntutan Rakyat</h3>
+              <p className="text-sm text-[#037033] font-medium">
+                Transparansi. Reformasi. Empati.
+              </p>
             </div>
-            <p className="text-gray-300 text-sm mb-4">
-              Tuntutan rakyat untuk perubahan menuju Indonesia yang lebih baik.
-              Bersama kita wujudkan tuntutan rakyat untuk masa depan bangsa.
-            </p>
           </div>
+          <p className="text-gray-300 text-sm mb-4">
+            Tuntutan rakyat untuk perubahan menuju Indonesia yang lebih baik.
+            Bersama kita wujudkan tuntutan rakyat untuk masa depan bangsa.
+          </p>
+        </div>
 
-          {/* Quick Links */}
-          <div>
-            <h4 className="font-semibold text-lg mb-4 md:text-right">
-              Aksi Utama
-            </h4>
-            <ul className="space-y-3">
-              {quickLinks.map((link) => {
-                const Icon = link.icon
-                return (
-                  <li key={link.name} className="md:text-right">
-                    <Link
-                      href={link.href}
-                      className="flex items-center space-x-2 text-gray-300 hover:text-white transition-colors duration-200 md:justify-end"
-                    >
-                      <Icon className="w-4 h-4 group-hover:scale-110 transition-transform duration-200 text-[#EB8FBD]" />
-                      <span className="text-sm">{link.name}</span>
-                    </Link>
-                  </li>
-                )
-              })}
-            </ul>
-          </div>
+        {/* Quick Links */}
+        <div>
+          <h4 className="font-semibold text-lg mb-4 md:text-right">
+            Menu Utama
+          </h4>
+          <ul className="space-y-3">
+            {MAIN_MENU_ITEMS.map((link) => {
+              const Icon = link.icon
+              return (
+                <li key={link.name} className="md:text-right">
+                  <Link
+                    href={link.href}
+                    className="flex items-center space-x-2 text-gray-300 hover:text-green-600 transition-colors duration-200 md:justify-end"
+                  >
+                    <Icon className="w-4 h-4 group-hover:scale-110 transition-transform duration-200 text-[#EB8FBD]" />
+                    <span className="text-sm">{link.name}</span>
+                  </Link>
+                </li>
+              )
+            })}
+          </ul>
+        </div>
 
-          {/* Important Info */}
-          <div>
-            <h4 className="font-semibold text-lg mb-4 md:text-right">
-              Informasi Penting
-            </h4>
-            <ul className="space-y-3">
-              {importantInfo.map((info) => (
+        {/* Important Info */}
+        <div>
+          <h4 className="font-semibold text-lg mb-4 md:text-right">Lainnya</h4>
+          <ul className="space-y-3">
+            {OTHER_MENU_ITEMS.map((info) => {
+              const Icon = info.icon
+              return (
                 <li key={info.name} className="md:text-right">
                   <Link
                     href={info.href}
-                    className="text-gray-300 hover:text-white transition-colors duration-200 text-sm block"
+                    className="flex items-center space-x-2 text-gray-300 hover:text-green-600 transition-colors duration-200 md:justify-end"
                   >
-                    {info.name}
+                    <Icon className="w-4 h-4 group-hover:scale-110 transition-transform duration-200 text-[#EB8FBD]" />
+                    <span className="text-sm">{info.name}</span>
                   </Link>
                 </li>
-              ))}
-            </ul>
-          </div>
+              )
+            })}
+          </ul>
         </div>
       </div>
-    </footer>
-  )
-}
+    </div>
+  </footer>
+)
 
 export default Footer

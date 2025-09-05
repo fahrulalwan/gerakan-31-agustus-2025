@@ -1,10 +1,10 @@
-export const Informasi = {
+export const INFORMASI = {
   title: 'Untuk Tetap Kuat & Terkoneksi | Transparansi. Reformasi. Empati.',
   description:
     'Kumpulan informasi penting, layanan psikologis gratis, dan tautan ke jaringan solidaritas.'
 }
 
-export const similarActions: {
+export const SIMILAR_ACTIONS: {
   url: string
   img: string
   title: string

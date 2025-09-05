@@ -1,40 +1,13 @@
 'use client'
 
-import {
-  FileText,
-  Megaphone,
-  Phone,
-  Scale,
-  List,
-  BadgeInfo,
-  BookUser
-} from 'lucide-react'
+import { List } from 'lucide-react'
 import Link from 'next/link'
 import { usePathname, useSearchParams } from 'next/navigation'
 import { useEffect, useRef, useState } from 'react'
 
+import { MAIN_MENU_ITEMS, OTHER_MENU_ITEMS } from '@/constants/menu'
 import { useCountdown } from '@/hooks/use-countdown'
 import { cn } from '@/lib/utils'
-
-const MAIN_MENU_ITEMS = [
-  { name: 'Tuntutan', href: '/tuntutan', icon: FileText },
-  { name: 'Kontak Darurat', href: '/kontak-darurat', icon: Phone },
-  { name: 'Panduan Demo', href: '/panduan-demo', icon: Megaphone },
-  { name: 'Hak Hukum', href: '/hak-hukum', icon: Scale }
-]
-
-const OTHER_MENU_ITEMS = [
-  {
-    name: 'Informasi',
-    href: '/informasi',
-    icon: BadgeInfo
-  },
-  {
-    name: 'Tentang',
-    href: '/tentang',
-    icon: BookUser
-  }
-]
 
 const targetWeekDate = new Date('2025-09-06T00:00:00+07:00') // September 6, 2025 00:00 WIB
 const targetYearDate = new Date('2026-08-31T00:00:00+07:00') // August 31, 2026 00:00 WIB

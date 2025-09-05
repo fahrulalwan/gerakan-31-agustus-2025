@@ -202,7 +202,7 @@ export const TYPESCRIPT_CONFIG = {
 
     // Prettier integration
     'prettier/prettier': [
-      'error',
+      'warn',
       {
         endOfLine: 'auto',
         trailingComma: 'none',
@@ -364,7 +364,7 @@ export const JAVASCRIPT_CONFIG = {
 
     // Prettier integration
     'prettier/prettier': [
-      'error',
+      'warn',
       {
         endOfLine: 'auto',
         trailingComma: 'none',

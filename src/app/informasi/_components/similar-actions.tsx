@@ -1,12 +1,9 @@
-// "use client";
-
 import Image from 'next/image'
 
-import { similarActions } from '@/constants/informasi'
-// import Margquee from "react-fast-marquee";
+import { SIMILAR_ACTIONS } from '@/constants/informasi'
 
 const SimilarActions = () => {
-  const actionsList = similarActions.map((item, idx) => (
+  const actionsList = SIMILAR_ACTIONS.map((item, idx) => (
     <a
       key={`${item.url}-${idx}`}
       target="_blank"
@@ -39,15 +36,6 @@ const SimilarActions = () => {
       <div className="grid gap-4 text-lg px-6 mt-10 md:grid-cols-2 lg:gap-5 mx-auto max-w-4xl">
         {actionsList}
       </div>
-
-      {/* Running sections on desktop, hmmm */}
-      {/* <Margquee
-        pauseOnHover
-        speed={30}
-        className="text-gray-300 text-lg mt-10 hidden! lg:flex!"
-      >
-        {actionsList}
-      </Margquee> */}
     </div>
   )
 }

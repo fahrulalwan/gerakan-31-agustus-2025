@@ -1,55 +1,12 @@
 'use client'
 
-import {
-  FileText,
-  Phone,
-  Megaphone,
-  Scale,
-  List,
-  BadgeInfo,
-  BookUser
-} from 'lucide-react'
+import { List } from 'lucide-react'
 import Link from 'next/link'
 import { usePathname, useSearchParams } from 'next/navigation'
 import { useState, useRef, useEffect } from 'react'
 
+import { MAIN_MENU_ITEMS, OTHER_MENU_ITEMS } from '@/constants/menu'
 import { cn } from '@/lib/utils'
-
-const BOTTOM_MENU_ITEMS = [
-  {
-    name: 'Tuntutan',
-    href: '/tuntutan',
-    icon: FileText
-  },
-  {
-    name: 'Panduan Demo',
-    href: '/panduan-demo',
-    icon: Megaphone
-  },
-  {
-    name: 'Kontak Darurat',
-    href: '/kontak-darurat',
-    icon: Phone
-  },
-  {
-    name: 'Hak Hukum',
-    href: '/hak-hukum',
-    icon: Scale
-  }
-]
-
-const OTHER_MENU_ITEMS = [
-  {
-    name: 'Informasi',
-    href: '/informasi',
-    icon: BadgeInfo
-  },
-  {
-    name: 'Tentang',
-    href: '/tentang',
-    icon: BookUser
-  }
-]
 
 const BottomBar = () => {
   const pathname = usePathname()
@@ -104,7 +61,7 @@ const BottomBar = () => {
     <>
       <div className="fixed bottom-0 left-0 right-0 bg-pink-200 border-t border-gray-200 shadow-lg z-50 md:hidden rounded-t-2xl">
         <div className="grid grid-cols-5 gap-1 py-1">
-          {BOTTOM_MENU_ITEMS.map((item) => {
+          {MAIN_MENU_ITEMS.map((item) => {
             const Icon = item.icon
             const isActive = checkActive(item.href ?? '')
 
