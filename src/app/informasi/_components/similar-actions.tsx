@@ -1,19 +1,12 @@
 // "use client";
 
 import Image from 'next/image'
+
+import { similarActions } from '@/constants/informasi'
 // import Margquee from "react-fast-marquee";
 
-type SimilarActionsProps = {
-  actions: {
-    url: string
-    img: string
-    title: string
-    desc: string
-  }[]
-}
-
-const SimilarActions = ({ actions }: SimilarActionsProps) => {
-  const actionsList = actions.map((item, idx) => (
+const SimilarActions = () => {
+  const actionsList = similarActions.map((item, idx) => (
     <a
       key={`${item.url}-${idx}`}
       target="_blank"
@@ -37,7 +30,7 @@ const SimilarActions = ({ actions }: SimilarActionsProps) => {
   ))
 
   return (
-    <div className="bg-gray-900 py-16" id="similar-actions">
+    <div className="bg-gray-900 py-16" id="aksi-serupa">
       <h2 className="lg:text-center mx-auto max-w-2xl px-6 lg:px-8 text-3xl font-bold tracking-tight text-white sm:text-4xl">
         Lihat lainnya yang juga ikut berkontribusi
       </h2>

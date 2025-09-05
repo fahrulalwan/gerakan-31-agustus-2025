@@ -4,9 +4,6 @@ import Link from 'next/link'
 
 import ButtonHero from '@/components/page/home/button-hero'
 import { APP_URL } from '@/constants/app'
-import similarActions from '@/data/similar_actions.json'
-
-import SimilarActions from './_components/similar-actions'
 
 // const visiMisi = [
 //   {
@@ -315,8 +312,6 @@ const TentangPage = () => {
             </div>
           </div>
         </div> */}
-
-        <SimilarActions actions={similarActions} />
       </div>
     </>
   )

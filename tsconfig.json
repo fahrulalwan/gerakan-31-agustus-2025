@@ -34,7 +34,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "src/app/page.tsx.old-1"
-  ],
+, "src/app/informasi/page.tsx.old"  ],
   "exclude": [
     "node_modules"
   ]
