@@ -86,21 +86,18 @@ const TentangPage = () => {
       <div className="bg-green-800">
         {/* Hero Section */}
         <div className="py-20 min-h-screen relative flex flex-col justify-center items-center">
-          <div className="mx-auto max-w-2xl text-center px-6 lg:px-8 mb-10">
-            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
+          <div className="max-w-6xl mx-auto text-center">
+            <h1 className="text-4xl md:text-6xl font-bold text-white mb-6 leading-tight">
               Suara Rakyat
               <br />
               <span className="text-[#EB8FBD]">Untuk Indonesia Adil</span>
             </h1>
-            <p className="mt-6 text-lg leading-6 text-green-100">
+            <p className="text-xl text-gray-200 mb-12 max-w-4xl mx-auto leading-relaxed">
               {TENTANG.description}
             </p>
           </div>
-          {/* <p className="text-4xl md:text-6xl lg:text-8xl text-pink-200 font-semibold text-center mb-10">
-            #ResetIndonesia
-          </p> */}
 
-          <ButtonHero label="Lihat Sumber" className="bg-pink-200" />
+          <ButtonHero label="Lihat Selengkapnya" className="bg-pink-200" />
         </div>
 
         {/* Sumber Tuntutan Section */}
