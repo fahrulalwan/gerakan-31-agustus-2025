@@ -55,7 +55,7 @@ export const similarActions: {
   {
     url: 'https://hurahuraklab.com/resetindonesia',
     img: '/img/similar_actions/huruharaklab.jpg',
-    title: 'huruharaklab #ResetIndonesi',
-    desc: 'Kompilasi postingan terkurasi seputar gerakan #ResetIndonesia.'
+    title: 'huruharaklab #ResetIndonesia',
+    desc: 'Kunjungi partisipasi kolektif dari komunitas design grafis yang keren-keren!'
   }
 ]
