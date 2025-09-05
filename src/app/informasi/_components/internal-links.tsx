@@ -1,4 +1,4 @@
-import { ChevronRight } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 import Link from 'next/link'
 
 type TInternalLink = {
@@ -52,7 +52,7 @@ const InternalLinks = () => (
             {link.desc}
           </p>
           <span className="absolute right-0 bottom-0 px-3 py-1 bg-green-800 text-white font-semibold text-sm border-t-8 border-l-8 border-gray-900 inline-flex items-center gap-1 rounded-tl-3xl">
-            Baca lebih lanjut <ChevronRight className="w-4 h-4" />
+            Baca lebih lanjut <ArrowRight className="size-4" />
           </span>
         </Link>
       ))}

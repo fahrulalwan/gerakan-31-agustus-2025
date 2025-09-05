@@ -53,37 +53,3 @@ export const similarActions: {
     desc: 'Obrolan singkat berbasis AI untuk membahas tuntutan 17+8'
   }
 ]
-
-type TService = {
-  name: string
-  link?: string
-  desc?: string
-}
-
-export const onlineServices: TService[] = [
-  {
-    name: 'ubahstigma x ouri.mindcare',
-    link: 'https://bit.ly/konselinggratisUS'
-  },
-  { name: 'HerSpace', link: 'https://bit.ly/KonselingGratisHerSpace' },
-  { name: 'temanbersama.id', link: 'https://bit.ly/konselingtemanbersama' },
-  { name: 'ibunda.id', desc: 'Download app WellMe di App Store/Google Play' },
-  { name: 'HIMPSI', link: 'https://bit.ly/KonselingGRATIS-HIMPSI0925' }
-]
-
-export const hotlines: TService[] = [
-  {
-    name: 'Pribudaya',
-    link: 'https://wa.me/6289688183036',
-    desc: '+62 896-8818-3036 (WhatsApp)'
-  },
-  {
-    name: 'SEJIWA',
-    desc: 'Hubungi 119 dan tekan 8 untuk mendapatkan bantuan Relawan Psikologi dari Himpunan Psikologi Indonesia (HIMPSI)'
-  },
-  {
-    name: 'BISA Helpline',
-    link: 'https://wa.me/628113855472',
-    desc: '08113855472 (WhatsApp)'
-  }
-]

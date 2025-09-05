@@ -1,6 +1,8 @@
 import { MessageCircle, Phone } from 'lucide-react'
 
-import { hotlines, onlineServices } from '@/constants/informasi'
+import { hotlines, onlineServices } from '@/constants/layanan-psikologis'
+
+import ServiceSection from './service-section'
 
 const PsychologicalSupport = () => (
   <section className="py-16 px-6" id="layanan-psikologis">
@@ -13,65 +15,20 @@ const PsychologicalSupport = () => (
       </p>
     </div>
 
-    <div className="mx-auto max-w-4xl mt-12 grid gap-8 md:grid-cols-2">
-      {/* Konseling Online */}
-      <div className="bg-green-100 shadow-md rounded-2xl p-6">
-        <div className="flex items-center gap-2 mb-4">
-          <MessageCircle className="w-6 h-6 text-green-800" />
-          <h3 className="text-xl font-semibold text-green-800">
-            Konseling Online
-          </h3>
-        </div>
-        <ul className="space-y-3">
-          {onlineServices.map((s, i) => (
-            <li key={i} className="flex items-start">
-              <span className="w-2 h-2 mt-2 mr-3 rounded-full bg-green-800 shrink-0" />
-              <div>
-                <p className="font-medium text-green-900">{s.name}</p>
-                {s.link && (
-                  <a
-                    href={s.link}
-                    className="text-blue-600 text-sm underline"
-                    target="_blank"
-                  >
-                    {s.link.replace('https://', '')}
-                  </a>
-                )}
-                {s.desc && <p className="text-gray-600 text-sm">{s.desc}</p>}
-              </div>
-            </li>
-          ))}
-        </ul>
-      </div>
+    <div className="mx-auto max-w-4xl mt-12 space-y-12">
+      <ServiceSection
+        title="Konseling Online"
+        icon={<MessageCircle className="size-5 text-green-800" />}
+        color="green"
+        items={onlineServices}
+      />
 
-      {/* Hotline */}
-      <div className="bg-pink-100 shadow-md rounded-2xl p-6">
-        <div className="flex items-center gap-2 mb-4">
-          <Phone className="w-6 h-6 text-pink-800" />
-          <h3 className="text-xl font-semibold text-pink-800">Hotline</h3>
-        </div>
-        <ul className="space-y-3">
-          {hotlines.map((h, i) => (
-            <li key={i} className="flex items-start">
-              <span className="w-2 h-2 mt-2 mr-3 rounded-full bg-pink-800 shrink-0" />
-              <div>
-                <p className="font-medium text-pink-900">{h.name}</p>
-                {h.link ? (
-                  <a
-                    href={h.link}
-                    className="text-blue-600 text-sm underline"
-                    target="_blank"
-                  >
-                    {h.desc}
-                  </a>
-                ) : (
-                  <p className="text-gray-600 text-sm">{h.desc}</p>
-                )}
-              </div>
-            </li>
-          ))}
-        </ul>
-      </div>
+      <ServiceSection
+        title="Hotline"
+        icon={<Phone className="size-5 text-pink-800" />}
+        color="pink"
+        items={hotlines}
+      />
     </div>
   </section>
 )
