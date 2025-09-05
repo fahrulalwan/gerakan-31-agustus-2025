@@ -155,7 +155,7 @@ const BottomBar = () => {
                       href={item.href}
                       onClick={() => setIsMenuOpen(false)}
                       className={cn(
-                        'flex items-center gap-3 py-2 hover:bg-green-50 transition-colors text-[#037033]'
+                        'flex items-center gap-3 px-4 py-2 hover:bg-green-50 transition-colors text-[#037033]'
                       )}
                     >
                       <Icon className={cn('w-4 h-4')} />
