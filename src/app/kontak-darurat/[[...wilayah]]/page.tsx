@@ -3,11 +3,11 @@ import { Metadata } from 'next'
 import EmergencyContacts from '@/components/page/demonstrasi/emergency-contacts'
 import ButtonHero from '@/components/page/home/button-hero'
 import { APP_URL } from '@/constants/app'
-import KontakDarurat from '@/constants/kontak-darurat'
+import { KONTAK_DARURAT } from '@/constants/kontak-darurat'
 
 export const metadata: Metadata = {
-  title: KontakDarurat.title,
-  description: KontakDarurat.description,
+  title: KONTAK_DARURAT.title,
+  description: KONTAK_DARURAT.description,
   keywords: [
     'panduan demonstrasi aman',
     'demonstrasi bertanggung jawab',
@@ -21,15 +21,15 @@ export const metadata: Metadata = {
     'keamanan demonstrasi'
   ],
   openGraph: {
-    title: KontakDarurat.title,
-    description: KontakDarurat.description,
+    title: KONTAK_DARURAT.title,
+    description: KONTAK_DARURAT.description,
     url: `${APP_URL}/kontak-darurat`,
     type: 'article'
   },
   twitter: {
     card: 'summary_large_image',
-    title: KontakDarurat.title,
-    description: KontakDarurat.description
+    title: KONTAK_DARURAT.title,
+    description: KONTAK_DARURAT.description
   },
   alternates: {
     canonical: `${APP_URL}/kontak-darurat`
@@ -56,7 +56,7 @@ const EmergencyContactPage = async ({
           </h1>
 
           <p className="text-xl text-gray-200 mb-12 max-w-4xl mx-auto leading-relaxed">
-            {KontakDarurat.description}
+            {KONTAK_DARURAT.description}
           </p>
         </div>
 
