@@ -59,58 +59,7 @@ const InformasiPage = () => (
       />
     </div>
 
-    <InternalLinks
-      links={[
-        {
-          label: 'Tuntutan',
-          href: '/tuntutan'
-        },
-        {
-          label: 'Tuntutan',
-          href: '/tuntutan'
-        },
-        {
-          label: 'Tuntutan',
-          href: '/tuntutan'
-        },
-        {
-          label: 'Tuntutan',
-          href: '/tuntutan'
-        },
-        {
-          label: 'Tuntutan',
-          href: '/tuntutan'
-        },
-        {
-          label: 'Tuntutan',
-          href: '/tuntutan'
-        },
-        {
-          label: 'Tuntutan',
-          href: '/tuntutan'
-        },
-        {
-          label: 'Tuntutan',
-          href: '/tuntutan'
-        },
-        {
-          label: 'Tuntutan',
-          href: '/tuntutan'
-        },
-        {
-          label: 'Tuntutan',
-          href: '/tuntutan'
-        },
-        {
-          label: 'Tuntutan',
-          href: '/tuntutan'
-        },
-        {
-          label: 'Tuntutan',
-          href: '/tuntutan'
-        }
-      ]}
-    />
+    <InternalLinks />
 
     <SimilarActions />
   </div>
