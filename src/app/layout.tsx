@@ -99,7 +99,7 @@ const RootLayout = ({
         `}
       </Script>
     </head>
-    <body className={`${rubik.className} antialiased`}>
+    <body className={`${rubik.className} antialiased bg-[#037033]`}>
       <Suspense fallback={<div className="h-16 bg-transparent" />}>
         <Navbar />
       </Suspense>
