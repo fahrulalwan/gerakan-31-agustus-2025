@@ -3,11 +3,11 @@ import { Metadata } from 'next'
 import LegalRights from '@/components/page/demonstrasi/legal-rights'
 import ButtonHero from '@/components/page/home/button-hero'
 import { APP_URL } from '@/constants/app'
-import HakHukum from '@/constants/hak-hukum'
+import { HAK_HUKUM } from '@/constants/hak-hukum'
 
 export const metadata: Metadata = {
-  title: HakHukum.title,
-  description: HakHukum.description,
+  title: HAK_HUKUM.title,
+  description: HAK_HUKUM.description,
   keywords: [
     'panduan demonstrasi aman',
     'demonstrasi bertanggung jawab',
@@ -21,15 +21,15 @@ export const metadata: Metadata = {
     'keamanan demonstrasi'
   ],
   openGraph: {
-    title: HakHukum.title,
-    description: HakHukum.description,
+    title: HAK_HUKUM.title,
+    description: HAK_HUKUM.description,
     url: `${APP_URL}/hak-hukum`,
     type: 'article'
   },
   twitter: {
     card: 'summary_large_image',
-    title: HakHukum.title,
-    description: HakHukum.description
+    title: HAK_HUKUM.title,
+    description: HAK_HUKUM.description
   },
   alternates: {
     canonical: `${APP_URL}/hak-hukum`
@@ -50,7 +50,7 @@ const EmergencyContactPage = () => (
         </h1>
 
         <p className="text-xl text-gray-200 mb-12 max-w-4xl mx-auto leading-relaxed">
-          {HakHukum.description}
+          {HAK_HUKUM.description}
         </p>
       </div>
 

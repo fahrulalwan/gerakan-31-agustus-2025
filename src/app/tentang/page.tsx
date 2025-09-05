@@ -1,58 +1,13 @@
-// import { Heart, Scale, Shield, Target, Users } from 'lucide-react'
 import type { Metadata } from 'next'
 import Link from 'next/link'
 
 import ButtonHero from '@/components/page/home/button-hero'
 import { APP_URL } from '@/constants/app'
-
-// const visiMisi = [
-//   {
-//     title: 'Visi',
-//     icon: Target,
-//     content:
-//       'Mewujudkan Indonesia yang demokratis, adil, dan sejahtera melalui partisipasi aktif rakyat dalam proses politik dan pengambilan keputusan.',
-//     color: 'bg-green-100 text-green-800'
-//   },
-//   {
-//     title: 'Misi',
-//     icon: Users,
-//     content:
-//       'Mengorganisir gerakan rakyat yang damai, terstruktur, dan berkelanjutan untuk memperjuangkan tuntutan reformasi yang menyeluruh.',
-//     color: 'bg-pink-100 text-pink-800'
-//   }
-// ]
-
-// const nilaiNilai = [
-//   {
-//     title: 'Demokrasi',
-//     icon: Scale,
-//     description:
-//       'Menghormati proses demokratis dan hak-hak konstitusional setiap warga negara'
-//   },
-//   {
-//     title: 'Kedamaian',
-//     icon: Heart,
-//     description:
-//       'Menjunjung tinggi demonstrasi damai tanpa kekerasan dalam bentuk apapun'
-//   },
-//   {
-//     title: 'Transparansi',
-//     icon: Shield,
-//     description:
-//       'Keterbukaan dalam setiap proses dan pengambilan keputusan gerakan'
-//   },
-//   {
-//     title: 'Persatuan',
-//     icon: Users,
-//     description:
-//       'Mengedepankan persatuan di atas perbedaan untuk kepentingan bangsa'
-//   }
-// ]
+import { TENTANG } from '@/constants/tentang'
 
 export const metadata: Metadata = {
-  title: 'Tentang 17+8 Tuntutan Rakyat | Transparansi. Reformasi. Empati.',
-  description:
-    '17+8 Tuntutan Rakyat. Hasil rangkuman beberapa tuntutan yang beredar di media sosial dalam beberapa hari.',
+  title: TENTANG.title,
+  description: TENTANG.description,
   keywords: [
     'latar belakang gerakan',
     'visi misi gerakan',
@@ -65,17 +20,15 @@ export const metadata: Metadata = {
     'aspirasi rakyat'
   ],
   openGraph: {
-    title: 'Tentang 17+8 Tuntutan Rakyat | Transparansi. Reformasi. Empati.',
-    description:
-      '17+8 Tuntutan Rakyat. Hasil rangkuman beberapa tuntutan yang beredar di media sosial dalam beberapa hari.',
+    title: TENTANG.title,
+    description: TENTANG.description,
     url: `${APP_URL}/tentang`,
     type: 'article'
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Tentang 17+8 Tuntutan Rakyat | Transparansi. Reformasi. Empati.',
-    description:
-      '17+8 Tuntutan Rakyat. Hasil rangkuman beberapa tuntutan yang beredar di media sosial dalam beberapa hari.'
+    title: TENTANG.title,
+    description: TENTANG.description
   },
   alternates: {
     canonical: `${APP_URL}/tentang`
@@ -86,14 +39,12 @@ const TentangPage = () => {
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'AboutPage',
-    name: 'Tentang 17+8 Tuntutan Rakyat | Transparansi. Reformasi. Empati.',
-    description:
-      '17+8 Tuntutan Rakyat. Hasil rangkuman beberapa tuntutan yang beredar di media sosial dalam beberapa hari.',
+    name: TENTANG.title,
+    description: TENTANG.description,
     mainEntity: {
       '@type': 'Organization',
-      name: '17+8 Tuntutan Rakyat | Transparansi. Reformasi. Empati.',
-      description:
-        '17+8 Tuntutan Rakyat. Hasil rangkuman beberapa tuntutan yang beredar di media sosial dalam beberapa hari.',
+      name: TENTANG.title,
+      description: TENTANG.description,
       foundingDate: '2025-08-31',
       mission:
         'Mewujudkan Indonesia yang lebih adil, demokratis, dan sejahtera melalui reformasi menyeluruh yang melibatkan partisipasi aktif masyarakat.',
@@ -111,11 +62,11 @@ const TentangPage = () => {
     },
     author: {
       '@type': 'Organization',
-      name: '17+8 Tuntutan Rakyat | Transparansi. Reformasi. Empati.'
+      name: TENTANG.title
     },
     publisher: {
       '@type': 'Organization',
-      name: '17+8 Tuntutan Rakyat | Transparansi. Reformasi. Empati.',
+      name: TENTANG.title,
       logo: {
         '@type': 'ImageObject',
         url: `${APP_URL}/android-chrome-512x512.png`
@@ -137,11 +88,11 @@ const TentangPage = () => {
         <div className="py-20 min-h-screen relative flex flex-col justify-center items-center">
           <div className="mx-auto max-w-2xl text-center px-6 lg:px-8 mb-10">
             <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
-              Tentang <span className="text-[#EB8FBD]">Tuntutan</span>
+              Suara Rakyat{' '}
+              <span className="text-[#EB8FBD]">Untuk Indonesia Adil</span>
             </h1>
             <p className="mt-6 text-lg leading-6 text-green-100">
-              17+8 tuntutan ini adalah rangkuman atas berbagai tuntutan dan
-              desakan yang beredar di media sosial dalam beberapa hari terakhir.
+              {TENTANG.description}
             </p>
           </div>
           {/* <p className="text-4xl md:text-6xl lg:text-8xl text-pink-200 font-semibold text-center mb-10">
