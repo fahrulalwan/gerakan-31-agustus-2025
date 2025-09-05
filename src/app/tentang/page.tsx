@@ -88,7 +88,8 @@ const TentangPage = () => {
         <div className="py-20 min-h-screen relative flex flex-col justify-center items-center">
           <div className="mx-auto max-w-2xl text-center px-6 lg:px-8 mb-10">
             <h1 className="text-4xl font-bold tracking-tight text-white sm:text-6xl">
-              Suara Rakyat{' '}
+              Suara Rakyat
+              <br />
               <span className="text-[#EB8FBD]">Untuk Indonesia Adil</span>
             </h1>
             <p className="mt-6 text-lg leading-6 text-green-100">
