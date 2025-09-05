@@ -11,6 +11,7 @@ const Footer = () => {
     { name: 'Tentang Tuntutan', href: '/tentang' },
     { name: 'Kontak Darurat', href: '/kontak-darurat' },
     { name: 'Hak Hukum', href: '/hak-hukum' },
+    { name: 'Layanan Psikologis', href: '/layanan-psikologis' },
     { name: 'Info Lebih Banyak', href: '/informasi' }
   ]
 

@@ -4,7 +4,7 @@ import ButtonHero from '@/components/page/home/button-hero'
 import { APP_URL } from '@/constants/app'
 import { Informasi } from '@/constants/informasi'
 
-import PsychologicalSupport from './_components/psychological-support'
+import InternalLinks from './_components/internal-links'
 import SimilarActions from './_components/similar-actions'
 
 export const metadata: Metadata = {
@@ -59,8 +59,60 @@ const InformasiPage = () => (
       />
     </div>
 
+    <InternalLinks
+      links={[
+        {
+          label: 'Tuntutan',
+          href: '/tuntutan'
+        },
+        {
+          label: 'Tuntutan',
+          href: '/tuntutan'
+        },
+        {
+          label: 'Tuntutan',
+          href: '/tuntutan'
+        },
+        {
+          label: 'Tuntutan',
+          href: '/tuntutan'
+        },
+        {
+          label: 'Tuntutan',
+          href: '/tuntutan'
+        },
+        {
+          label: 'Tuntutan',
+          href: '/tuntutan'
+        },
+        {
+          label: 'Tuntutan',
+          href: '/tuntutan'
+        },
+        {
+          label: 'Tuntutan',
+          href: '/tuntutan'
+        },
+        {
+          label: 'Tuntutan',
+          href: '/tuntutan'
+        },
+        {
+          label: 'Tuntutan',
+          href: '/tuntutan'
+        },
+        {
+          label: 'Tuntutan',
+          href: '/tuntutan'
+        },
+        {
+          label: 'Tuntutan',
+          href: '/tuntutan'
+        }
+      ]}
+    />
+
     <SimilarActions />
-    <PsychologicalSupport />
   </div>
 )
 

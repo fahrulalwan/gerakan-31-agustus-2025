@@ -45,6 +45,12 @@ export const similarActions: {
     img: '/img/similar_actions/s_id.png',
     title: 's.id/anak-paham-tuntutan-rakyat',
     desc: 'Informasi 17+8 tuntutan yang mudah dipahami oleh anak'
+  },
+  {
+    url: 'https://Bit.ly/Fana178',
+    img: '/img/similar_actions/fana_ai.avif',
+    title: 'bit.ly/Fana178',
+    desc: 'Obrolan singkat berbasis AI untuk membahas tuntutan 17+8'
   }
 ]
 
