@@ -11,7 +11,7 @@ const SimilarActions = () => {
       key={`${item.url}-${idx}`}
       target="_blank"
       href={item.url}
-      className="flex items-start justify-start gap-4 p-3 bg-green-100 rounded-2xl"
+      className="flex items-start justify-start gap-4 p-3 bg-green-100 rounded-xl"
     >
       <Image
         src={item.img}

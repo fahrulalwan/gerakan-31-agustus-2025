@@ -1,5 +1,3 @@
-'use client'
-
 import { ArrowRight } from 'lucide-react'
 
 import { TService } from '@/constants/layanan-psikologis'
@@ -26,29 +24,24 @@ const ServiceCard = ({ item, color }: { item: TService; color: string }) => (
           {item.name}
         </h4>
       </div>
-      {item.desc && (
-        <p
-          className={`text-sm mb-3 ${
-            item.disabled ? 'text-gray-400' : `text-${color}-800`
-          }`}
-        >
-          {item.desc}
-        </p>
-      )}
+      <p
+        className={`text-sm ${
+          item.disabled ? 'text-gray-400' : `text-${color}-800`
+        }`}
+      >
+        {item.desc ?? item.link}
+      </p>
     </div>
 
     {!item.disabled && (
-      <button
-        onClick={() => {
-          if (!item.disabled && item.link) {
-            window.open(item.link, '_blank', 'noopener,noreferrer')
-          }
-        }}
-        className={`w-full p-3 rounded-xl font-bold flex items-center justify-center gap-2 transition-opacity ${`bg-${color}-600 text-white hover:opacity-90`}`}
+      <a
+        href={item.link}
+        target="_blank"
+        className={`w-full mt-3 p-3 rounded-xl font-bold flex items-center justify-center gap-2 transition-opacity ${`bg-${color}-600 text-white hover:opacity-90`}`}
       >
         Lihat lebih lanjut
         <ArrowRight className="size-4" />
-      </button>
+      </a>
     )}
   </div>
 )

@@ -11,7 +11,7 @@ type ServiceSectionProps = {
 const ServiceSection = ({ title, icon, color, items }: ServiceSectionProps) => (
   <div>
     <h3
-      className={`text-xl font-bold text-${color}-300 mb-4 flex items-center gap-2`}
+      className={`text-xl font-bold text-${color}-300 [&>svg]:fill-${color}-50 mb-4 flex items-center gap-2`}
     >
       {icon}
       {title}
