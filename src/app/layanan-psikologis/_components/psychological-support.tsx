@@ -18,14 +18,14 @@ const PsychologicalSupport = () => (
     <div className="mx-auto max-w-4xl mt-12 space-y-12">
       <ServiceSection
         title="Konseling Online"
-        icon={<MessageCircle className="size-5 text-green-800" />}
+        icon={<MessageCircle className="size-5" />}
         color="green"
         items={onlineServices}
       />
 
       <ServiceSection
         title="Hotline"
-        icon={<Phone className="size-5 text-pink-800" />}
+        icon={<Phone className="size-5" />}
         color="pink"
         items={hotlines}
       />

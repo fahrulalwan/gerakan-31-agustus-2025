@@ -13,17 +13,6 @@ export type TService = {
 
 export const onlineServices: TService[] = [
   {
-    name: 'ubahstigma x ouri.mindcare',
-    link: 'https://bit.ly/konselinggratisUS',
-    desc: 'Organisasi non-profit yang bertujuan untuk mematahkan persepsi negatif masyarakat (stigma) terhadap kesehatan mental',
-    disabled: true
-  },
-  {
-    name: 'HerSpace',
-    link: 'https://bit.ly/KonselingGratisHerSpace',
-    disabled: true
-  },
-  {
     name: 'temanbersama.id',
     link: 'https://bit.ly/konselingtemanbersama',
     desc: 'Ruang Aman untuk Berbagi Cerita'
@@ -37,6 +26,17 @@ export const onlineServices: TService[] = [
     name: 'HIMPSI',
     link: 'https://bit.ly/KonselingGRATIS-HIMPSI0925',
     desc: 'Menghadirkan layanan konseling psikologis gratis sebagai bentuk kepedulian kepada masyarakat.'
+  },
+  {
+    name: 'ubahstigma x ouri.mindcare',
+    link: 'https://bit.ly/konselinggratisUS',
+    desc: 'Organisasi non-profit yang bertujuan untuk mematahkan persepsi negatif masyarakat (stigma) terhadap kesehatan mental',
+    disabled: true
+  },
+  {
+    name: 'HerSpace',
+    link: 'https://bit.ly/KonselingGratisHerSpace',
+    disabled: true
   }
 ]
 
