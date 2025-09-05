@@ -1,9 +1,10 @@
 import { Metadata } from 'next'
 
-import EmergencyContacts from '@/components/page/demonstrasi/emergency-contacts'
-import ButtonHero from '@/components/page/home/button-hero'
+import ButtonHero from '@/components/molecule/button-hero'
 import { APP_URL } from '@/constants/app'
 import { KONTAK_DARURAT } from '@/constants/kontak-darurat'
+
+import EmergencyContacts from './_components/emergency-contacts'
 
 export const metadata: Metadata = {
   title: KONTAK_DARURAT.title,
@@ -42,7 +43,7 @@ const EmergencyContactPage = async ({
   params: Promise<{ wilayah?: string }>
 }) => {
   const { wilayah } = await params
-  const wilayahToPass = wilayah?.[0] ? wilayah?.[0].toLowerCase() : 'nasional'
+  const wilayahToPass = wilayah ? wilayah.toLowerCase() : 'nasional'
 
   return (
     <div className="bg-gray-900">

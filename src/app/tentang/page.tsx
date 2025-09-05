@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 
-import ButtonHero from '@/components/page/home/button-hero'
+import ButtonHero from '@/components/molecule/button-hero'
 import { APP_URL } from '@/constants/app'
 import { TENTANG } from '@/constants/tentang'
 

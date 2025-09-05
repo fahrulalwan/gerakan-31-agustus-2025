@@ -2,10 +2,11 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { Suspense } from 'react'
 
-import ButtonHero from '@/components/page/home/button-hero'
-import ButtonShare from '@/components/page/tuntutan/button-share'
-import TuntutanTabs from '@/components/page/tuntutan/tuntutan-tabs'
+import ButtonHero from '@/components/molecule/button-hero'
 import { APP_URL } from '@/constants/app'
+
+import ButtonShare from './_components/button-share'
+import TuntutanTabs from './_components/tuntutan-tabs'
 
 export const metadata: Metadata = {
   title: '17+8 Tuntutan Rakyat | Transparansi. Reformasi. Empati.',

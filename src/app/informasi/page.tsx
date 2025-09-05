@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 
-import ButtonHero from '@/components/page/home/button-hero'
+import ButtonHero from '@/components/molecule/button-hero'
 import { APP_URL } from '@/constants/app'
 import { INFORMASI } from '@/constants/informasi'
 
