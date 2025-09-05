@@ -1,17 +1,26 @@
 import { TService } from '@/constants/layanan-psikologis'
+import { cn } from '@/lib/utils'
 
-import ServiceCard from './service-card'
+import ServiceCard, { ServiceCardProps } from './service-card'
 
 type ServiceSectionProps = {
   title: string
   icon: React.ReactNode
-  color: string // e.g. "green" | "pink"
   items: TService[]
+} & Pick<ServiceCardProps, 'color'>
+
+const colorMap: Record<string, string> = {
+  green: 'text-green-300',
+  pink: 'text-pink-300'
 }
+
 const ServiceSection = ({ title, icon, color, items }: ServiceSectionProps) => (
   <div>
     <h3
-      className={`text-xl font-bold text-${color}-300 [&>svg]:fill-${color}-50 mb-4 flex items-center gap-2`}
+      className={cn(
+        'text-xl font-bold mb-4 flex items-center gap-2',
+        colorMap[color]
+      )}
     >
       {icon}
       {title}
