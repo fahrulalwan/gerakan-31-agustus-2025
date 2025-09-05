@@ -103,7 +103,7 @@ const BottomBar = () => {
   return (
     <>
       <div className="fixed bottom-0 left-0 right-0 bg-pink-200 border-t border-gray-200 shadow-lg z-50 md:hidden rounded-t-2xl">
-        <div className="grid grid-cols-5 py-1">
+        <div className="grid grid-cols-5 gap-1 py-1">
           {BOTTOM_MENU_ITEMS.map((item) => {
             const Icon = item.icon
             const isActive = checkActive(item.href ?? '')
@@ -113,7 +113,7 @@ const BottomBar = () => {
                 key={item.name}
                 href={item.href ?? ''}
                 className={cn(
-                  'flex flex-col items-center py-2 px-3 min-w-0 transition-all duration-200',
+                  'flex flex-col items-center py-2 min-w-0 transition-all duration-200',
                   isActive && !isMenuOpen
                     ? 'text-pink-800'
                     : 'text-[#037033] hover:text-gray-700'
@@ -134,7 +134,7 @@ const BottomBar = () => {
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className={cn(
-                'flex flex-col items-center justify-center py-2 px-3 min-w-0 transition-all duration-200 text-[#037033] mx-auto cursor-pointer',
+                'flex flex-col items-center justify-center py-2 min-w-0 transition-all duration-200 text-[#037033] mx-auto cursor-pointer',
                 isMenuOpen
                   ? 'text-pink-800'
                   : 'text-[#037033] hover:text-gray-700'
@@ -155,7 +155,7 @@ const BottomBar = () => {
                       href={item.href}
                       onClick={() => setIsMenuOpen(false)}
                       className={cn(
-                        'flex items-center gap-3 px-4 py-3 hover:bg-green-50 transition-colors text-[#037033]'
+                        'flex items-center gap-3 py-2 hover:bg-green-50 transition-colors text-[#037033]'
                       )}
                     >
                       <Icon className={cn('w-4 h-4')} />
