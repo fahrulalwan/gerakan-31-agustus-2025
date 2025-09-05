@@ -10,7 +10,8 @@ const Footer = () => {
   const importantInfo = [
     { name: 'Tentang Tuntutan', href: '/tentang' },
     { name: 'Kontak Darurat', href: '/kontak-darurat' },
-    { name: 'Hak Hukum', href: '/hak-hukum' }
+    { name: 'Hak Hukum', href: '/hak-hukum' },
+    { name: 'Info Lebih Banyak', href: '/informasi' }
   ]
 
   return (
