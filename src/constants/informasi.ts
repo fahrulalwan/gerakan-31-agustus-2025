@@ -51,5 +51,11 @@ export const similarActions: {
     img: '/img/similar_actions/fana_ai.avif',
     title: 'bit.ly/Fana178',
     desc: 'Obrolan singkat berbasis AI untuk membahas tuntutan 17+8'
+  },
+  {
+    url: 'https://hurahuraklab.com/resetindonesia',
+    img: '/img/similar_actions/huruharaklab.jpg',
+    title: 'huruharaklab #ResetIndonesi',
+    desc: 'Kompilasi postingan terkurasi seputar gerakan #ResetIndonesia.'
   }
 ]
