@@ -23,7 +23,7 @@ const BOTTOM_MENU_ITEMS = [
   },
   {
     name: 'Panduan Demo',
-    href: '/panduan-demo?category=persiapan',
+    href: '/panduan-demo',
     icon: Megaphone
   },
   {
@@ -57,7 +57,7 @@ const BottomBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const menuRef = useRef<HTMLDivElement>(null)
 
-  const isActive = (href: string) => {
+  const checkActive = (href: string) => {
     if (href.includes('category=')) {
       const category = href.split('category=')[1]
       const currentCategory = searchParams.get('category')
@@ -106,15 +106,15 @@ const BottomBar = () => {
         <div className="grid grid-cols-5 py-1">
           {BOTTOM_MENU_ITEMS.map((item) => {
             const Icon = item.icon
-            const active = isActive(item.href ?? '')
+            const isActive = checkActive(item.href ?? '')
 
             return (
               <Link
                 key={item.name}
                 href={item.href ?? ''}
                 className={cn(
-                  'flex flex-col items-center justify-center py-2 px-3 min-w-0 transition-all duration-200',
-                  active
+                  'flex flex-col items-center py-2 px-3 min-w-0 transition-all duration-200',
+                  isActive && !isMenuOpen
                     ? 'text-pink-800'
                     : 'text-[#037033] hover:text-gray-700'
                 )}
@@ -122,7 +122,7 @@ const BottomBar = () => {
                 <Icon className={cn('w-5 h-5 mb-1 transition-colors')} />
                 <p
                   className={cn(
-                    'text-[10px] font-normal text-center leading-tight whitespace-nowrap peer'
+                    'text-[10px] font-normal text-center leading-tight peer'
                   )}
                 >
                   {item.name}
