@@ -1,5 +1,6 @@
 import { AlertTriangle, MapPin, Route, Navigation } from 'lucide-react'
 import type { Metadata } from 'next'
+import { Suspense } from 'react'
 
 import ButtonHero from '@/components/molecule/button-hero'
 import { APP_URL } from '@/constants/app'
@@ -63,7 +64,9 @@ const DemonstrasiPage = async () => (
 
     {/* Tab Navigation and Content */}
     <div id="content">
-      <PanduanDemoTabs />
+      <Suspense fallback={<div />}>
+        <PanduanDemoTabs />
+      </Suspense>
     </div>
 
     {/* Route Learning Section */}
