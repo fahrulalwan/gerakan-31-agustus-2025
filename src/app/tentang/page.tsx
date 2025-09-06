@@ -258,8 +258,12 @@ const TentangPage = () => {
                           <span className="font-medium text-[#EB8FBD] mr-2">
                             Tanggal:
                           </span>
-                          <time dateTime={korban.tanggal.replace(/ /g, '-')}>
-                            {korban.tanggal}
+                          <time
+                            dateTime={korban.tanggal.toISOString().slice(0, 10)}
+                          >
+                            {new Intl.DateTimeFormat('id', {
+                              dateStyle: 'long'
+                            }).format(korban.tanggal)}
                           </time>
                         </div>
                         <div className="flex text-gray-300">
