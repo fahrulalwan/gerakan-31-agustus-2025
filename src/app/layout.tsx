@@ -1,5 +1,5 @@
 import { Analytics } from '@vercel/analytics/react'
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Rubik } from 'next/font/google'
 import Script from 'next/script'
 import { Suspense } from 'react'
@@ -14,6 +14,11 @@ const rubik = Rubik({
   variable: '--font-rubik',
   subsets: ['latin']
 })
+
+export const viewport: Viewport = {
+  themeColor: '#037033',
+  colorScheme: 'dark'
+}
 
 export const metadata: Metadata = {
   metadataBase: new URL(APP_URL),
