@@ -83,7 +83,7 @@ const TentangPage = () => {
         // eslint-disable-next-line react/no-danger
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <div className="bg-green-800">
+      <div className="bg-[#037033]">
         {/* Hero Section */}
         <div className="py-20 min-h-screen relative flex flex-col justify-center items-center">
           <div className="max-w-6xl mx-auto text-center">
