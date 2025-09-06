@@ -186,6 +186,219 @@ const TentangPage = () => {
           </div>
         </div>
 
+        {/* Memorial Section */}
+        <div className="py-16 sm:py-24 bg-gray-800" id="memorial">
+          <div className="mx-auto max-w-5xl px-6">
+            <div className="mx-auto max-w-2xl lg:text-center mb-16">
+              <h2 className="text-base font-semibold leading-7 text-[#EB8FBD]">
+                In Memoriam
+              </h2>
+              <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+                Mereka yang Gugur dalam Perjuangan
+              </p>
+              <p className="mt-6 text-lg leading-8 text-gray-300">
+                Mengenang saudara-saudara kita yang telah berpulang dalam
+                demonstrasi 28 Agustus - 2 September 2025. Pengorbanan mereka
+                tidak akan terlupakan dalam perjuangan menuju Indonesia yang
+                lebih adil.
+              </p>
+            </div>
+
+            <div
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6"
+              role="region"
+              aria-label="Daftar korban demonstrasi"
+            >
+              {[
+                {
+                  nama: 'Affan Kurniawan',
+                  usia: 21,
+                  profesi: 'Pengemudi Ojek Online',
+                  tanggal: '28 Agustus 2025',
+                  lokasi: 'Pejompongan, Jakarta Barat',
+                  penyebab:
+                    'Dilindas kendaraan taktis Brimob saat mengantar pesanan di Jalan Bendungan Hilir'
+                },
+                {
+                  nama: 'Muhammad Akbar Basri',
+                  usia: 26,
+                  profesi: 'Staf Humas DPRD Makassar',
+                  tanggal: '29 Agustus 2025',
+                  lokasi: 'Makassar',
+                  penyebab: 'Terjebak dalam kebakaran Gedung DPRD Makassar'
+                },
+                {
+                  nama: 'Sarinawati',
+                  usia: 25,
+                  profesi: 'Staf Pendamping Anggota DPRD Makassar',
+                  tanggal: '29 Agustus 2025',
+                  lokasi: 'Makassar',
+                  penyebab: 'Terjebak dalam kebakaran Gedung DPRD Makassar'
+                },
+                {
+                  nama: 'Saiful Akbar',
+                  usia: 43,
+                  profesi: 'Plt Kepala Seksi Kesra Kecamatan Ujung Tanah',
+                  tanggal: '29 Agustus 2025',
+                  lokasi: 'Makassar',
+                  penyebab: 'Terjebak dalam kebakaran Gedung DPRD Makassar'
+                },
+                {
+                  nama: 'Rusdamdiansyah',
+                  usia: 26,
+                  profesi: 'Pengemudi Ojek Online',
+                  tanggal: '29 Agustus 2025',
+                  lokasi: 'Makassar',
+                  penyebab:
+                    'Dikeroyok massa yang mencurigainya sebagai intel di depan Kampus UMI Makassar'
+                },
+                {
+                  nama: 'Sumari',
+                  usia: 60,
+                  profesi: 'Tukang Becak',
+                  tanggal: '29 Agustus 2025',
+                  lokasi: 'Solo',
+                  penyebab:
+                    'Sesak napas dan serangan asma saat terpapar gas air mata di Bundaran Gladak'
+                },
+                {
+                  nama: 'Rheza Sendy Pratama',
+                  usia: 21,
+                  profesi:
+                    'Mahasiswa Ilmu Komunikasi Universitas Amikom Yogyakarta',
+                  tanggal: '31 Agustus 2025',
+                  lokasi: 'Yogyakarta',
+                  penyebab:
+                    'Tumbang saat aparat menembakkan gas air mata, dirawat di RSUP Dr Sardjito'
+                },
+                {
+                  nama: 'Andika Lutfi Falah',
+                  usia: 16,
+                  profesi: 'Siswa Kelas 11 SMK Negeri 14 Kabupaten Tangerang',
+                  tanggal: '31 Agustus 2025',
+                  lokasi: 'Jakarta',
+                  penyebab:
+                    'Luka berat pada kepala belakang akibat benturan benda tumpul saat demo Jakarta'
+                },
+                {
+                  nama: 'Iko Juliant Junior',
+                  usia: 19,
+                  profesi:
+                    'Mahasiswa Fakultas Hukum Universitas Negeri Semarang',
+                  tanggal: '31 Agustus 2025',
+                  lokasi: 'Semarang',
+                  penyebab:
+                    'Kondisi kritis yang memerlukan operasi, sempat mengigau meminta tidak dipukuli'
+                }
+              ].map((korban, index) => (
+                <article
+                  key={index}
+                  className="bg-gray-700 border border-gray-600 rounded-lg p-6 hover:bg-gray-650 transition-colors duration-200"
+                  role="article"
+                  aria-labelledby={`victim-${index}-name`}
+                >
+                  <div className="flex items-start space-x-4">
+                    <div className="flex-shrink-0">
+                      <div className="w-16 h-16 bg-[#EB8FBD] rounded-full flex items-center justify-center">
+                        <span
+                          className="text-white font-bold text-lg"
+                          aria-hidden="true"
+                        >
+                          {korban.nama.charAt(0)}
+                        </span>
+                      </div>
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <h3
+                        id={`victim-${index}-name`}
+                        className="text-lg font-semibold text-white mb-2"
+                      >
+                        {korban.nama}
+                        {korban.usia && (
+                          <span className="text-gray-300 font-normal ml-2">
+                            ({korban.usia} tahun)
+                          </span>
+                        )}
+                      </h3>
+                      <div className="space-y-2 text-sm">
+                        <div className="flex text-gray-300">
+                          <span className="font-medium text-[#EB8FBD] mr-2">
+                            Profesi:
+                          </span>
+                          <span>{korban.profesi}</span>
+                        </div>
+                        <div className="flex text-gray-300">
+                          <span className="font-medium text-[#EB8FBD] mr-2">
+                            Tanggal:
+                          </span>
+                          <time dateTime={korban.tanggal.replace(/ /g, '-')}>
+                            {korban.tanggal}
+                          </time>
+                        </div>
+                        <div className="flex text-gray-300">
+                          <span className="font-medium text-[#EB8FBD] mr-2">
+                            Lokasi:
+                          </span>
+                          <span>{korban.lokasi}</span>
+                        </div>
+                        {korban.alamat && (
+                          <div className="flex text-gray-300">
+                            <span className="font-medium text-[#EB8FBD] mr-2">
+                              Alamat:
+                            </span>
+                            <span className="text-xs leading-relaxed">
+                              {korban.alamat}
+                            </span>
+                          </div>
+                        )}
+                        <div className="mt-3 pt-3 border-t border-gray-600">
+                          <p className="text-gray-300 text-sm leading-relaxed">
+                            <span className="font-medium text-[#EB8FBD]">
+                              Penyebab:{' '}
+                            </span>
+                            {korban.penyebab}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              ))}
+            </div>
+
+            <div className="mt-12 text-center">
+              <p className="text-gray-300 text-sm leading-relaxed max-w-4xl mx-auto">
+                <em>
+                  Informasi berdasarkan laporan media terpercaya per tanggal 2
+                  September 2025. Kami menghormati keluarga yang berduka dan
+                  berharap keadilan dapat ditegakkan untuk setiap kasus yang
+                  terjadi.
+                </em>
+              </p>
+              <div className="mt-6 flex justify-center space-x-4 text-xs text-gray-400">
+                <span>Sumber:</span>
+                <a
+                  href="https://www.kompas.com/tren/read/2025/09/02/174500565/update-10-korban-tewas-dalam-demonstrasi-28-agustus-2-september-2025"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#EB8FBD] hover:underline"
+                >
+                  Kompas.com
+                </a>
+                <span>•</span>
+                <a
+                  href="https://tirto.id/daftar-korban-tewas-saat-demo-25-agt-1-sept-2025-hgXb"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#EB8FBD] hover:underline"
+                >
+                  Tirto.id
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Visi Misi Section */}
         {/* <div className="py-24 sm:py-32">
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
