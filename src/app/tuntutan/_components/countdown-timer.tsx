@@ -23,9 +23,7 @@ const CountdownTimer = () => {
       <div className="flex flex-col sm:flex-row items-center justify-center gap-3 md:gap-4 mb-4 md:mb-6">
         <div className="text-center sm:text-left">
           <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-1 hidden sm:block">
-            {isExpired
-              ? ''
-              : `Deadline ${jangka === '1-minggu' ? '5 September 2025' : '31 Agustus 2026'}`}
+            {`Deadline ${jangka === '1-minggu' ? '5 September 2025' : '31 Agustus 2026'}`}
           </h3>
           <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-1 block sm:hidden">
             Deadline
