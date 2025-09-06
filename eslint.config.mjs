@@ -434,7 +434,9 @@ export const IGNORE_PATTERNS = {
     '.vscode/**',
     '.idea/**',
     '*.tmp',
-    '*.temp'
+    '*.temp',
+    'next-env.d.ts',
+    '*.txt',
   ]
 }
 
