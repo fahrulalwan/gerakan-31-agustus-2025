@@ -98,6 +98,9 @@ const RootLayout = ({
           gtag('config', 'G-SFPWV522H8');
         `}
       </Script>
+      <link rel="icon" href="/favicon.ico" sizes="any" />
+      <link rel="icon" href="/favicon.png" type="image/png" />
+      <link rel="apple-touch-icon" href="/apple-icon.png" />
     </head>
     <body className={`${rubik.className} antialiased bg-[#037033]`}>
       <Suspense fallback={<div className="h-16 bg-transparent" />}>
