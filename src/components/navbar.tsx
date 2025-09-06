@@ -30,6 +30,8 @@ const Navbar = () => {
   const targetDate = jangka === '1-minggu' ? targetWeekDate : targetYearDate
   const { days, hours, minutes, seconds } = useCountdown(targetDate)
 
+  const isExpired = days === 0 && hours === 0 && minutes === 0 && seconds === 0
+
   const checkActive = (href: string) => {
     if (href === '/') {
       return pathname === '/'
@@ -193,7 +195,8 @@ const Navbar = () => {
       {isPageTuntutan && !isCountdownHide && (
         <div
           className={cn(
-            'bg-[#EB8FBD] sticky top-[200px] z-10 will-change-transform rounded-b-2xl border-pink-200 border-b border-l border-r transition-all duration-300 block md:hidden'
+            'bg-[#EB8FBD] border-[#EB8FBD] sticky top-[200px] z-10 will-change-transform rounded-b-2xl border-b border-l border-r transition-all duration-300 block md:hidden',
+            isExpired && 'bg-[#6B7280] border-[#6B7280]'
           )}
           style={{
             top: isCountdownShow ? 0 : -200
