@@ -29,7 +29,8 @@ export const metadata: Metadata = {
       {
         url: `${APP_URL}/ogimage.png`,
         width: 1200,
-        height: 630
+        height: 630,
+        alt: '17+8 Tuntutan Rakyat | Transparansi. Reformasi. Empati.'
       }
     ],
     type: 'website'
@@ -43,7 +44,8 @@ export const metadata: Metadata = {
       {
         url: `${APP_URL}/twitter-card.png`,
         width: 1200,
-        height: 630
+        height: 630,
+        alt: '17+8 Tuntutan Rakyat | Transparansi. Reformasi. Empati.'
       }
     ]
   },

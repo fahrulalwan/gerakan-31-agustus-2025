@@ -22,23 +22,23 @@ Bersuara perlu strategi, bukan sekadar emosi. TuntutanRakyat menyediakan panduan
     <div className="px-6 space-y-2 pb-10">
       <p className="text-center text-white text-lg font-bold">Share via:</p>
       <div className="flex gap-2 justify-center">
-        <TelegramShareButton url={APP_URL} title={title} className="">
+        <TelegramShareButton type="button" url={APP_URL} title={title}>
           <TelegramIcon className="rounded-full size-10" />
         </TelegramShareButton>
 
-        <WhatsappShareButton url={APP_URL} title={title} className="">
+        <WhatsappShareButton type="button" url={APP_URL} title={title}>
           <WhatsappIcon className="rounded-full size-10" />
         </WhatsappShareButton>
 
-        <ThreadsShareButton url={APP_URL} title={title} className="">
+        <ThreadsShareButton type="button" url={APP_URL} title={title}>
           <ThreadsIcon className="rounded-full size-10" />
         </ThreadsShareButton>
 
-        <TwitterShareButton url={APP_URL} title={title} className="">
+        <TwitterShareButton type="button" url={APP_URL} title={title}>
           <XIcon className="rounded-full size-10" />
         </TwitterShareButton>
 
-        <LinkedinShareButton url={APP_URL} title={title} className="">
+        <LinkedinShareButton type="button" url={APP_URL} title={title}>
           <LinkedinIcon className="rounded-full size-10" />
         </LinkedinShareButton>
       </div>

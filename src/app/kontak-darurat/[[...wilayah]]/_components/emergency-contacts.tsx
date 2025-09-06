@@ -194,7 +194,10 @@ const EmergencyContacts = ({ wilayah }: { wilayah: string }) => {
             })
           }}
         >
-          <SelectTrigger className="w-full md:w-auto text-base bg-green-100 border-green-200 text-green-800 font-bold cursor-pointer py-5">
+          <SelectTrigger
+            type="button"
+            className="w-full md:w-auto text-base bg-green-100 border-green-200 text-green-800 font-bold cursor-pointer py-5"
+          >
             <SelectValue placeholder="Pilih wilayah..." />
           </SelectTrigger>
           <SelectContent>

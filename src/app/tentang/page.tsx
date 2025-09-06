@@ -1,9 +1,11 @@
+import { User } from 'lucide-react'
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 
 import ButtonHero from '@/components/molecule/button-hero'
 import { APP_URL } from '@/constants/app'
-import { TENTANG } from '@/constants/tentang'
+import { TENTANG, DECEASED_LIST } from '@/constants/tentang'
 
 export const metadata: Metadata = {
   title: TENTANG.title,
@@ -182,6 +184,138 @@ const TentangPage = () => {
                 tidak bermaksud mengesampingkan tuntutan-tuntutan lain yang
                 mungkin juga beredar di waktu yang sama.
               </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Memorial Section */}
+        <div className="py-16 sm:py-24 bg-gray-800" id="memorial">
+          <div className="mx-auto max-w-5xl px-6">
+            <div className="mx-auto max-w-2xl lg:text-center mb-16">
+              <h2 className="text-base font-semibold leading-7 text-[#EB8FBD]">
+                In Memoriam
+              </h2>
+              <p className="mt-2 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+                Mereka yang Gugur dalam Perjuangan
+              </p>
+              <p className="mt-6 text-lg leading-8 text-gray-300">
+                Mengenang saudara-saudara kita yang telah berpulang dalam
+                demonstrasi 28 Agustus - 2 September 2025. Pengorbanan mereka
+                tidak akan terlupakan dalam perjuangan menuju Indonesia yang
+                lebih adil.
+              </p>
+            </div>
+
+            <div
+              className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6"
+              role="region"
+              aria-label="Daftar korban demonstrasi"
+            >
+              {DECEASED_LIST.map((korban, index) => (
+                <article
+                  key={index}
+                  className="bg-gray-700 border border-gray-600 rounded-lg p-6 hover:bg-gray-650 transition-colors duration-200"
+                  role="article"
+                  aria-labelledby={`victim-${index}-name`}
+                >
+                  <div className="flex items-start space-x-4">
+                    <div className="flex-shrink-0">
+                      <div className="w-16 h-16 bg-gray-600 rounded-full flex items-center justify-center overflow-hidden">
+                        {korban.photo ? (
+                          <Image
+                            src={korban.photo}
+                            alt={korban.name}
+                            loading="lazy"
+                            width={64}
+                            height={64}
+                            className="w-full h-full object-cover rounded-full"
+                          />
+                        ) : (
+                          <User className="w-8 h-8 text-gray-400" />
+                        )}
+                      </div>
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <h3
+                        id={`victim-${index}-name`}
+                        className="text-lg font-semibold text-white mb-2"
+                      >
+                        {korban.name}
+                        {korban.age && (
+                          <span className="text-gray-300 font-normal ml-2">
+                            ({korban.age} tahun)
+                          </span>
+                        )}
+                      </h3>
+                      <div className="space-y-2 text-sm">
+                        <div className="flex text-gray-300">
+                          <span className="font-medium text-[#EB8FBD] mr-2">
+                            Profesi:
+                          </span>
+                          <span>{korban.occupation}</span>
+                        </div>
+                        <div className="flex text-gray-300">
+                          <span className="font-medium text-[#EB8FBD] mr-2">
+                            Tanggal:
+                          </span>
+                          <time
+                            dateTime={korban.tanggal.toISOString().slice(0, 10)}
+                          >
+                            {new Intl.DateTimeFormat('id', {
+                              dateStyle: 'long'
+                            }).format(korban.tanggal)}
+                          </time>
+                        </div>
+                        <div className="flex text-gray-300">
+                          <span className="font-medium text-[#EB8FBD] mr-2">
+                            Lokasi:
+                          </span>
+                          <span>{korban.location}</span>
+                        </div>
+                        <div className="mt-3 pt-3 border-t border-gray-600">
+                          <p className="text-gray-300 text-sm leading-relaxed">
+                            <span className="font-medium text-[#EB8FBD]">
+                              Penyebab:{' '}
+                            </span>
+                            {korban.cause}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              ))}
+            </div>
+
+            <div className="mt-12 text-center">
+              <p className="text-gray-300 text-sm leading-relaxed max-w-4xl mx-auto">
+                <em>
+                  Informasi berdasarkan laporan media terpercaya per tanggal 2
+                  September 2025. Kami menghormati keluarga yang berduka dan
+                  berharap keadilan dapat ditegakkan untuk setiap kasus yang
+                  terjadi.
+                </em>
+              </p>
+              <div className="mt-6 flex justify-center space-x-4 text-xs text-gray-400">
+                <span>Sumber:</span>
+                <a
+                  href="https://www.kompas.com/tren/read/2025/09/02/174500565/update-10-korban-tewas-dalam-demonstrasi-28-agustus-2-september-2025"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#EB8FBD] hover:underline"
+                >
+                  Kompas.com
+                </a>
+                <span>•</span>
+                <a
+                  href="https://tirto.id/daftar-korban-tewas-saat-demo-25-agt-1-sept-2025-hgXb"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-[#EB8FBD] hover:underline"
+                >
+                  Tirto.id
+                </a>
+              </div>
             </div>
           </div>
         </div>

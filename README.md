@@ -1,32 +1,42 @@
-# 17+8: Tuntutan Rakyat 🇮🇩🌑
+# Tuntutan Rakyat 🇮🇩
 
-17+8: Tuntutan Rakyat is a community-driven platform designed to provide a reliable source of information and tools during times of civil unrest in Indonesia. Our mission is to combat misinformation and empower citizens by creating a centralized, verifiable platform for news and protest resources.
-
-The name "17+8: Tuntutan Rakyat" is a sub-movement of #IndonesiaGelap, a powerful reference to the ongoing demonstrations and the need for transparency and truth.
+Tuntutan Rakyat is a community-driven platform designed to provide a reliable source of information and tools during times of civil unrest in Indonesia. Our mission is to combat misinformation and empower citizens by creating a centralized, verifiable platform for information and resources.
 
 ## Features
 
-### 1. Website Checklist for Demonstrations
-This is a comprehensive and actionable checklist designed for organizers of protest-related websites. It goes beyond a simple to-do list, offering guidance on crucial aspects to ensure a safe and effective digital presence.
+Our platform offers several key resources for the public:
 
-**Content & Information:** Guidelines on what to include, such as the protest's core demands, schedule, and safe gathering points.
+### 1. Demands (Tuntutan)
+A comprehensive collection of the people's demands, organized and presented in a clear, accessible format.
 
-**Security & Privacy:** Best practices for protecting user data and maintaining anonymity.
+### 2. Demonstration Guides (Panduan Demo)
+Practical guides for safely participating in demonstrations, including:
+- Tips for staying safe
+- What to bring
+- How to document events
+- First aid information
 
-**Accessibility:** Tips to ensure the website is accessible to all users, including those with disabilities.
+### 3. Legal Rights Information (Hak Hukum)
+Critical information about citizens' legal rights during protests and interactions with authorities.
 
-**Calls to Action:** Advice on how to create clear and effective calls to action, such as sharing on social media or donating to a verified cause.
+### 4. Emergency Contacts (Kontak Darurat)
+A curated list of emergency contacts for legal aid, medical assistance, and other crucial services.
 
-### 2. Misinformation-Free News Platform
-This core feature is a news curation platform built on a collaborative model to ensure integrity and combat the spread of misinformation.
+### 5. Psychological Services (Layanan Psikologis)
+Resources for mental health support during times of civil unrest.
 
-**Fact-Checking Process:** All curated news is subject to a rigorous internal and collaborative verification process to ensure accuracy before publication.
+### 6. Information Center (Informasi)
+A hub providing important information, links to free psychological services, and connections to solidarity networks.
 
-**Community Reporting:** Users can flag potential misinformation, which is then reviewed by our network of collaborators, creating a feedback loop for continuous improvement.
+## Technology Stack
 
-## How It Works
+The platform is built using modern web technologies:
 
-The platform will be built with a modern web stack, using real-time updates and a modular architecture to scale effectively. The front-end will be designed to be intuitive and mobile-first, recognizing that most users will access the platform on their smartphones.
+- **Frontend**: Next.js 15, React 19, TypeScript 5
+- **Styling**: Tailwind CSS 4, shadcn/ui components
+- **Icons**: Lucide React
+- **Runtime**: Bun 1.2
+- **Deployment**: Vercel
 
 ## How to Contribute
 
@@ -34,10 +44,12 @@ This project is open-source, and we welcome contributions from developers, desig
 
 1. **Fork the repository:** Start by forking this repository to your own GitHub account.
 2. **Clone the project:** `git clone https://github.com/fahrulalwan/tuntutan-rakyat.git`
-3. **Create a new branch:** `git checkout -b feature/your-feature-name`
-4. **Make your changes:** Implement your feature or fix a bug.
-5. **Commit and push:** `git commit -m "feat: your feature description"` followed by `git push origin feature/your-feature-name`
-6. **Open a Pull Request:** Submit a pull request detailing your changes.
+3. **Install dependencies:** `bun install`
+4. **Run the development server:** `bun dev`
+5. **Create a new branch:** `git checkout -b feature/your-feature-name`
+6. **Make your changes:** Implement your feature or fix a bug.
+7. **Commit and push:** `git commit -m "feat: your feature description"` followed by `git push origin feature/your-feature-name`
+8. **Open a Pull Request:** Submit a pull request detailing your changes.
 
 ## Contact
 
