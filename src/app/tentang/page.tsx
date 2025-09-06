@@ -1,9 +1,11 @@
+import { User } from 'lucide-react'
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 
 import ButtonHero from '@/components/molecule/button-hero'
 import { APP_URL } from '@/constants/app'
-import { TENTANG } from '@/constants/tentang'
+import { TENTANG, DECEASED_LIST } from '@/constants/tentang'
 
 export const metadata: Metadata = {
   title: TENTANG.title,
@@ -209,88 +211,7 @@ const TentangPage = () => {
               role="region"
               aria-label="Daftar korban demonstrasi"
             >
-              {[
-                {
-                  nama: 'Affan Kurniawan',
-                  usia: 21,
-                  profesi: 'Pengemudi Ojek Online',
-                  tanggal: '28 Agustus 2025',
-                  lokasi: 'Pejompongan, Jakarta Barat',
-                  penyebab:
-                    'Dilindas kendaraan taktis Brimob saat mengantar pesanan di Jalan Bendungan Hilir'
-                },
-                {
-                  nama: 'Muhammad Akbar Basri',
-                  usia: 26,
-                  profesi: 'Staf Humas DPRD Makassar',
-                  tanggal: '29 Agustus 2025',
-                  lokasi: 'Makassar',
-                  penyebab: 'Terjebak dalam kebakaran Gedung DPRD Makassar'
-                },
-                {
-                  nama: 'Sarinawati',
-                  usia: 25,
-                  profesi: 'Staf Pendamping Anggota DPRD Makassar',
-                  tanggal: '29 Agustus 2025',
-                  lokasi: 'Makassar',
-                  penyebab: 'Terjebak dalam kebakaran Gedung DPRD Makassar'
-                },
-                {
-                  nama: 'Saiful Akbar',
-                  usia: 43,
-                  profesi: 'Plt Kepala Seksi Kesra Kecamatan Ujung Tanah',
-                  tanggal: '29 Agustus 2025',
-                  lokasi: 'Makassar',
-                  penyebab: 'Terjebak dalam kebakaran Gedung DPRD Makassar'
-                },
-                {
-                  nama: 'Rusdamdiansyah',
-                  usia: 26,
-                  profesi: 'Pengemudi Ojek Online',
-                  tanggal: '29 Agustus 2025',
-                  lokasi: 'Makassar',
-                  penyebab:
-                    'Dikeroyok massa yang mencurigainya sebagai intel di depan Kampus UMI Makassar'
-                },
-                {
-                  nama: 'Sumari',
-                  usia: 60,
-                  profesi: 'Tukang Becak',
-                  tanggal: '29 Agustus 2025',
-                  lokasi: 'Solo',
-                  penyebab:
-                    'Sesak napas dan serangan asma saat terpapar gas air mata di Bundaran Gladak'
-                },
-                {
-                  nama: 'Rheza Sendy Pratama',
-                  usia: 21,
-                  profesi:
-                    'Mahasiswa Ilmu Komunikasi Universitas Amikom Yogyakarta',
-                  tanggal: '31 Agustus 2025',
-                  lokasi: 'Yogyakarta',
-                  penyebab:
-                    'Tumbang saat aparat menembakkan gas air mata, dirawat di RSUP Dr Sardjito'
-                },
-                {
-                  nama: 'Andika Lutfi Falah',
-                  usia: 16,
-                  profesi: 'Siswa Kelas 11 SMK Negeri 14 Kabupaten Tangerang',
-                  tanggal: '31 Agustus 2025',
-                  lokasi: 'Jakarta',
-                  penyebab:
-                    'Luka berat pada kepala belakang akibat benturan benda tumpul saat demo Jakarta'
-                },
-                {
-                  nama: 'Iko Juliant Junior',
-                  usia: 19,
-                  profesi:
-                    'Mahasiswa Fakultas Hukum Universitas Negeri Semarang',
-                  tanggal: '31 Agustus 2025',
-                  lokasi: 'Semarang',
-                  penyebab:
-                    'Kondisi kritis yang memerlukan operasi, sempat mengigau meminta tidak dipukuli'
-                }
-              ].map((korban, index) => (
+              {DECEASED_LIST.map((korban, index) => (
                 <article
                   key={index}
                   className="bg-gray-700 border border-gray-600 rounded-lg p-6 hover:bg-gray-650 transition-colors duration-200"
@@ -299,13 +220,19 @@ const TentangPage = () => {
                 >
                   <div className="flex items-start space-x-4">
                     <div className="flex-shrink-0">
-                      <div className="w-16 h-16 bg-[#EB8FBD] rounded-full flex items-center justify-center">
-                        <span
-                          className="text-white font-bold text-lg"
-                          aria-hidden="true"
-                        >
-                          {korban.nama.charAt(0)}
-                        </span>
+                      <div className="w-16 h-16 bg-gray-600 rounded-full flex items-center justify-center overflow-hidden">
+                        {korban.photo ? (
+                          <Image
+                            src={korban.photo}
+                            alt={korban.name}
+                            loading="lazy"
+                            width={64}
+                            height={64}
+                            className="w-full h-full object-cover rounded-full"
+                          />
+                        ) : (
+                          <User className="w-8 h-8 text-gray-400" />
+                        )}
                       </div>
                     </div>
                     <div className="flex-1 min-w-0">
@@ -313,10 +240,10 @@ const TentangPage = () => {
                         id={`victim-${index}-name`}
                         className="text-lg font-semibold text-white mb-2"
                       >
-                        {korban.nama}
-                        {korban.usia && (
+                        {korban.name}
+                        {korban.age && (
                           <span className="text-gray-300 font-normal ml-2">
-                            ({korban.usia} tahun)
+                            ({korban.age} tahun)
                           </span>
                         )}
                       </h3>
@@ -325,7 +252,7 @@ const TentangPage = () => {
                           <span className="font-medium text-[#EB8FBD] mr-2">
                             Profesi:
                           </span>
-                          <span>{korban.profesi}</span>
+                          <span>{korban.occupation}</span>
                         </div>
                         <div className="flex text-gray-300">
                           <span className="font-medium text-[#EB8FBD] mr-2">
@@ -339,24 +266,14 @@ const TentangPage = () => {
                           <span className="font-medium text-[#EB8FBD] mr-2">
                             Lokasi:
                           </span>
-                          <span>{korban.lokasi}</span>
+                          <span>{korban.location}</span>
                         </div>
-                        {korban.alamat && (
-                          <div className="flex text-gray-300">
-                            <span className="font-medium text-[#EB8FBD] mr-2">
-                              Alamat:
-                            </span>
-                            <span className="text-xs leading-relaxed">
-                              {korban.alamat}
-                            </span>
-                          </div>
-                        )}
                         <div className="mt-3 pt-3 border-t border-gray-600">
                           <p className="text-gray-300 text-sm leading-relaxed">
                             <span className="font-medium text-[#EB8FBD]">
                               Penyebab:{' '}
                             </span>
-                            {korban.penyebab}
+                            {korban.cause}
                           </p>
                         </div>
                       </div>

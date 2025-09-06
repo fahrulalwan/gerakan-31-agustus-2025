@@ -13,6 +13,7 @@ const SimilarActions = () => {
       <Image
         src={item.img}
         alt={item.title}
+        loading="lazy"
         width={96}
         height={96}
         className="w-20 h-20 object-cover rounded-2xl"
