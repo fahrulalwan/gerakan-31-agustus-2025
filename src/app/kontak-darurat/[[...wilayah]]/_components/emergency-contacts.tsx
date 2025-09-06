@@ -27,7 +27,7 @@ import {
   NATIONAL_EMERGENCY_CONTACTS,
   REGIONAL_EMERGENCY_CONTACTS,
   CATEGORIZED_REGIONS,
-  EmergencyContact
+  type EmergencyContact
 } from '@/constants/demonstration'
 import { cn } from '@/lib/utils'
 

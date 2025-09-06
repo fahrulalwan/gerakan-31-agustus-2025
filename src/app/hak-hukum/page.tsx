@@ -1,9 +1,10 @@
 import { Metadata } from 'next'
 
-import LegalRights from '@/components/page/demonstrasi/legal-rights'
-import ButtonHero from '@/components/page/home/button-hero'
+import ButtonHero from '@/components/molecule/button-hero'
 import { APP_URL } from '@/constants/app'
 import { HAK_HUKUM } from '@/constants/hak-hukum'
+
+import LegalRights from './_components/legal-rights'
 
 export const metadata: Metadata = {
   title: HAK_HUKUM.title,

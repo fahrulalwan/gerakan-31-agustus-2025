@@ -1,1 +1,1 @@
-export const APP_URL = 'https://tuntutanrakyat.vercel.app'
+export const APP_URL = 'https://tuntutanrakyat.space'

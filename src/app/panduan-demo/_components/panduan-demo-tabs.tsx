@@ -2,12 +2,12 @@
 
 import { Shield, CheckCircle, Clock } from 'lucide-react'
 import Link from 'next/link'
+import { useSearchParams } from 'next/navigation'
 import { useEffect, useRef } from 'react'
 
 import { cn } from '@/lib/utils'
 
 import DuringDemonstration from './during-demonstration'
-import EmergencyContacts from './emergency-contacts'
 import PostDemonstration from './post-demonstration'
 import PreDemonstration from './pre-demonstration'
 
@@ -38,16 +38,12 @@ const tabs = [
   }
 ]
 
-const PanduanDemoTabs = ({
-  category,
-  wilayah
-}: {
-  category: string
-  wilayah: string
-}) => {
+const PanduanDemoTabs = () => {
+  const params = useSearchParams()
+  const category = params.get('category') ?? 'persiapan'
+
   const ActiveComponent =
-    tabs.find((tab) => tab.category === category)?.component ??
-    EmergencyContacts
+    tabs.find((tab) => tab.category === category)?.component ?? PreDemonstration
 
   const contentRef = useRef<HTMLDivElement>(null)
 
@@ -176,7 +172,7 @@ const PanduanDemoTabs = ({
 
       {/* Content */}
       <div className="bg-gray-900">
-        <ActiveComponent wilayah={wilayah} />
+        <ActiveComponent />
       </div>
     </>
   )
